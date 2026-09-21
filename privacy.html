@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности — [Название Игры]</title>
+    <title>Privacy Policy — Smash Arena: PvP Battle Action</title>
     <style>
         :root {
             --bg-color: #f9fafb;
             --card-bg: #ffffff;
-            --text-main: #1f2937;
+            --text-main: #111827;
             --text-muted: #4b5563;
             --link-color: #2563eb;
             --border-color: #e5e7eb;
@@ -37,7 +37,7 @@
             font-size: 1.75rem;
             margin-top: 0;
             margin-bottom: 8px;
-            color: #111827;
+            color: var(--text-main);
         }
 
         .date {
@@ -52,7 +52,7 @@
             margin-bottom: 12px;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 6px;
-            color: #111827;
+            color: var(--text-main);
         }
 
         p, li {
@@ -99,61 +99,79 @@
 <body>
 
 <div class="container">
-    <h1>Политика конфиденциальности</h1>
-    <div class="date">Дата последнего обновления: 21 сентября 2026 г.</div>
+    <h1>Privacy Policy</h1>
+    <div class="date">Last updated: September 21, 2026</div>
 
     <p>
-        Настоящая Политика конфиденциальности описывает, как разработчик <strong>[Имя разработчика или Название студии]</strong> (далее — «Разработчик») обрабатывает информацию, собираемую при использовании мобильной игры <strong>[Название Игры]</strong> (далее — «Приложение»).
+        This Privacy Policy applies to the mobile game <strong>Smash Arena: PvP Battle Action</strong> (hereinafter referred to as the "Game"), developed and maintained by <strong>Alexander Gellert / Tiny Heart Studios</strong> (hereinafter referred to as "we", "us", or "our").
+    </p>
+    <p>
+        The Game is built using the <strong>Defold Engine</strong>. We are committed to protecting the privacy of our players. This policy explains what information is collected, how it is used, and what rights you have.
     </p>
 
-    <h2>1. Сбор и использование информации</h2>
+    <h2>1. Information Collection and Processing</h2>
     <p>
-        Приложение само по себе не требует регистрации и не запрашивает персональные данные (такие как имя, адрес проживания или номер телефона).
+        The Game itself does not require an account creation and does not collect or store direct personally identifiable information (PII) such as your legal name, physical address, or phone number.
     </p>
     <p>
-        Однако для показа рекламы, внутриигровой аналитики и работы сетевых сервисов используются сторонние SDK, которые могут автоматически собирать обезличенную техническую информацию:
-    </p>
-    <ul>
-        <li>Идентификаторы устройства (GAID / IDFA, Android ID);</li>
-        <li>IP-адрес и примерное местоположение (на уровне страны/города);</li>
-        <li>Сведения о модели устройства, версии операционной системы;</li>
-        <li>Данные об игровом процессе и сбоях приложения.</li>
-    </ul>
-
-    <h2>2. Сторонние сервисы</h2>
-    <p>
-        В Приложении задействованы библиотеки третьих лиц, имеющие собственные политики обработки данных:
+        The Defold runtime executes client-side game logic without native data-tracking modules. However, the Game incorporates third-party Software Development Kits (SDKs) for monetization and game platform connectivity. These third parties may automatically collect certain device and network identifiers:
     </p>
     <ul>
-        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Services</a></li>
-        <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob</a></li>
-        <!-- Раскомментируйте или добавьте при необходимости:
-        <li><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a></li>
-        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Crashlytics & Analytics</a></li>
-        -->
+        <li><strong>Advertising Identifiers:</strong> Google Advertising ID (GAID) or ID for Advertisers (IDFA);</li>
+        <li><strong>Device Data:</strong> Hardware model, operating system version, screen resolution, and system language;</li>
+        <li><strong>Network & Location:</strong> IP address and generalized geographic location (country or city level);</li>
+        <li><strong>Performance & Diagnostic Data:</strong> Frame rate, game crashes, and ad impression logs.</li>
     </ul>
 
-    <h2>3. Конфиденциальность детей (COPPA)</h2>
+    <h2>2. Third-Party Services and Monetization</h2>
     <p>
-        Приложение не предназначено для детей младше 13 лет (или младше 16 лет в странах ЕС). Разработчик сознательно не собирает персональные данные детей. Если вы являетесь родителем или опекуном и узнали, что ваш ребенок предоставил нам персональную информацию, свяжитесь с нами, и данные будут немедленно удалены.
+        To display ads and support leaderboard or service infrastructure, we integrate authorized third-party providers. These providers govern their data handling under their respective privacy policies:
+    </p>
+    <ul>
+        <li>
+            <strong>Google Play Services:</strong> 
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
+        </li>
+        <li>
+            <strong>Google AdMob:</strong> 
+            <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">https://support.google.com/admob/answer/6128543</a>
+        </li>
+    </ul>
+
+    <h2>3. How We Use the Data</h2>
+    <p>The collected technical data is used solely to:</p>
+    <ul>
+        <li>Deliver contextual and personalized advertisements via Google AdMob;</li>
+        <li>Ensure proper functionality and balance of multiplayer/PvP matchmaking;</li>
+        <li>Diagnose client crashes, bugs, and latency issues across different hardware configurations;</li>
+        <li>Comply with platform requirements and legal obligations.</li>
+    </ul>
+
+    <h2>4. Children’s Privacy (COPPA & GDPR-K)</h2>
+    <p>
+        The Game is not directed at children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal data from children. If you are a parent or legal guardian and believe that your child has provided us with personal information through third-party services, please contact us immediately to have the data removed.
     </p>
 
-    <h2>4. Безопасность</h2>
+    <h2>5. User Rights (GDPR & CCPA/CPRA)</h2>
     <p>
-        Разработчик принимает необходимые организационные и технические меры для защиты данных. Однако ни один метод передачи данных через Интернет или способ электронного хранения не является абсолютно безопасным.
+        Depending on your jurisdiction, you have specific rights regarding your personal information, including the right to request access, correction, or deletion of data collected by third-party ad networks.
+    </p>
+    <p>
+        You can reset or restrict the collection of your Advertising ID directly via your Android device settings (<em>Settings &rarr; Google &rarr; Ads &rarr; Reset/Delete advertising ID</em>).
     </p>
 
-    <h2>5. Изменения в Политике конфиденциальности</h2>
+    <h2>6. Changes to This Policy</h2>
     <p>
-        Политика конфиденциальности может время от времени обновляться. Актуальная версия всегда размещается на этой странице. Рекомендуется периодически просматривать данный документ.
+        We may periodically update this Privacy Policy to reflect changes in our legal obligations or updates to the game framework and SDKs. The updated version will always be published on this page with an updated revision date.
     </p>
 
-    <h2>6. Контакты</h2>
+    <h2>7. Contact Information</h2>
     <p>
-        Если у вас есть вопросы или предложения относительно настоящей политики конфиденциальности, вы можете связаться с Разработчиком:
+        If you have any questions or data requests regarding this Privacy Policy, contact us directly:
     </p>
     <div class="contact-box">
-        <strong>Email:</strong> <a href="mailto:[ваш_email@example.com]">[ваш_email@example.com]</a>
+        <strong>Developer:</strong> Alexander Gellert (Tiny Heart Studios)<br>
+        <strong>Email:</strong> <a href="mailto:oblistud@gmail.com">oblistud@gmail.com</a>
     </div>
 </div>
 
