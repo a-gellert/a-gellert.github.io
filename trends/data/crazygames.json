@@ -1,0 +1,54 @@
+{
+  "platform": "crazygames",
+  "lastUpdated": "2026-10-02",
+  "games": [
+    { "name": "Shell Shockers", "developer": "Blue Wizard Digital", "genre": "Action", "subGenre": "FPS", "rating": 4.6, "ratingsCount": 210000, "downloads": "30M+", "downloadsNum": 35000000, "releaseDate": "2017-09-01", "lastUpdate": "2026-09-20", "price": "Free", "hypeIndex": 89, "trend": "stable", "growthRate": 4.5, "tags": ["multiplayer", "fps", "eggs"], "url": "#" },
+    { "name": "Bullet Force", "developer": "Blayze Games", "genre": "Action", "subGenre": "FPS", "rating": 4.4, "ratingsCount": 180000, "downloads": "25M+", "downloadsNum": 28000000, "releaseDate": "2016-06-15", "lastUpdate": "2026-08-10", "price": "Free", "hypeIndex": 72, "trend": "down", "growthRate": -1.2, "tags": ["multiplayer", "fps", "realistic"], "url": "#" },
+    { "name": "Crazy Roll 3D", "developer": "CrazyGames", "genre": "Arcade", "subGenre": "Endless", "rating": 4.5, "ratingsCount": 95000, "downloads": "15M+", "downloadsNum": 16000000, "releaseDate": "2019-02-10", "lastUpdate": "2025-05-20", "price": "Free", "hypeIndex": 68, "trend": "stable", "growthRate": 2.1, "tags": ["ball", "avoidance"], "url": "#" },
+    { "name": "Dead Zed", "developer": "Not Doppler", "genre": "Action", "subGenre": "Shooter", "rating": 4.3, "ratingsCount": 120000, "downloads": "10M+", "downloadsNum": 12000000, "releaseDate": "2012-08-05", "lastUpdate": "2024-11-15", "price": "Free", "hypeIndex": 60, "trend": "down", "growthRate": -3.5, "tags": ["zombie", "survival"], "url": "#" },
+    { "name": "Krunker.io", "developer": "Yendis Entertainment", "genre": "Action", "subGenre": "FPS", "rating": 4.7, "ratingsCount": 450000, "downloads": "80M+", "downloadsNum": 85000000, "releaseDate": "2018-05-20", "lastUpdate": "2026-09-25", "price": "Free", "hypeIndex": 92, "trend": "up", "growthRate": 6.8, "tags": ["multiplayer", "io", "movement"], "url": "#" },
+    { "name": "BuildNow GG", "developer": "battlelab", "genre": "Action", "subGenre": "Third Person Shooter", "rating": 4.5, "ratingsCount": 85000, "downloads": "8M+", "downloadsNum": 9000000, "releaseDate": "2021-08-10", "lastUpdate": "2026-08-28", "price": "Free", "hypeIndex": 84, "trend": "up", "growthRate": 14.2, "tags": ["building", "pvp"], "url": "#" },
+    { "name": "Forward Assault Remix", "developer": "Blayze Games", "genre": "Action", "subGenre": "FPS", "rating": 4.2, "ratingsCount": 65000, "downloads": "5M+", "downloadsNum": 6000000, "releaseDate": "2017-12-01", "lastUpdate": "2025-03-10", "price": "Free", "hypeIndex": 55, "trend": "down", "growthRate": -5.1, "tags": ["tactical", "multiplayer"], "url": "#" },
+    { "name": "1v1.LOL", "developer": "JustPlay.LOL", "genre": "Action", "subGenre": "Third Person Shooter", "rating": 4.6, "ratingsCount": 350000, "downloads": "50M+", "downloadsNum": 55000000, "releaseDate": "2019-12-15", "lastUpdate": "2026-09-18", "price": "Free", "hypeIndex": 95, "trend": "up", "growthRate": 8.7, "tags": ["building", "battle-royale"], "url": "#" },
+    { "name": "Drift Hunters", "developer": "Ilya Kaminetsky", "genre": "Racing", "subGenre": "Drift", "rating": 4.8, "ratingsCount": 280000, "downloads": "40M+", "downloadsNum": 42000000, "releaseDate": "2017-02-10", "lastUpdate": "2026-07-22", "price": "Free", "hypeIndex": 87, "trend": "stable", "growthRate": 3.4, "tags": ["cars", "drifting", "tuning"], "url": "#" },
+    { "name": "Madalin Stunt Cars 2", "developer": "Madalin Stanciu", "genre": "Racing", "subGenre": "Stunt", "rating": 4.5, "ratingsCount": 150000, "downloads": "20M+", "downloadsNum": 22000000, "releaseDate": "2015-07-25", "lastUpdate": "2023-09-10", "price": "Free", "hypeIndex": 65, "trend": "down", "growthRate": -2.1, "tags": ["cars", "multiplayer", "sandbox"], "url": "#" },
+    { "name": "Merc Zone", "developer": "Blue Wizard Digital", "genre": "Action", "subGenre": "FPS", "rating": 4.3, "ratingsCount": 55000, "downloads": "4M+", "downloadsNum": 4500000, "releaseDate": "2020-07-15", "lastUpdate": "2025-10-05", "price": "Free", "hypeIndex": 58, "trend": "down", "growthRate": -4.2, "tags": ["suit", "fast-paced"], "url": "#" },
+    { "name": "Ev.io", "developer": "Addicting Games", "genre": "Action", "subGenre": "FPS", "rating": 4.6, "ratingsCount": 110000, "downloads": "12M+", "downloadsNum": 13000000, "releaseDate": "2021-01-20", "lastUpdate": "2026-09-05", "price": "Free", "hypeIndex": 82, "trend": "up", "growthRate": 11.5, "tags": ["sci-fi", "halo-like"], "url": "#" },
+    { "name": "Rocket Soccer Derby", "developer": "Destruction Crew", "genre": "Sports", "subGenre": "Car Soccer", "rating": 4.4, "ratingsCount": 75000, "downloads": "6M+", "downloadsNum": 6500000, "releaseDate": "2020-09-10", "lastUpdate": "2025-12-12", "price": "Free", "hypeIndex": 70, "trend": "stable", "growthRate": 1.8, "tags": ["cars", "soccer"], "url": "#" },
+    { "name": "Zombs Royale", "developer": "End Game", "genre": "Action", "subGenre": "Battle Royale", "rating": 4.7, "ratingsCount": 320000, "downloads": "45M+", "downloadsNum": 48000000, "releaseDate": "2018-03-15", "lastUpdate": "2026-08-30", "price": "Free", "hypeIndex": 86, "trend": "stable", "growthRate": 2.5, "tags": ["2d", "multiplayer"], "url": "#" },
+    { "name": "Paper.io 2", "developer": "Voodoo", "genre": "Arcade", "subGenre": "IO", "rating": 4.5, "ratingsCount": 250000, "downloads": "60M+", "downloadsNum": 65000000, "releaseDate": "2018-08-20", "lastUpdate": "2026-05-15", "price": "Free", "hypeIndex": 79, "trend": "stable", "growthRate": 3.1, "tags": ["territory", "multiplayer"], "url": "#" },
+    { "name": "Sonic.exe Clone", "developer": "Scary Dev", "genre": "Action", "subGenre": "Horror", "rating": 4.2, "ratingsCount": 45000, "downloads": "3M+", "downloadsNum": 3000000, "releaseDate": "2024-10-31", "lastUpdate": "2026-01-15", "price": "Free", "hypeIndex": 62, "trend": "down", "growthRate": -4.2, "tags": ["horror", "retro"], "url": "#"},
+    { "name": "Block World 3D", "developer": "Voxel Games", "genre": "Adventure", "subGenre": "Sandbox", "rating": 4.6, "ratingsCount": 180000, "downloads": "15M+", "downloadsNum": 15000000, "releaseDate": "2021-05-20", "lastUpdate": "2026-09-10", "price": "Free", "hypeIndex": 82, "trend": "stable", "growthRate": 3.5, "tags": ["sandbox", "multiplayer"], "url": "#"},
+    { "name": "Real Parking Pro", "developer": "Car Games", "genre": "Racing", "subGenre": "Parking", "rating": 4.4, "ratingsCount": 95000, "downloads": "8M+", "downloadsNum": 8000000, "releaseDate": "2022-03-15", "lastUpdate": "2026-08-05", "price": "Free", "hypeIndex": 70, "trend": "up", "growthRate": 6.8, "tags": ["cars", "simulation"], "url": "#"},
+    { "name": "Dunk Legend", "developer": "Hoops Studio", "genre": "Sports", "subGenre": "Basketball", "rating": 4.5, "ratingsCount": 65000, "downloads": "5M+", "downloadsNum": 5000000, "releaseDate": "2023-11-10", "lastUpdate": "2026-07-20", "price": "Free", "hypeIndex": 75, "trend": "stable", "growthRate": 2.1, "tags": ["sports", "arcade"], "url": "#"},
+    { "name": "MineBuilder", "developer": "Voxel Games", "genre": "Adventure", "subGenre": "Sandbox", "rating": 4.3, "ratingsCount": 120000, "downloads": "10M+", "downloadsNum": 10000000, "releaseDate": "2020-08-25", "lastUpdate": "2026-05-15", "price": "Free", "hypeIndex": 68, "trend": "down", "growthRate": -1.5, "tags": ["sandbox", "crafting"], "url": "#"},
+    { "name": "Tank Wars.io", "developer": "Battle Games", "genre": "Action", "subGenre": ".io", "rating": 4.7, "ratingsCount": 150000, "downloads": "12M+", "downloadsNum": 12000000, "releaseDate": "2022-09-05", "lastUpdate": "2026-09-25", "price": "Free", "hypeIndex": 85, "trend": "up", "growthRate": 14.5, "tags": ["tanks", "multiplayer"], "url": "#"},
+    { "name": "Turret Defense", "developer": "Tower Games", "genre": "Strategy", "subGenre": "Tower Defense", "rating": 4.6, "ratingsCount": 85000, "downloads": "6M+", "downloadsNum": 6000000, "releaseDate": "2024-02-14", "lastUpdate": "2026-08-30", "price": "Free", "hypeIndex": 78, "trend": "up", "growthRate": 9.2, "tags": ["strategy", "defense"], "url": "#"},
+    { "name": "Slender Escape", "developer": "Scary Dev", "genre": "Action", "subGenre": "Horror", "rating": 4.1, "ratingsCount": 35000, "downloads": "2M+", "downloadsNum": 2000000, "releaseDate": "2025-10-31", "lastUpdate": "2026-06-10", "price": "Free", "hypeIndex": 58, "trend": "down", "growthRate": -6.5, "tags": ["horror", "stealth"], "url": "#"}
+  ],
+  "niches": [
+    { "genre": "Sci-Fi FPS", "demand": "high", "supply": "low", "opportunity": 85, "topGames": 12, "avgRating": 4.4 },
+    { "genre": "Building Shooter", "demand": "high", "supply": "medium", "opportunity": 75, "topGames": 20, "avgRating": 4.5 },
+    { "genre": "Car Stunt", "demand": "medium", "supply": "high", "opportunity": 45, "topGames": 60, "avgRating": 4.2 },
+    { "genre": "Horror .exe", "demand": "medium", "supply": "medium", "opportunity": 60, "topGames": 35, "avgRating": 4.1},
+    { "genre": "Tank Battle", "demand": "medium", "supply": "high", "opportunity": 50, "topGames": 80, "avgRating": 4.4},
+    { "genre": "Multiplayer Sandbox", "demand": "high", "supply": "medium", "opportunity": 75, "topGames": 20, "avgRating": 4.6}
+  ],
+  "genreDistribution": {
+    "Action": 52,
+    "Arcade": 9,
+    "Racing": 13,
+    "Sports": 9,
+    "Puzzle": 4,
+    "Adventure": 9,
+    "Strategy": 4
+  },
+  "trendHistory": [
+    {"date": "2026-05", "hypeAvg": 69},
+    {"date": "2026-06", "hypeAvg": 71},
+    {"date": "2026-07", "hypeAvg": 73},
+    {"date": "2026-08", "hypeAvg": 75},
+    {"date": "2026-09", "hypeAvg": 78},
+    {"date": "2026-10", "hypeAvg": 76}
+  ]
+}

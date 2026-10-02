@@ -1,0 +1,57 @@
+{
+  "platform": "google_play",
+  "lastUpdated": "2026-10-02",
+  "games": [
+    { "name": "Epic Heroes: Clash", "developer": "Nova Studio", "genre": "RPG", "subGenre": "Action RPG", "rating": 4.6, "ratingsCount": 240000, "downloads": "10M+", "downloadsNum": 12000000, "releaseDate": "2025-11-10", "lastUpdate": "2026-09-15", "price": "Free", "hypeIndex": 92, "trend": "up", "growthRate": 25.4, "tags": ["multiplayer", "fantasy"], "url": "#" },
+    { "name": "Merge Mansion 3D", "developer": "Casual Co", "genre": "Puzzle", "subGenre": "Merge", "rating": 4.4, "ratingsCount": 150000, "downloads": "5M+", "downloadsNum": 5500000, "releaseDate": "2026-02-14", "lastUpdate": "2026-10-01", "price": "Free", "hypeIndex": 85, "trend": "up", "growthRate": 18.2, "tags": ["casual", "merge"], "url": "#" },
+    { "name": "Speed Racing: Drift", "developer": "Gear Shift Games", "genre": "Racing", "subGenre": "Drift", "rating": 4.2, "ratingsCount": 85000, "downloads": "1M+", "downloadsNum": 1500000, "releaseDate": "2026-06-20", "lastUpdate": "2026-09-25", "price": "Free", "hypeIndex": 78, "trend": "stable", "growthRate": 5.1, "tags": ["racing", "cars"], "url": "#" },
+    { "name": "Idle Miner Tycoon: Space", "developer": "Gold Digger Inc", "genre": "Simulation", "subGenre": "Idle", "rating": 4.7, "ratingsCount": 420000, "downloads": "25M+", "downloadsNum": 26000000, "releaseDate": "2024-03-05", "lastUpdate": "2026-09-30", "price": "Free", "hypeIndex": 88, "trend": "up", "growthRate": 12.5, "tags": ["idle", "space"], "url": "#" },
+    { "name": "Zombie Survival: Dawn", "developer": "Apocalypse Games", "genre": "Action", "subGenre": "Survival", "rating": 4.1, "ratingsCount": 35000, "downloads": "1M+", "downloadsNum": 1200000, "releaseDate": "2026-08-01", "lastUpdate": "2026-09-10", "price": "Free", "hypeIndex": 65, "trend": "down", "growthRate": -2.3, "tags": ["zombie", "survival"], "url": "#" },
+    { "name": "Farm Town Story", "developer": "AgriPlay", "genre": "Simulation", "subGenre": "Farming", "rating": 4.5, "ratingsCount": 110000, "downloads": "5M+", "downloadsNum": 6000000, "releaseDate": "2025-05-12", "lastUpdate": "2026-08-20", "price": "Free", "hypeIndex": 72, "trend": "stable", "growthRate": 1.5, "tags": ["farming", "relaxing"], "url": "#" },
+    { "name": "Word Brain Teaser", "developer": "Lexicon Labs", "genre": "Word", "subGenre": "Puzzle", "rating": 4.8, "ratingsCount": 500000, "downloads": "50M+", "downloadsNum": 51000000, "releaseDate": "2023-11-20", "lastUpdate": "2026-09-29", "price": "Free", "hypeIndex": 80, "trend": "stable", "growthRate": 4.2, "tags": ["word", "puzzle"], "url": "#" },
+    { "name": "Galaxy Shooter: Alien", "developer": "Retro Arcade", "genre": "Arcade", "subGenre": "Shooter", "rating": 4.3, "ratingsCount": 60000, "downloads": "1M+", "downloadsNum": 2000000, "releaseDate": "2026-01-10", "lastUpdate": "2026-07-15", "price": "Free", "hypeIndex": 60, "trend": "down", "growthRate": -5.5, "tags": ["arcade", "shooter"], "url": "#" },
+    { "name": "Cooking Chef: Restaurant", "developer": "Tasty Games", "genre": "Simulation", "subGenre": "Time Management", "rating": 4.6, "ratingsCount": 210000, "downloads": "10M+", "downloadsNum": 11000000, "releaseDate": "2025-09-05", "lastUpdate": "2026-09-22", "price": "Free", "hypeIndex": 79, "trend": "up", "growthRate": 8.4, "tags": ["cooking", "casual"], "url": "#" },
+    { "name": "Shadow Ninja Assassin", "developer": "Stealth Studios", "genre": "Action", "subGenre": "Platformer", "rating": 4.0, "ratingsCount": 25000, "downloads": "500K+", "downloadsNum": 800000, "releaseDate": "2026-07-22", "lastUpdate": "2026-08-30", "price": "Free", "hypeIndex": 68, "trend": "stable", "growthRate": 3.1, "tags": ["ninja", "action"], "url": "#" },
+    { "name": "Color Hoop Sort", "developer": "Minimal Puzzles", "genre": "Puzzle", "subGenre": "Brain Game", "rating": 4.5, "ratingsCount": 320000, "downloads": "25M+", "downloadsNum": 27000000, "releaseDate": "2024-06-18", "lastUpdate": "2026-09-05", "price": "Free", "hypeIndex": 74, "trend": "stable", "growthRate": 2.2, "tags": ["puzzle", "sorting"], "url": "#" },
+    { "name": "Sniper 3D: Elite", "developer": "Gunfire Games", "genre": "Action", "subGenre": "FPS", "rating": 4.4, "ratingsCount": 450000, "downloads": "50M+", "downloadsNum": 55000000, "releaseDate": "2022-10-30", "lastUpdate": "2026-09-28", "price": "Free", "hypeIndex": 82, "trend": "up", "growthRate": 6.7, "tags": ["sniper", "fps"], "url": "#" },
+    { "name": "Bubble Pop Classic", "developer": "Casual Co", "genre": "Casual", "subGenre": "Bubble Shooter", "rating": 4.7, "ratingsCount": 180000, "downloads": "10M+", "downloadsNum": 12000000, "releaseDate": "2025-02-14", "lastUpdate": "2026-09-12", "price": "Free", "hypeIndex": 76, "trend": "stable", "growthRate": 3.5, "tags": ["casual", "bubble"], "url": "#" },
+    { "name": "City Builder: Megapolis", "developer": "Urban Sims", "genre": "Simulation", "subGenre": "City Building", "rating": 4.3, "ratingsCount": 95000, "downloads": "5M+", "downloadsNum": 6500000, "releaseDate": "2025-11-20", "lastUpdate": "2026-08-25", "price": "Free", "hypeIndex": 71, "trend": "down", "growthRate": -1.2, "tags": ["city", "simulation"], "url": "#" },
+    { "name": "Dragon Pet 3D", "developer": "Virtual Pets Inc", "genre": "Casual", "subGenre": "Virtual Pet", "rating": 4.1, "ratingsCount": 40000, "downloads": "1M+", "downloadsNum": 1800000, "releaseDate": "2026-04-10", "lastUpdate": "2026-07-05", "price": "Free", "hypeIndex": 55, "trend": "down", "growthRate": -8.4, "tags": ["pet", "dragon"], "url": "#" },
+    { "name": "Flappy Fly", "developer": "Casual Guy", "genre": "Arcade", "subGenre": "Hyper-casual", "rating": 4.1, "ratingsCount": 45000, "downloads": "1M+", "downloadsNum": 1100000, "releaseDate": "2025-01-10", "lastUpdate": "2026-05-12", "price": "Free", "hypeIndex": 60, "trend": "stable", "growthRate": 0.5, "tags": ["hyper-casual", "flying"], "url": "#"},
+    { "name": "Color Swipe", "developer": "HyperPlay", "genre": "Arcade", "subGenre": "Hyper-casual", "rating": 4.3, "ratingsCount": 75000, "downloads": "5M+", "downloadsNum": 5000000, "releaseDate": "2024-11-20", "lastUpdate": "2026-07-01", "price": "Free", "hypeIndex": 62, "trend": "down", "growthRate": -1.2, "tags": ["hyper-casual", "colors"], "url": "#"},
+    { "name": "Royal Gem Match", "developer": "King Maker", "genre": "Puzzle", "subGenre": "Match-3", "rating": 4.8, "ratingsCount": 350000, "downloads": "20M+", "downloadsNum": 21000000, "releaseDate": "2023-04-10", "lastUpdate": "2026-09-15", "price": "Free", "hypeIndex": 85, "trend": "up", "growthRate": 15.5, "tags": ["match-3", "casual"], "url": "#"},
+    { "name": "Castle Defense 3D", "developer": "Tower Games", "genre": "Strategy", "subGenre": "Tower Defense", "rating": 4.6, "ratingsCount": 120000, "downloads": "10M+", "downloadsNum": 10500000, "releaseDate": "2025-02-15", "lastUpdate": "2026-08-30", "price": "Free", "hypeIndex": 72, "trend": "stable", "growthRate": 3.4, "tags": ["strategy", "defense"], "url": "#"},
+    { "name": "Fort Battle Mobile", "developer": "Action Inc", "genre": "Action", "subGenre": "Battle Royale", "rating": 4.4, "ratingsCount": 850000, "downloads": "50M+", "downloadsNum": 55000000, "releaseDate": "2022-09-10", "lastUpdate": "2026-10-01", "price": "Free", "hypeIndex": 90, "trend": "up", "growthRate": 5.2, "tags": ["battle-royale", "multiplayer"], "url": "#"},
+    { "name": "Magic Legends TCG", "developer": "Card Master", "genre": "Card", "subGenre": "TCG", "rating": 4.7, "ratingsCount": 55000, "downloads": "1M+", "downloadsNum": 1500000, "releaseDate": "2026-01-05", "lastUpdate": "2026-09-20", "price": "Free", "hypeIndex": 78, "trend": "up", "growthRate": 12.1, "tags": ["tcg", "cards"], "url": "#"},
+    { "name": "Silent Corridors", "developer": "Spooky Studio", "genre": "Adventure", "subGenre": "Horror", "rating": 4.2, "ratingsCount": 30000, "downloads": "500K+", "downloadsNum": 750000, "releaseDate": "2026-05-15", "lastUpdate": "2026-08-10", "price": "Free", "hypeIndex": 65, "trend": "down", "growthRate": -4.5, "tags": ["horror", "survival"], "url": "#"}
+  ],
+  "niches": [
+    { "genre": "Action RPG", "demand": "high", "supply": "medium", "opportunity": 78, "topGames": 45, "avgRating": 4.4 },
+    { "genre": "Merge Puzzle", "demand": "high", "supply": "high", "opportunity": 65, "topGames": 120, "avgRating": 4.3 },
+    { "genre": "Space Idle", "demand": "medium", "supply": "low", "opportunity": 82, "topGames": 15, "avgRating": 4.1 },
+    { "genre": "Hyper-casual Runner", "demand": "high", "supply": "high", "opportunity": 45, "topGames": 200, "avgRating": 4.0},
+    { "genre": "Horror Puzzle", "demand": "medium", "supply": "low", "opportunity": 72, "topGames": 30, "avgRating": 4.4},
+    { "genre": "Strategy Card", "demand": "high", "supply": "medium", "opportunity": 80, "topGames": 50, "avgRating": 4.6}
+  ],
+  "genreDistribution": {
+    "Action": 17,
+    "RPG": 5,
+    "Puzzle": 13,
+    "Racing": 5,
+    "Simulation": 17,
+    "Word": 5,
+    "Arcade": 14,
+    "Casual": 9,
+    "Strategy": 5,
+    "Card": 5,
+    "Adventure": 5
+  },
+  "trendHistory": [
+    {"date": "2026-05", "hypeAvg": 60},
+    {"date": "2026-06", "hypeAvg": 64},
+    {"date": "2026-07", "hypeAvg": 68},
+    {"date": "2026-08", "hypeAvg": 71},
+    {"date": "2026-09", "hypeAvg": 74},
+    {"date": "2026-10", "hypeAvg": 75}
+  ]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналитика игровых трендов | Дашборд</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-chart-line"></i>
+                <h2>GameTrends</h2>
+            </div>
+            <a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> Назад на сайт</a>
+            
+            <nav class="platform-nav">
+                <h3>Платформы</h3>
+                <ul id="platform-tabs">
+                    <li data-platform="google_play" class="active"><i class="fa-brands fa-google-play"></i> Google Play</li>
+                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam</li>
+                    <li data-platform="poki"><i class="fa-solid fa-gamepad"></i> Poki</li>
+                    <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
+                    <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Yandex Games</li>
+                </ul>
+            </nav>
+            
+            <div class="filters">
+                <h3>Фильтры</h3>
+                <div class="filter-group">
+                    <label for="genre-filter">Жанр</label>
+                    <select id="genre-filter">
+                        <option value="all">Все жанры</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="hype-filter">Мин. Индекс Хайпа</label>
+                    <input type="range" id="hype-filter" min="0" max="100" value="0">
+                    <span id="hype-filter-val">0</span>
+                </div>
+                <div class="filter-group">
+                    <label for="search-input">Поиск игры</label>
+                    <input type="text" id="search-input" placeholder="Название...">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1 id="current-platform-title">Google Play Тренд Аналитика</h1>
+                    <p class="subtitle">Последнее обновление: <span id="last-updated">Загрузка...</span></p>
+                </div>
+                <button id="export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт в CSV</button>
+            </header>
+
+            <!-- Overview Cards -->
+            <section class="overview-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-dice"></i></div>
+                    <div class="card-info">
+                        <h4>Всего игр</h4>
+                        <div class="card-value" id="stat-total-games">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="card-info">
+                        <h4>Средний рейтинг</h4>
+                        <div class="card-value" id="stat-avg-rating">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div class="card-info">
+                        <h4>Средний Индекс Хайпа</h4>
+                        <div class="card-value" id="stat-avg-hype">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="card-info">
+                        <h4>Топ жанр</h4>
+                        <div class="card-value" id="stat-top-genre">-</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h3>Распределение по жанрам</h3>
+                    <canvas id="genreChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Тренд Индекса Хайпа (Последние 4 мес)</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Niches Section -->
+            <section class="niches-section">
+                <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Анализ ниш (Скрытый спрос)</h3>
+                <div class="niches-grid" id="niches-container">
+                    <!-- Niche cards will be injected here -->
+                </div>
+            </section>
+
+            <!-- Games Table -->
+            <section class="table-section">
+                <div class="table-header">
+                    <h3>Анализ игр</h3>
+                </div>
+                <div class="table-responsive">
+                    <table id="games-table">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Название <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="genre">Жанр <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="downloadsNum">Скачивания/Игроки <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="hypeIndex">Индекс Хайпа <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="trend">Тренд <i class="fa-solid fa-sort"></i></th>
+                            </tr>
+                        </thead>
+                        <tbody id="games-tbody">
+                            <!-- Rows injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

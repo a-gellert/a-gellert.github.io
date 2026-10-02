@@ -1,0 +1,48 @@
+name: Update Game Trends Data
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-trends:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          npm init -y
+          npm install google-play-scraper cheerio node-fetch
+
+      - name: Fetch Steam data
+        run: node scripts/fetch-steam.mjs
+
+      - name: Fetch Google Play data
+        run: node scripts/fetch-google-play.mjs
+
+      - name: Fetch Poki data
+        run: node scripts/fetch-poki.mjs
+
+      - name: Fetch CrazyGames data
+        run: node scripts/fetch-crazygames.mjs
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add trends/data/*.json
+          git diff --staged --quiet || git commit -m "📊 Auto-update game trends data [$(date -u +%Y-%m-%d)]"
+          git push

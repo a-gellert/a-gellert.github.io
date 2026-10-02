@@ -1,0 +1,55 @@
+{
+  "platform": "poki",
+  "lastUpdated": "2026-10-02",
+  "games": [
+    { "name": "Venge.io", "developer": "Cem Demir", "genre": "Action", "subGenre": "FPS", "rating": 4.5, "ratingsCount": 150000, "downloads": "20M+", "downloadsNum": 25000000, "releaseDate": "2020-05-10", "lastUpdate": "2026-08-15", "price": "Free", "hypeIndex": 88, "trend": "stable", "growthRate": 5.2, "tags": ["multiplayer", "fps", "io"], "url": "#" },
+    { "name": "Stickman Hook", "developer": "Madbox", "genre": "Arcade", "subGenre": "Platformer", "rating": 4.6, "ratingsCount": 320000, "downloads": "50M+", "downloadsNum": 55000000, "releaseDate": "2018-10-01", "lastUpdate": "2025-11-20", "price": "Free", "hypeIndex": 75, "trend": "stable", "growthRate": 2.1, "tags": ["stickman", "physics"], "url": "#" },
+    { "name": "Subway Surfers", "developer": "SYBO Games", "genre": "Arcade", "subGenre": "Endless Runner", "rating": 4.8, "ratingsCount": 2000000, "downloads": "100M+", "downloadsNum": 150000000, "releaseDate": "2012-05-24", "lastUpdate": "2026-09-30", "price": "Free", "hypeIndex": 95, "trend": "up", "growthRate": 8.4, "tags": ["runner", "classic"], "url": "#" },
+    { "name": "Drive Mad", "developer": "Martin Magni", "genre": "Racing", "subGenre": "Physics", "rating": 4.7, "ratingsCount": 85000, "downloads": "5M+", "downloadsNum": 8000000, "releaseDate": "2022-01-15", "lastUpdate": "2026-05-10", "price": "Free", "hypeIndex": 82, "trend": "up", "growthRate": 12.3, "tags": ["driving", "puzzle"], "url": "#" },
+    { "name": "Monkey Mart", "developer": "TinyDobbins", "genre": "Simulation", "subGenre": "Idle", "rating": 4.4, "ratingsCount": 120000, "downloads": "10M+", "downloadsNum": 12000000, "releaseDate": "2022-08-10", "lastUpdate": "2026-07-20", "price": "Free", "hypeIndex": 79, "trend": "stable", "growthRate": 4.5, "tags": ["idle", "management"], "url": "#" },
+    { "name": "Smash Karts", "developer": "Tall Team", "genre": "Racing", "subGenre": "Action", "rating": 4.6, "ratingsCount": 95000, "downloads": "10M+", "downloadsNum": 11000000, "releaseDate": "2020-03-20", "lastUpdate": "2026-09-10", "price": "Free", "hypeIndex": 85, "trend": "up", "growthRate": 15.6, "tags": ["multiplayer", "racing"], "url": "#" },
+    { "name": "Temple of Boom", "developer": "Colin Lane Games", "genre": "Action", "subGenre": "Platformer", "rating": 4.3, "ratingsCount": 45000, "downloads": "2M+", "downloadsNum": 2500000, "releaseDate": "2019-12-05", "lastUpdate": "2024-02-14", "price": "Free", "hypeIndex": 62, "trend": "down", "growthRate": -3.2, "tags": ["retro", "2-player"], "url": "#" },
+    { "name": "Brain Test: Tricky Puzzles", "developer": "Unico Studio", "genre": "Puzzle", "subGenre": "Trivia", "rating": 4.5, "ratingsCount": 210000, "downloads": "30M+", "downloadsNum": 35000000, "releaseDate": "2019-11-10", "lastUpdate": "2026-06-15", "price": "Free", "hypeIndex": 73, "trend": "stable", "growthRate": 1.5, "tags": ["brain", "funny"], "url": "#" },
+    { "name": "Who Is?", "developer": "Unico Studio", "genre": "Puzzle", "subGenre": "Riddle", "rating": 4.4, "ratingsCount": 150000, "downloads": "15M+", "downloadsNum": 18000000, "releaseDate": "2020-12-01", "lastUpdate": "2025-10-20", "price": "Free", "hypeIndex": 68, "trend": "down", "growthRate": -1.8, "tags": ["puzzle", "detective"], "url": "#" },
+    { "name": "Tribals.io", "developer": "ONRUSH Studio", "genre": "Action", "subGenre": "Survival", "rating": 4.2, "ratingsCount": 65000, "downloads": "5M+", "downloadsNum": 6000000, "releaseDate": "2022-06-15", "lastUpdate": "2026-09-01", "price": "Free", "hypeIndex": 76, "trend": "up", "growthRate": 9.4, "tags": ["multiplayer", "survival"], "url": "#" },
+    { "name": "Moto X3M", "developer": "MadPuffers", "genre": "Racing", "subGenre": "Bike", "rating": 4.7, "ratingsCount": 450000, "downloads": "50M+", "downloadsNum": 60000000, "releaseDate": "2016-05-10", "lastUpdate": "2024-08-20", "price": "Free", "hypeIndex": 78, "trend": "stable", "growthRate": 2.5, "tags": ["bike", "physics"], "url": "#" },
+    { "name": "Onet Paradise", "developer": "Potato Jam", "genre": "Puzzle", "subGenre": "Matching", "rating": 4.3, "ratingsCount": 35000, "downloads": "2M+", "downloadsNum": 2500000, "releaseDate": "2021-04-10", "lastUpdate": "2025-01-15", "price": "Free", "hypeIndex": 60, "trend": "down", "growthRate": -4.5, "tags": ["matching", "relaxing"], "url": "#" },
+    { "name": "Raft Wars", "developer": "Martijn Kunst", "genre": "Action", "subGenre": "Shooter", "rating": 4.5, "ratingsCount": 180000, "downloads": "15M+", "downloadsNum": 17000000, "releaseDate": "2007-10-15", "lastUpdate": "2024-11-20", "price": "Free", "hypeIndex": 70, "trend": "stable", "growthRate": 1.2, "tags": ["classic", "turn-based"], "url": "#" },
+    { "name": "Murder", "developer": "Studio Seufz", "genre": "Action", "subGenre": "Arcade", "rating": 4.6, "ratingsCount": 110000, "downloads": "8M+", "downloadsNum": 9500000, "releaseDate": "2014-11-01", "lastUpdate": "2023-05-10", "price": "Free", "hypeIndex": 65, "trend": "down", "growthRate": -2.5, "tags": ["funny", "stealth"], "url": "#" },
+    { "name": "Water Color Sort", "developer": "VNStart Studio", "genre": "Puzzle", "subGenre": "Brain Game", "rating": 4.4, "ratingsCount": 220000, "downloads": "25M+", "downloadsNum": 28000000, "releaseDate": "2020-08-15", "lastUpdate": "2026-08-05", "price": "Free", "hypeIndex": 74, "trend": "up", "growthRate": 6.8, "tags": ["puzzle", "sorting"], "url": "#" },
+    { "name": "Blob.io", "developer": "IO Games", "genre": "Arcade", "subGenre": ".io", "rating": 4.2, "ratingsCount": 85000, "downloads": "5M+", "downloadsNum": 5000000, "releaseDate": "2021-04-10", "lastUpdate": "2026-08-01", "price": "Free", "hypeIndex": 68, "trend": "stable", "growthRate": 1.5, "tags": ["multiplayer", "io"], "url": "#"},
+    { "name": "Fashion Star", "developer": "Girls Play", "genre": "Casual", "subGenre": "Dress-up", "rating": 4.5, "ratingsCount": 120000, "downloads": "10M+", "downloadsNum": 10000000, "releaseDate": "2023-08-15", "lastUpdate": "2026-09-10", "price": "Free", "hypeIndex": 72, "trend": "up", "growthRate": 5.2, "tags": ["fashion", "girls"], "url": "#"},
+    { "name": "Burger Master", "developer": "Food Games", "genre": "Simulation", "subGenre": "Cooking", "rating": 4.6, "ratingsCount": 95000, "downloads": "8M+", "downloadsNum": 8000000, "releaseDate": "2022-11-20", "lastUpdate": "2026-07-25", "price": "Free", "hypeIndex": 75, "trend": "stable", "growthRate": 2.8, "tags": ["cooking", "management"], "url": "#"},
+    { "name": "Gold Clicker", "developer": "Idle Co", "genre": "Simulation", "subGenre": "Clicker", "rating": 4.3, "ratingsCount": 65000, "downloads": "4M+", "downloadsNum": 4000000, "releaseDate": "2024-05-10", "lastUpdate": "2026-06-15", "price": "Free", "hypeIndex": 60, "trend": "down", "growthRate": -3.5, "tags": ["idle", "clicker"], "url": "#"},
+    { "name": "Defend The Wall", "developer": "Strategy Studio", "genre": "Strategy", "subGenre": "Tower Defense", "rating": 4.7, "ratingsCount": 45000, "downloads": "2M+", "downloadsNum": 2000000, "releaseDate": "2025-02-28", "lastUpdate": "2026-09-05", "price": "Free", "hypeIndex": 80, "trend": "up", "growthRate": 12.4, "tags": ["strategy", "defense"], "url": "#"},
+    { "name": "Draw and Guess", "developer": "Party Games", "genre": "Puzzle", "subGenre": "Drawing", "rating": 4.8, "ratingsCount": 150000, "downloads": "15M+", "downloadsNum": 15000000, "releaseDate": "2020-10-10", "lastUpdate": "2026-08-20", "price": "Free", "hypeIndex": 85, "trend": "stable", "growthRate": 4.1, "tags": ["multiplayer", "drawing"], "url": "#"},
+    { "name": "Hoops Champ", "developer": "Sporty", "genre": "Sports", "subGenre": "Basketball", "rating": 4.4, "ratingsCount": 75000, "downloads": "6M+", "downloadsNum": 6000000, "releaseDate": "2023-01-15", "lastUpdate": "2026-05-30", "price": "Free", "hypeIndex": 65, "trend": "down", "growthRate": -2.1, "tags": ["sports", "basketball"], "url": "#"},
+    { "name": "Slither Snake 3D", "developer": "IO Games", "genre": "Arcade", "subGenre": ".io", "rating": 4.1, "ratingsCount": 110000, "downloads": "9M+", "downloadsNum": 9000000, "releaseDate": "2019-06-20", "lastUpdate": "2025-12-10", "price": "Free", "hypeIndex": 55, "trend": "down", "growthRate": -5.5, "tags": ["multiplayer", "snake"], "url": "#"}
+  ],
+  "niches": [
+    { "genre": "IO Survival", "demand": "high", "supply": "low", "opportunity": 88, "topGames": 8, "avgRating": 4.3 },
+    { "genre": "Physics Racing", "demand": "medium", "supply": "medium", "opportunity": 60, "topGames": 25, "avgRating": 4.5 },
+    { "genre": "Idle Management", "demand": "high", "supply": "high", "opportunity": 55, "topGames": 40, "avgRating": 4.2 },
+    { "genre": "Casual Dress-up", "demand": "medium", "supply": "high", "opportunity": 40, "topGames": 150, "avgRating": 4.2},
+    { "genre": "Drawing Multiplayer", "demand": "high", "supply": "low", "opportunity": 78, "topGames": 10, "avgRating": 4.6},
+    { "genre": "Idle Sports", "demand": "medium", "supply": "low", "opportunity": 70, "topGames": 25, "avgRating": 4.4}
+  ],
+  "genreDistribution": {
+    "Action": 22,
+    "Arcade": 17,
+    "Racing": 13,
+    "Simulation": 13,
+    "Puzzle": 22,
+    "Casual": 4,
+    "Strategy": 4,
+    "Sports": 5
+  },
+  "trendHistory": [
+    {"date": "2026-05", "hypeAvg": 68},
+    {"date": "2026-06", "hypeAvg": 69},
+    {"date": "2026-07", "hypeAvg": 71},
+    {"date": "2026-08", "hypeAvg": 73},
+    {"date": "2026-09", "hypeAvg": 74},
+    {"date": "2026-10", "hypeAvg": 75}
+  ]
+}
