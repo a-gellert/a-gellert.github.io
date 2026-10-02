@@ -27,6 +27,10 @@
                     <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
                     <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Yandex Games</li>
                 </ul>
+                <h3 style="margin-top:15px">Обзоры</h3>
+                <ul>
+                    <li id="new-releases-tab" class="nav-special"><i class="fa-solid fa-rocket"></i> Интересные новинки</li>
+                </ul>
             </nav>
             
             <div class="filters">
@@ -50,7 +54,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" id="platform-view">
             <header class="topbar">
                 <div>
                     <h1 id="current-platform-title">Google Play Тренд Аналитика</h1>
@@ -130,6 +134,101 @@
                         </thead>
                         <tbody id="games-tbody">
                             <!-- Rows injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- New Releases Section (hidden by default) -->
+        <main class="main-content" id="new-releases-view" style="display:none">
+            <header class="topbar">
+                <div>
+                    <h1><i class="fa-solid fa-rocket" style="color:var(--accent)"></i> Интересные новинки</h1>
+                    <p class="subtitle">Игры за последние 30 дней с отличным ростом и удержанием • <span id="nr-last-updated">Загрузка...</span></p>
+                </div>
+                <button id="nr-export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт CSV</button>
+            </header>
+
+            <!-- New Releases Overview -->
+            <section class="overview-cards">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="card-info">
+                        <h4>Новинок</h4>
+                        <div class="card-value" id="nr-total">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
+                    <div class="card-info">
+                        <h4>Средний Hype</h4>
+                        <div class="card-value" id="nr-avg-hype">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-user-clock"></i></div>
+                    <div class="card-info">
+                        <h4>Retention D1 (ср.)</h4>
+                        <div class="card-value" id="nr-avg-d1">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-calendar-week"></i></div>
+                    <div class="card-info">
+                        <h4>Retention D7 (ср.)</h4>
+                        <div class="card-value" id="nr-avg-d7">-</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="card-info">
+                        <h4>Средний рост</h4>
+                        <div class="card-value" id="nr-avg-growth">-</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Row -->
+            <section class="charts-section">
+                <div class="chart-container">
+                    <h3>Новинки по платформам</h3>
+                    <canvas id="nrPlatformChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Retention: D1 → D7 → D30 (топ-8 игр)</h3>
+                    <canvas id="nrRetentionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- New Releases Niches -->
+            <section class="niches-section">
+                <h3><i class="fa-solid fa-lightbulb"></i> Горячие ниши новинок</h3>
+                <div class="niches-grid" id="nr-niches-container">
+                </div>
+            </section>
+
+            <!-- New Releases Table -->
+            <section class="table-section">
+                <div class="table-header">
+                    <h3><i class="fa-solid fa-list-check"></i> Все новинки (последние 30 дней)</h3>
+                </div>
+                <div class="table-responsive">
+                    <table id="nr-table">
+                        <thead>
+                            <tr>
+                                <th data-sort-nr="name">Название <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="platform">Платформа <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="genre">Жанр <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="hypeIndex">Hype <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="retentionDay1">D1 <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="retentionDay7">D7 <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort-nr="growthRate">Рост <i class="fa-solid fa-sort"></i></th>
+                                <th>Инсайт</th>
+                            </tr>
+                        </thead>
+                        <tbody id="nr-tbody">
                         </tbody>
                     </table>
                 </div>
