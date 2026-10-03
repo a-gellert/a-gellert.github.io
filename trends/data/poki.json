@@ -1,22 +1,22 @@
 {
   "platform": "poki",
-  "lastUpdated": "2026-10-02",
+  "lastUpdated": "2026-10-03",
   "games": [
     {
       "name": "Subway Surfers",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.5,
-      "ratingsCount": 82323,
-      "downloads": "18M+",
-      "downloadsNum": 12095332,
+      "rating": 4.6,
+      "ratingsCount": 41254,
+      "downloads": "5M+",
+      "downloadsNum": 8473039,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 81,
-      "trend": "stable",
-      "growthRate": -2.9,
+      "hypeIndex": 62,
+      "trend": "up",
+      "growthRate": 18.7,
       "tags": [
         "popular",
         "browser"
@@ -28,16 +28,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.7,
-      "ratingsCount": 57627,
-      "downloads": "50M+",
-      "downloadsNum": 15457272,
+      "rating": 4.4,
+      "ratingsCount": 118864,
+      "downloads": "19M+",
+      "downloadsNum": 23837648,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 85,
-      "trend": "down",
-      "growthRate": -3.5,
+      "hypeIndex": 58,
+      "trend": "up",
+      "growthRate": 6.5,
       "tags": [
         "popular",
         "browser"
@@ -49,16 +49,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.4,
-      "ratingsCount": 40862,
-      "downloads": "42M+",
-      "downloadsNum": 19004914,
+      "rating": 4.3,
+      "ratingsCount": 63490,
+      "downloads": "18M+",
+      "downloadsNum": 24264338,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 72,
-      "trend": "stable",
-      "growthRate": 1.1,
+      "hypeIndex": 57,
+      "trend": "down",
+      "growthRate": -3.3,
       "tags": [
         "popular",
         "browser"
@@ -66,41 +66,20 @@
       "url": "https://poki.com/en/g/minefun-io"
     },
     {
-      "name": "Tag",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 184288,
-      "downloads": "45M+",
-      "downloadsNum": 24142602,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
-      "price": "Free",
-      "hypeIndex": 69,
-      "trend": "stable",
-      "growthRate": 4.7,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/tag"
-    },
-    {
       "name": "Scary Teacher 3D",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.5,
-      "ratingsCount": 23737,
-      "downloads": "3M+",
-      "downloadsNum": 38543462,
+      "rating": 4.9,
+      "ratingsCount": 105370,
+      "downloads": "11M+",
+      "downloadsNum": 5809889,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 91,
+      "hypeIndex": 81,
       "trend": "up",
-      "growthRate": 14.7,
+      "growthRate": 10,
       "tags": [
         "popular",
         "browser"
@@ -108,20 +87,41 @@
       "url": "https://poki.com/en/g/scary-teacher-3d"
     },
     {
+      "name": "Stickman Battle",
+      "developer": "Poki Developer",
+      "genre": "Popular",
+      "subGenre": "Browser Game",
+      "rating": 4.6,
+      "ratingsCount": 2906,
+      "downloads": "7M+",
+      "downloadsNum": 11807955,
+      "releaseDate": "2023-01-01",
+      "lastUpdate": "2026-10-03",
+      "price": "Free",
+      "hypeIndex": 71,
+      "trend": "stable",
+      "growthRate": 1.9,
+      "tags": [
+        "popular",
+        "browser"
+      ],
+      "url": "https://poki.com/en/g/stickman-battle"
+    },
+    {
       "name": "Steal a Brainrot",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.8,
-      "ratingsCount": 6448,
-      "downloads": "11M+",
-      "downloadsNum": 24148692,
+      "rating": 4.1,
+      "ratingsCount": 50609,
+      "downloads": "2M+",
+      "downloadsNum": 21402741,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 71,
+      "hypeIndex": 69,
       "trend": "up",
-      "growthRate": 19.3,
+      "growthRate": 11.4,
       "tags": [
         "popular",
         "browser"
@@ -133,16 +133,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.4,
-      "ratingsCount": 181743,
-      "downloads": "28M+",
-      "downloadsNum": 48184768,
+      "rating": 4.7,
+      "ratingsCount": 19039,
+      "downloads": "42M+",
+      "downloadsNum": 14544228,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 92,
-      "trend": "up",
-      "growthRate": 18.4,
+      "hypeIndex": 69,
+      "trend": "stable",
+      "growthRate": -0.4,
       "tags": [
         "popular",
         "browser"
@@ -155,15 +155,15 @@
       "genre": "Popular",
       "subGenre": "Browser Game",
       "rating": 4.5,
-      "ratingsCount": 175190,
+      "ratingsCount": 103442,
       "downloads": "12M+",
-      "downloadsNum": 46540756,
+      "downloadsNum": 20640491,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 91,
+      "hypeIndex": 82,
       "trend": "up",
-      "growthRate": 8.9,
+      "growthRate": 15.6,
       "tags": [
         "popular",
         "browser"
@@ -175,16 +175,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.8,
-      "ratingsCount": 39578,
-      "downloads": "23M+",
-      "downloadsNum": 28198843,
+      "rating": 4.2,
+      "ratingsCount": 91680,
+      "downloads": "17M+",
+      "downloadsNum": 7106400,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 66,
-      "trend": "up",
-      "growthRate": 17.7,
+      "hypeIndex": 74,
+      "trend": "down",
+      "growthRate": -4.5,
       "tags": [
         "popular",
         "browser"
@@ -196,16 +196,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.1,
-      "ratingsCount": 66452,
-      "downloads": "44M+",
-      "downloadsNum": 48754456,
+      "rating": 4.6,
+      "ratingsCount": 49357,
+      "downloads": "48M+",
+      "downloadsNum": 28894325,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
       "hypeIndex": 55,
       "trend": "up",
-      "growthRate": 14.8,
+      "growthRate": 7.7,
       "tags": [
         "popular",
         "browser"
@@ -217,16 +217,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.2,
-      "ratingsCount": 33793,
+      "rating": 4.1,
+      "ratingsCount": 54178,
       "downloads": "40M+",
-      "downloadsNum": 33612948,
+      "downloadsNum": 7528182,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 91,
-      "trend": "up",
-      "growthRate": 11.3,
+      "hypeIndex": 61,
+      "trend": "stable",
+      "growthRate": -0.4,
       "tags": [
         "popular",
         "browser"
@@ -238,16 +238,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.3,
-      "ratingsCount": 167069,
-      "downloads": "47M+",
-      "downloadsNum": 16671177,
+      "rating": 4.1,
+      "ratingsCount": 169862,
+      "downloads": "8M+",
+      "downloadsNum": 30094507,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-02",
+      "lastUpdate": "2026-10-03",
       "price": "Free",
-      "hypeIndex": 82,
-      "trend": "down",
-      "growthRate": -4.1,
+      "hypeIndex": 78,
+      "trend": "up",
+      "growthRate": 19,
       "tags": [
         "popular",
         "browser"
@@ -287,27 +287,27 @@
   "trendHistory": [
     {
       "date": "2026-05",
-      "hypeAvg": 80
+      "hypeAvg": 68
     },
     {
       "date": "2026-06",
-      "hypeAvg": 81
+      "hypeAvg": 65
     },
     {
       "date": "2026-07",
-      "hypeAvg": 79
+      "hypeAvg": 70
     },
     {
       "date": "2026-08",
-      "hypeAvg": 78
+      "hypeAvg": 67
     },
     {
       "date": "2026-09",
-      "hypeAvg": 77
+      "hypeAvg": 67
     },
     {
       "date": "2026-10",
-      "hypeAvg": 80
+      "hypeAvg": 66
     }
   ]
 }
