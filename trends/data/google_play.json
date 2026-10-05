@@ -1,6 +1,6 @@
 {
   "platform": "google_play",
-  "lastUpdated": "2026-10-04",
+  "lastUpdated": "2026-10-05",
   "games": [
     {
       "name": "Fortnite",
@@ -12,16 +12,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 49,
+      "hypeIndex": 46,
       "trend": "up",
-      "growthRate": 24.8,
+      "growthRate": 11.2,
       "tags": [
         "action",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.epicgames.fortnite"
+    },
+    {
+      "name": "Slow Mo Strike: Knives in Time",
+      "developer": "KAYAC Inc.",
+      "genre": "Action",
+      "subGenre": "Action",
+      "rating": 4.6,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 12.3,
+      "tags": [
+        "action",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.kayac.slow_mo_strike"
     },
     {
       "name": "Castle Busters",
@@ -33,37 +54,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 40,
-      "trend": "stable",
-      "growthRate": 1.7,
+      "hypeIndex": 41,
+      "trend": "up",
+      "growthRate": 5.8,
       "tags": [
         "action",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.epicoro.castleclashers"
-    },
-    {
-      "name": "Slow Mo Strike: Knives in Time",
-      "developer": "KAYAC Inc.",
-      "genre": "Action",
-      "subGenre": "Action",
-      "rating": 4.5,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 13.4,
-      "tags": [
-        "action",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.kayac.slow_mo_strike"
     },
     {
       "name": "Among Us",
@@ -75,11 +75,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
+      "hypeIndex": 40,
       "trend": "up",
-      "growthRate": 11.9,
+      "growthRate": 6.5,
       "tags": [
         "action",
         "free"
@@ -96,16 +96,58 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 45,
       "trend": "up",
-      "growthRate": 19.1,
+      "growthRate": 18.5,
       "tags": [
         "action",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.activision.callofduty.shooter"
+    },
+    {
+      "name": "Shoot & Hide",
+      "developer": "CrazyLabs LTD",
+      "genre": "Action",
+      "subGenre": "Action",
+      "rating": 4.5,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 20.4,
+      "tags": [
+        "action",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.sniper.shoot.hide.game"
+    },
+    {
+      "name": "Kick the Buddy－Fun Action Game",
+      "developer": "Playgendary Limited",
+      "genre": "Action",
+      "subGenre": "Action",
+      "rating": 4.1,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 45,
+      "trend": "up",
+      "growthRate": 21.7,
+      "tags": [
+        "action",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.playgendary.kickthebuddy"
     },
     {
       "name": "Free Fire x NARUTO SHIPPUDEN",
@@ -117,11 +159,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
+      "hypeIndex": 40,
       "trend": "stable",
-      "growthRate": 2.4,
+      "growthRate": -2.9,
       "tags": [
         "action",
         "free"
@@ -133,42 +175,21 @@
       "developer": "ninja kiwi",
       "genre": "Action",
       "subGenre": "Action",
-      "rating": 3.8,
+      "rating": 3.7,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
+      "hypeIndex": 39,
       "trend": "up",
-      "growthRate": 19.6,
+      "growthRate": 8.6,
       "tags": [
         "action",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.ninjakiwi.bloonsblitz"
-    },
-    {
-      "name": "OverPeak : Action Game",
-      "developer": "R-USER Games",
-      "genre": "Action",
-      "subGenre": "Action",
-      "rating": 4.2,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 39,
-      "trend": "stable",
-      "growthRate": -2.2,
-      "tags": [
-        "action",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.rusergames.overpeak"
     },
     {
       "name": "Ghost Sniper: War FPS Shooter",
@@ -180,37 +201,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 44,
       "trend": "up",
-      "growthRate": 14.4,
+      "growthRate": 6.9,
       "tags": [
         "action",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=sniper.war.target.soldier.shooter.aldagames.com"
-    },
-    {
-      "name": "Shoot & Hide",
-      "developer": "CrazyLabs LTD",
-      "genre": "Action",
-      "subGenre": "Action",
-      "rating": 4.4,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 44,
-      "trend": "up",
-      "growthRate": 10.7,
-      "tags": [
-        "action",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.sniper.shoot.hide.game"
     },
     {
       "name": "Rotate Rings",
@@ -222,11 +222,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 44,
-      "trend": "stable",
-      "growthRate": 2.6,
+      "hypeIndex": 48,
+      "trend": "up",
+      "growthRate": 17.1,
       "tags": [
         "puzzle",
         "free"
@@ -243,37 +243,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 48,
       "trend": "up",
-      "growthRate": 7.1,
+      "growthRate": 20.1,
       "tags": [
         "puzzle",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.oakever.meowdoku"
-    },
-    {
-      "name": "Smash Land!",
-      "developer": "Flow Games A.S.",
-      "genre": "Puzzle",
-      "subGenre": "Puzzle",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 43,
-      "trend": "stable",
-      "growthRate": 0.9,
-      "tags": [
-        "puzzle",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.flow.smashparty"
     },
     {
       "name": "Block Blast!",
@@ -285,16 +264,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
-      "trend": "down",
-      "growthRate": -4.1,
+      "hypeIndex": 48,
+      "trend": "up",
+      "growthRate": 16.8,
       "tags": [
         "puzzle",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.block.juggle"
+    },
+    {
+      "name": "Smash Land!",
+      "developer": "Flow Games A.S.",
+      "genre": "Puzzle",
+      "subGenre": "Puzzle",
+      "rating": 4.6,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 43,
+      "trend": "stable",
+      "growthRate": -0.1,
+      "tags": [
+        "puzzle",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.flow.smashparty"
     },
     {
       "name": "Magic Sort!",
@@ -306,37 +306,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 47,
+      "hypeIndex": 48,
       "trend": "up",
-      "growthRate": 21.5,
+      "growthRate": 23.7,
       "tags": [
         "puzzle",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.grandgames.magicsort"
-    },
-    {
-      "name": "Brain Puzzle 3: Crazy Mind",
-      "developer": "JoyGame Studio",
-      "genre": "Puzzle",
-      "subGenre": "Puzzle",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 43,
-      "trend": "stable",
-      "growthRate": 0.9,
-      "tags": [
-        "puzzle",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.brain.crazy.joygame"
     },
     {
       "name": "Woodoku Blast",
@@ -348,11 +327,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 44,
       "trend": "stable",
-      "growthRate": 0.8,
+      "growthRate": 3.2,
       "tags": [
         "puzzle",
         "free"
@@ -360,20 +339,41 @@
       "url": "https://play.google.com/store/apps/details?id=com.tripledot.blockbash"
     },
     {
-      "name": "Amaze GO!",
-      "developer": "Oakever Games",
+      "name": "Brain Puzzle 3: Crazy Mind",
+      "developer": "JoyGame Studio",
       "genre": "Puzzle",
       "subGenre": "Puzzle",
-      "rating": 4.8,
+      "rating": 4.6,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
-      "trend": "stable",
-      "growthRate": 2.8,
+      "hypeIndex": 48,
+      "trend": "up",
+      "growthRate": 22.7,
+      "tags": [
+        "puzzle",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.brain.crazy.joygame"
+    },
+    {
+      "name": "Amaze GO!",
+      "developer": "Oakever Games",
+      "genre": "Puzzle",
+      "subGenre": "Puzzle",
+      "rating": 4.9,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 7,
       "tags": [
         "puzzle",
         "free"
@@ -390,11 +390,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 41,
-      "trend": "stable",
-      "growthRate": 1.1,
+      "hypeIndex": 43,
+      "trend": "up",
+      "growthRate": 9,
       "tags": [
         "puzzle",
         "free"
@@ -411,11 +411,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 8.5,
+      "hypeIndex": 44,
+      "trend": "stable",
+      "growthRate": -0.4,
       "tags": [
         "puzzle",
         "free"
@@ -427,42 +427,21 @@
       "developer": "Pawprint Studio",
       "genre": "RPG",
       "subGenre": "RPG",
-      "rating": 3.3,
+      "rating": 3.4,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 34,
-      "trend": "stable",
-      "growthRate": -2.6,
+      "hypeIndex": 39,
+      "trend": "up",
+      "growthRate": 13.4,
       "tags": [
         "rpg",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.x.aniimos"
-    },
-    {
-      "name": "XP Hero",
-      "developer": "Supercent, Inc.",
-      "genre": "RPG",
-      "subGenre": "RPG",
-      "rating": 4.3,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 44,
-      "trend": "up",
-      "growthRate": 10.9,
-      "tags": [
-        "rpg",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=io.supercent.weaponrpg"
     },
     {
       "name": "Avatar World ®",
@@ -474,16 +453,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 44,
+      "hypeIndex": 43,
       "trend": "stable",
-      "growthRate": 3.1,
+      "growthRate": -1.1,
       "tags": [
         "rpg",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.pazugames.avatarworld"
+    },
+    {
+      "name": "XP Hero",
+      "developer": "Supercent, Inc.",
+      "genre": "RPG",
+      "subGenre": "RPG",
+      "rating": 4.3,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 23.7,
+      "tags": [
+        "rpg",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=io.supercent.weaponrpg"
     },
     {
       "name": "Frost World - Snow Survival",
@@ -495,11 +495,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "up",
-      "growthRate": 9.1,
+      "hypeIndex": 39,
+      "trend": "stable",
+      "growthRate": -2.5,
       "tags": [
         "rpg",
         "free"
@@ -516,16 +516,58 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 13.1,
+      "hypeIndex": 43,
+      "trend": "stable",
+      "growthRate": 1.5,
       "tags": [
         "rpg",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.plarium.raidlegends"
+    },
+    {
+      "name": "Gangster Miami RP: Grand City",
+      "developer": "Universe Game Labs",
+      "genre": "RPG",
+      "subGenre": "RPG",
+      "rating": 4.5,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 14.5,
+      "tags": [
+        "rpg",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.bf8.car.street.racing.game3d"
+    },
+    {
+      "name": "Super Stylist Fashion Makeover",
+      "developer": "CrazyLabs LTD",
+      "genre": "RPG",
+      "subGenre": "RPG",
+      "rating": 4.4,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 42,
+      "trend": "stable",
+      "growthRate": 2.8,
+      "tags": [
+        "rpg",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.cocoplay.fashion.style"
     },
     {
       "name": "Rogue Legend - Roguelike RPG",
@@ -537,37 +579,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 48,
+      "hypeIndex": 46,
       "trend": "up",
-      "growthRate": 18.9,
+      "growthRate": 11.9,
       "tags": [
         "rpg",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.pockethaven.roguelegend"
-    },
-    {
-      "name": "Gangster Miami RP: Grand City",
-      "developer": "Universe Game Labs",
-      "genre": "RPG",
-      "subGenre": "RPG",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 48,
-      "trend": "up",
-      "growthRate": 23.7,
-      "tags": [
-        "rpg",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.bf8.car.street.racing.game3d"
     },
     {
       "name": "Hero Wars: Alliance RPG Legend",
@@ -579,11 +600,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 14,
+      "hypeIndex": 42,
+      "trend": "stable",
+      "growthRate": -1.7,
       "tags": [
         "rpg",
         "free"
@@ -591,46 +612,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.nexters.herowars"
     },
     {
-      "name": "Little Farm Story: Idle Tycoon",
-      "developer": "SayGames Ltd",
+      "name": "Seven Knights Re:BIRTH",
+      "developer": "Netmarble",
       "genre": "RPG",
       "subGenre": "RPG",
-      "rating": 4.3,
+      "rating": 4.5,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 41,
-      "trend": "stable",
-      "growthRate": -0.6,
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 16.6,
       "tags": [
         "rpg",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.h8games.littlefarmstory"
-    },
-    {
-      "name": "Path of Kings",
-      "developer": "VOODOO",
-      "genre": "RPG",
-      "subGenre": "RPG",
-      "rating": 4.7,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 44,
-      "trend": "stable",
-      "growthRate": 1.9,
-      "tags": [
-        "rpg",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.TornadoBear.WayofKings"
+      "url": "https://play.google.com/store/apps/details?id=com.netmarble.tskgb"
     },
     {
       "name": "Melon Sandbox",
@@ -642,58 +642,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
-      "trend": "up",
-      "growthRate": 6.8,
+      "hypeIndex": 43,
+      "trend": "stable",
+      "growthRate": -1.9,
       "tags": [
         "simulation",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.studio27.MelonPlayground"
-    },
-    {
-      "name": "Car Evolve",
-      "developer": "Heseri Games",
-      "genre": "Simulation",
-      "subGenre": "Simulation",
-      "rating": 3,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 33,
-      "trend": "stable",
-      "growthRate": 1.4,
-      "tags": [
-        "simulation",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=io.heseri.car"
-    },
-    {
-      "name": "Freddy Playground Sandbox",
-      "developer": "Big Host Africa",
-      "genre": "Simulation",
-      "subGenre": "Simulation",
-      "rating": 3.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 43,
-      "trend": "up",
-      "growthRate": 24.7,
-      "tags": [
-        "simulation",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.freddys.playground.sandbox"
     },
     {
       "name": "Solar Smash",
@@ -705,16 +663,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 45,
       "trend": "up",
-      "growthRate": 13.3,
+      "growthRate": 8.4,
       "tags": [
         "simulation",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.paradyme.solarsmash"
+    },
+    {
+      "name": "Car Evolve",
+      "developer": "Heseri Games",
+      "genre": "Simulation",
+      "subGenre": "Simulation",
+      "rating": 3,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 38,
+      "trend": "up",
+      "growthRate": 19.9,
+      "tags": [
+        "simulation",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=io.heseri.car"
     },
     {
       "name": "Annoying Uncle Punch Game®",
@@ -726,11 +705,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "stable",
-      "growthRate": 4.1,
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 17.8,
       "tags": [
         "simulation",
         "free"
@@ -738,25 +717,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.gtsy.annoying.punch.game"
     },
     {
-      "name": "NoomiClone",
-      "developer": "NoomiClone Dev",
+      "name": "Freddy Playground Sandbox",
+      "developer": "Big Host Africa",
       "genre": "Simulation",
       "subGenre": "Simulation",
-      "rating": 4.3,
+      "rating": 3.2,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 39,
       "trend": "up",
-      "growthRate": 15.7,
+      "growthRate": 18.7,
       "tags": [
         "simulation",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.JamesWest.NoomiClone"
+      "url": "https://play.google.com/store/apps/details?id=com.freddys.playground.sandbox"
     },
     {
       "name": "Keyboard Escape: +1 Speed ASMR",
@@ -768,16 +747,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "up",
-      "growthRate": 23.6,
+      "hypeIndex": 36,
+      "trend": "stable",
+      "growthRate": 2.3,
       "tags": [
         "simulation",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.metax.obby.escape.run"
+    },
+    {
+      "name": "Craft Builder: 3D Block World",
+      "developer": "Coup Coup LTD",
+      "genre": "Simulation",
+      "subGenre": "Simulation",
+      "rating": 3.5,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 39,
+      "trend": "up",
+      "growthRate": 11.7,
+      "tags": [
+        "simulation",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.novas.craft.builder.block.world"
     },
     {
       "name": "Pizza Ready!",
@@ -789,16 +789,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 18.5,
+      "hypeIndex": 43,
+      "trend": "stable",
+      "growthRate": 4,
       "tags": [
         "simulation",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=io.supercent.pizzaidle"
+    },
+    {
+      "name": "Viral Streamer: Idle Clicker",
+      "developer": "CSCMobi Studios",
+      "genre": "Simulation",
+      "subGenre": "Simulation",
+      "rating": 4.7,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 42,
+      "trend": "down",
+      "growthRate": -3.2,
+      "tags": [
+        "simulation",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.cscmobi.livestream.idle.clicker"
     },
     {
       "name": "Kick & Break The Ragdoll Games",
@@ -810,37 +831,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
-      "trend": "up",
-      "growthRate": 8.5,
+      "hypeIndex": 42,
+      "trend": "down",
+      "growthRate": -3.7,
       "tags": [
         "simulation",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.playflix.kick.breakragdoll.games"
-    },
-    {
-      "name": "Viral Streamer: Idle Clicker",
-      "developer": "CSCMobi Studios",
-      "genre": "Simulation",
-      "subGenre": "Simulation",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 44,
-      "trend": "stable",
-      "growthRate": 5,
-      "tags": [
-        "simulation",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.cscmobi.livestream.idle.clicker"
     },
     {
       "name": "Warline: Sniper Strike",
@@ -852,11 +852,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 50,
       "trend": "up",
-      "growthRate": 22.9,
+      "growthRate": 23.3,
       "tags": [
         "strategy",
         "free"
@@ -873,11 +873,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 44,
       "trend": "up",
-      "growthRate": 25,
+      "growthRate": 19,
       "tags": [
         "strategy",
         "free"
@@ -889,16 +889,16 @@
       "developer": "37GAMES GLOBAL",
       "genre": "Strategy",
       "subGenre": "Strategy",
-      "rating": 4.6,
+      "rating": 4.5,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
-      "trend": "stable",
-      "growthRate": 0.2,
+      "hypeIndex": 45,
+      "trend": "up",
+      "growthRate": 13,
       "tags": [
         "strategy",
         "free"
@@ -915,37 +915,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 44,
       "trend": "up",
-      "growthRate": 13.8,
+      "growthRate": 13.2,
       "tags": [
         "strategy",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.s01.global"
-    },
-    {
-      "name": "Last Asylum: Plague",
-      "developer": "37GAMES GLOBAL",
-      "genre": "Strategy",
-      "subGenre": "Strategy",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 12.4,
-      "tags": [
-        "strategy",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.phs.global"
     },
     {
       "name": "Kingshot",
@@ -957,16 +936,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 41,
-      "trend": "stable",
-      "growthRate": -0.2,
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 18.4,
       "tags": [
         "strategy",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.run.tower.defense"
+    },
+    {
+      "name": "Last Asylum: Plague",
+      "developer": "37GAMES GLOBAL",
+      "genre": "Strategy",
+      "subGenre": "Strategy",
+      "rating": 4.6,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 45,
+      "trend": "up",
+      "growthRate": 8.7,
+      "tags": [
+        "strategy",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.phs.global"
     },
     {
       "name": "Total Battle: War Strategy",
@@ -978,37 +978,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "up",
-      "growthRate": 10.5,
+      "hypeIndex": 39,
+      "trend": "down",
+      "growthRate": -3.9,
       "tags": [
         "strategy",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.totalbattle"
-    },
-    {
-      "name": "Top Lords",
-      "developer": "GAME SPARK",
-      "genre": "Strategy",
-      "subGenre": "Strategy",
-      "rating": 4.7,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 49,
-      "trend": "up",
-      "growthRate": 20.9,
-      "tags": [
-        "strategy",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.gamespark.topking.gp"
     },
     {
       "name": "Tiles Survive!",
@@ -1020,11 +999,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 48,
+      "hypeIndex": 45,
       "trend": "up",
-      "growthRate": 24.5,
+      "growthRate": 15.6,
       "tags": [
         "strategy",
         "free"
@@ -1032,25 +1011,46 @@
       "url": "https://play.google.com/store/apps/details?id=com.funplus.ts.global"
     },
     {
-      "name": "Last Beacon: Survival",
-      "developer": "YG Technology FZ-LLC",
+      "name": "Top Lords",
+      "developer": "GAME SPARK",
       "genre": "Strategy",
       "subGenre": "Strategy",
-      "rating": 4.4,
+      "rating": 4.7,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
+      "hypeIndex": 47,
       "trend": "up",
-      "growthRate": 8.1,
+      "growthRate": 15.4,
       "tags": [
         "strategy",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.hnhs.endlesssea.gp"
+      "url": "https://play.google.com/store/apps/details?id=com.gamespark.topking.gp"
+    },
+    {
+      "name": "Police Chief",
+      "developer": "VoyagerOne IE",
+      "genre": "Strategy",
+      "subGenre": "Strategy",
+      "rating": 4.7,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 48,
+      "trend": "up",
+      "growthRate": 19.8,
+      "tags": [
+        "strategy",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.slg.policewar"
     },
     {
       "name": "Angry Birds 2",
@@ -1062,11 +1062,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 42,
       "trend": "up",
-      "growthRate": 11.9,
+      "growthRate": 10.4,
       "tags": [
         "casual",
         "free"
@@ -1074,25 +1074,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.rovio.baba"
     },
     {
-      "name": "Bus Fever Party!",
-      "developer": "Lumi Games",
+      "name": "MemeMix Challenge: Funny Party",
+      "developer": "Amobear VN Game Global",
       "genre": "Casual",
       "subGenre": "Casual",
-      "rating": 4.3,
+      "rating": 3.6,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "stable",
-      "growthRate": 5,
+      "hypeIndex": 40,
+      "trend": "up",
+      "growthRate": 14,
       "tags": [
         "casual",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=gridplus.busjam.carpuzzle"
+      "url": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun"
     },
     {
       "name": "Royal Smash! - Physics Puzzle",
@@ -1104,11 +1104,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 44,
-      "trend": "stable",
-      "growthRate": 4.7,
+      "hypeIndex": 48,
+      "trend": "up",
+      "growthRate": 20.5,
       "tags": [
         "casual",
         "free"
@@ -1116,25 +1116,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.cyphergames.royalsmash"
     },
     {
-      "name": "MemeMix Challenge: Funny Party",
-      "developer": "Amobear VN Game Global",
+      "name": "Bus Fever Party!",
+      "developer": "Lumi Games",
       "genre": "Casual",
       "subGenre": "Casual",
-      "rating": 3.5,
+      "rating": 4.2,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 35,
-      "trend": "stable",
-      "growthRate": -2.6,
+      "hypeIndex": 39,
+      "trend": "down",
+      "growthRate": -4.2,
       "tags": [
         "casual",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.mimik.challenge.fun"
+      "url": "https://play.google.com/store/apps/details?id=gridplus.busjam.carpuzzle"
     },
     {
       "name": "Township",
@@ -1146,37 +1146,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 47,
-      "trend": "up",
-      "growthRate": 16.7,
+      "hypeIndex": 44,
+      "trend": "stable",
+      "growthRate": 1.6,
       "tags": [
         "casual",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.playrix.township"
-    },
-    {
-      "name": "Candy Crush Saga",
-      "developer": "King",
-      "genre": "Casual",
-      "subGenre": "Casual",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 45,
-      "trend": "up",
-      "growthRate": 10.8,
-      "tags": [
-        "casual",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga"
     },
     {
       "name": "Idle Cat Gunner: Shooter RPG",
@@ -1188,11 +1167,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 41,
-      "trend": "stable",
-      "growthRate": -1.9,
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 22.4,
       "tags": [
         "casual",
         "free"
@@ -1209,11 +1188,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 48,
       "trend": "up",
-      "growthRate": 17.9,
+      "growthRate": 15.6,
       "tags": [
         "casual",
         "free"
@@ -1221,25 +1200,46 @@
       "url": "https://play.google.com/store/apps/details?id=com.animal.hunter.shooting.apex"
     },
     {
-      "name": "Frost Valley™: Merge & Story",
-      "developer": "Tuyoo Games (HK) Limited",
+      "name": "Candy Crush Saga",
+      "developer": "King",
       "genre": "Casual",
       "subGenre": "Casual",
-      "rating": 4.8,
+      "rating": 4.6,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 48,
       "trend": "up",
-      "growthRate": 6.5,
+      "growthRate": 22,
       "tags": [
         "casual",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.liteorange.hometopia"
+      "url": "https://play.google.com/store/apps/details?id=com.king.candycrushsaga"
+    },
+    {
+      "name": "Hole.io",
+      "developer": "VOODOO",
+      "genre": "Casual",
+      "subGenre": "Casual",
+      "rating": 3.2,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 34,
+      "trend": "stable",
+      "growthRate": -1,
+      "tags": [
+        "casual",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=io.voodoo.holeio"
     },
     {
       "name": "Angry Smash",
@@ -1251,11 +1251,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 51,
+      "hypeIndex": 49,
       "trend": "up",
-      "growthRate": 24.2,
+      "growthRate": 18.5,
       "tags": [
         "casual",
         "free"
@@ -1272,58 +1272,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 42,
       "trend": "stable",
-      "growthRate": 1.2,
+      "growthRate": -1.4,
       "tags": [
         "arcade",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.fungames.blockcraft"
-    },
-    {
-      "name": "Bulldozer Master: Crush & Mine",
-      "developer": "Supercent, Inc.",
-      "genre": "Arcade",
-      "subGenre": "Arcade",
-      "rating": 4.4,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 42,
-      "trend": "stable",
-      "growthRate": 4.1,
-      "tags": [
-        "arcade",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=io.supercent.bulldozermasters"
-    },
-    {
-      "name": "Mob Control",
-      "developer": "VOODOO",
-      "genre": "Arcade",
-      "subGenre": "Arcade",
-      "rating": 4.3,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 47,
-      "trend": "up",
-      "growthRate": 22,
-      "tags": [
-        "arcade",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.vincentb.MobControl"
     },
     {
       "name": "Paper.io 2",
@@ -1335,16 +1293,58 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 43,
       "trend": "up",
-      "growthRate": 22,
+      "growthRate": 12.1,
       "tags": [
         "arcade",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=io.voodoo.paper2"
+    },
+    {
+      "name": "Mob Control",
+      "developer": "VOODOO",
+      "genre": "Arcade",
+      "subGenre": "Arcade",
+      "rating": 4.3,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 22.1,
+      "tags": [
+        "arcade",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.vincentb.MobControl"
+    },
+    {
+      "name": "Bulldozer Master: Crush & Mine",
+      "developer": "Supercent, Inc.",
+      "genre": "Arcade",
+      "subGenre": "Arcade",
+      "rating": 4.4,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 46,
+      "trend": "up",
+      "growthRate": 16.7,
+      "tags": [
+        "arcade",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=io.supercent.bulldozermasters"
     },
     {
       "name": "Sled Surfers",
@@ -1356,37 +1356,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
-      "trend": "up",
-      "growthRate": 7.1,
+      "hypeIndex": 42,
+      "trend": "stable",
+      "growthRate": 0.5,
       "tags": [
         "arcade",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.sled.surfers.game"
-    },
-    {
-      "name": "Subway Surfers",
-      "developer": "SYBO Games",
-      "genre": "Arcade",
-      "subGenre": "Arcade",
-      "rating": 4.5,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 46,
-      "trend": "up",
-      "growthRate": 16.1,
-      "tags": [
-        "arcade",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
     },
     {
       "name": "Geometry Dash Lite",
@@ -1398,11 +1377,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 47,
       "trend": "up",
-      "growthRate": 15.4,
+      "growthRate": 20.6,
       "tags": [
         "arcade",
         "free"
@@ -1410,25 +1389,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.robtopx.geometryjumplite"
     },
     {
-      "name": "Bison Gold",
-      "developer": "Yousuf Rahman",
+      "name": "Subway Surfers",
+      "developer": "SYBO Games",
       "genre": "Arcade",
       "subGenre": "Arcade",
-      "rating": 4.4,
+      "rating": 4.5,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
+      "hypeIndex": 46,
       "trend": "up",
-      "growthRate": 6.3,
+      "growthRate": 13.9,
       "tags": [
         "arcade",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.bisongold.goldpg"
+      "url": "https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
     },
     {
       "name": "Snake Clash!",
@@ -1440,16 +1419,37 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 43,
       "trend": "up",
-      "growthRate": 13.4,
+      "growthRate": 5.2,
       "tags": [
         "arcade",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=io.supercent.linkedcubic"
+    },
+    {
+      "name": "Bison Gold",
+      "developer": "Yousuf Rahman",
+      "genre": "Arcade",
+      "subGenre": "Arcade",
+      "rating": 4.3,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 45,
+      "trend": "up",
+      "growthRate": 17.2,
+      "tags": [
+        "arcade",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.bisongold.goldpg"
     },
     {
       "name": "2 Player games : the Challenge",
@@ -1461,11 +1461,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 45,
       "trend": "up",
-      "growthRate": 13.8,
+      "growthRate": 8.7,
       "tags": [
         "arcade",
         "free"
@@ -1482,11 +1482,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 45,
+      "hypeIndex": 48,
       "trend": "up",
-      "growthRate": 10.9,
+      "growthRate": 24.7,
       "tags": [
         "racing",
         "free"
@@ -1503,37 +1503,16 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
+      "hypeIndex": 45,
       "trend": "up",
-      "growthRate": 6.9,
+      "growthRate": 20.2,
       "tags": [
         "racing",
         "free"
       ],
       "url": "https://play.google.com/store/apps/details?id=com.WalkTalk.FlightMaster"
-    },
-    {
-      "name": "Extreme Car Driving Simulator",
-      "developer": "AxesInMotion Racing",
-      "genre": "Racing",
-      "subGenre": "Racing",
-      "rating": 4.3,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 41,
-      "trend": "stable",
-      "growthRate": 0.5,
-      "tags": [
-        "racing",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.aim.racing"
     },
     {
       "name": "Car Race",
@@ -1545,11 +1524,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 47,
       "trend": "up",
-      "growthRate": 14.1,
+      "growthRate": 19.4,
       "tags": [
         "racing",
         "free"
@@ -1566,11 +1545,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
       "hypeIndex": 41,
       "trend": "down",
-      "growthRate": -4.8,
+      "growthRate": -4.1,
       "tags": [
         "racing",
         "free"
@@ -1587,11 +1566,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 42,
-      "trend": "stable",
-      "growthRate": 2.1,
+      "hypeIndex": 40,
+      "trend": "down",
+      "growthRate": -4.6,
       "tags": [
         "racing",
         "free"
@@ -1599,46 +1578,25 @@
       "url": "https://play.google.com/store/apps/details?id=com.sfr.real.traffic.car.simulator3d"
     },
     {
-      "name": "Spinner Evolution",
-      "developer": "HyperMonk Games",
+      "name": "Extreme Car Driving Simulator",
+      "developer": "AxesInMotion Racing",
       "genre": "Racing",
       "subGenre": "Racing",
-      "rating": 4.5,
+      "rating": 4.3,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 47,
+      "hypeIndex": 43,
       "trend": "up",
-      "growthRate": 23.1,
+      "growthRate": 9.9,
       "tags": [
         "racing",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.hypermonkgames.SpinnerEvolution"
-    },
-    {
-      "name": "RUSH: Xtreme",
-      "developer": "SayGames Ltd",
-      "genre": "Racing",
-      "subGenre": "Racing",
-      "rating": 4.6,
-      "ratingsCount": 0,
-      "downloads": "0",
-      "downloadsNum": 0,
-      "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
-      "price": "Free",
-      "hypeIndex": 42,
-      "trend": "down",
-      "growthRate": -3.7,
-      "tags": [
-        "racing",
-        "free"
-      ],
-      "url": "https://play.google.com/store/apps/details?id=com.rush.xtreme.sports"
+      "url": "https://play.google.com/store/apps/details?id=com.aim.racing"
     },
     {
       "name": "Wheelie Master: Moto Ride 3D",
@@ -1650,11 +1608,11 @@
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 43,
-      "trend": "stable",
-      "growthRate": 1.3,
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 18.6,
       "tags": [
         "racing",
         "free"
@@ -1662,25 +1620,67 @@
       "url": "https://play.google.com/store/apps/details?id=wheelie.master.street.elite.bikegame"
     },
     {
-      "name": "Hill Climb Racing",
-      "developer": "Fingersoft",
+      "name": "Spinner Evolution",
+      "developer": "HyperMonk Games",
       "genre": "Racing",
       "subGenre": "Racing",
-      "rating": 4.2,
+      "rating": 4.4,
       "ratingsCount": 0,
       "downloads": "0",
       "downloadsNum": 0,
       "releaseDate": "2024-01-01",
-      "lastUpdate": "2026-10-04",
+      "lastUpdate": "2026-10-05",
       "price": "Free",
-      "hypeIndex": 46,
+      "hypeIndex": 44,
       "trend": "up",
-      "growthRate": 23.1,
+      "growthRate": 10.1,
       "tags": [
         "racing",
         "free"
       ],
-      "url": "https://play.google.com/store/apps/details?id=com.fingersoft.hillclimb"
+      "url": "https://play.google.com/store/apps/details?id=com.hypermonkgames.SpinnerEvolution"
+    },
+    {
+      "name": "Stunt Bike Extreme",
+      "developer": "Hyperkani",
+      "genre": "Racing",
+      "subGenre": "Racing",
+      "rating": 4.7,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 47,
+      "trend": "up",
+      "growthRate": 17.4,
+      "tags": [
+        "racing",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.hyperkani.trialbike"
+    },
+    {
+      "name": "Car Crash Simulator: Mountain",
+      "developer": "Moon Star Games Yazilim",
+      "genre": "Racing",
+      "subGenre": "Racing",
+      "rating": 3.6,
+      "ratingsCount": 0,
+      "downloads": "0",
+      "downloadsNum": 0,
+      "releaseDate": "2024-01-01",
+      "lastUpdate": "2026-10-05",
+      "price": "Free",
+      "hypeIndex": 38,
+      "trend": "up",
+      "growthRate": 8.3,
+      "tags": [
+        "racing",
+        "free"
+      ],
+      "url": "https://play.google.com/store/apps/details?id=com.msgames.carcrashsimulator.beam"
     }
   ],
   "niches": [
@@ -1693,7 +1693,7 @@
       "avgRating": 4.7
     },
     {
-      "genre": "Casual",
+      "genre": "Strategy",
       "demand": "high",
       "supply": "high",
       "opportunity": 45,
@@ -1702,14 +1702,6 @@
     },
     {
       "genre": "RPG",
-      "demand": "high",
-      "supply": "high",
-      "opportunity": 44,
-      "topGames": 10,
-      "avgRating": 4.4
-    },
-    {
-      "genre": "Strategy",
       "demand": "high",
       "supply": "high",
       "opportunity": 44,
@@ -1731,6 +1723,14 @@
       "opportunity": 44,
       "topGames": 10,
       "avgRating": 4.4
+    },
+    {
+      "genre": "Action",
+      "demand": "high",
+      "supply": "high",
+      "opportunity": 43,
+      "topGames": 10,
+      "avgRating": 4.3
     }
   ],
   "genreDistribution": {
