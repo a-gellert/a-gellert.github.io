@@ -1,22 +1,22 @@
 {
   "platform": "poki",
-  "lastUpdated": "2026-10-07",
+  "lastUpdated": "2026-10-08",
   "games": [
     {
       "name": "MineFun.io",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.7,
-      "ratingsCount": 105668,
-      "downloads": "28M+",
-      "downloadsNum": 27933517,
+      "rating": 4,
+      "ratingsCount": 141378,
+      "downloads": "39M+",
+      "downloadsNum": 23600132,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 69,
-      "trend": "down",
-      "growthRate": -3.9,
+      "hypeIndex": 66,
+      "trend": "up",
+      "growthRate": 17.3,
       "tags": [
         "popular",
         "browser"
@@ -28,16 +28,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.9,
-      "ratingsCount": 101990,
-      "downloads": "46M+",
-      "downloadsNum": 47733143,
+      "rating": 4.4,
+      "ratingsCount": 88325,
+      "downloads": "24M+",
+      "downloadsNum": 11049171,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 66,
+      "hypeIndex": 87,
       "trend": "up",
-      "growthRate": 6,
+      "growthRate": 13,
       "tags": [
         "popular",
         "browser"
@@ -49,16 +49,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.3,
-      "ratingsCount": 123018,
-      "downloads": "39M+",
-      "downloadsNum": 43387964,
+      "rating": 4.8,
+      "ratingsCount": 142677,
+      "downloads": "16M+",
+      "downloadsNum": 18223951,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 82,
-      "trend": "stable",
-      "growthRate": 4.1,
+      "hypeIndex": 92,
+      "trend": "up",
+      "growthRate": 5.1,
       "tags": [
         "popular",
         "browser"
@@ -70,16 +70,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4,
-      "ratingsCount": 128598,
-      "downloads": "51M+",
-      "downloadsNum": 5840303,
+      "rating": 4.3,
+      "ratingsCount": 178791,
+      "downloads": "27M+",
+      "downloadsNum": 4593697,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 70,
+      "hypeIndex": 58,
       "trend": "up",
-      "growthRate": 5.5,
+      "growthRate": 9.1,
       "tags": [
         "popular",
         "browser"
@@ -87,20 +87,41 @@
       "url": "https://poki.com/en/g/tag"
     },
     {
+      "name": "Basketball Stars",
+      "developer": "Poki Developer",
+      "genre": "Popular",
+      "subGenre": "Browser Game",
+      "rating": 4.3,
+      "ratingsCount": 178980,
+      "downloads": "9M+",
+      "downloadsNum": 9053939,
+      "releaseDate": "2023-01-01",
+      "lastUpdate": "2026-10-08",
+      "price": "Free",
+      "hypeIndex": 76,
+      "trend": "stable",
+      "growthRate": 1.2,
+      "tags": [
+        "popular",
+        "browser"
+      ],
+      "url": "https://poki.com/en/g/basketball-stars"
+    },
+    {
       "name": "Cryzen.io",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.7,
-      "ratingsCount": 189291,
-      "downloads": "38M+",
-      "downloadsNum": 14835370,
+      "rating": 4.3,
+      "ratingsCount": 20675,
+      "downloads": "23M+",
+      "downloadsNum": 48377756,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 84,
-      "trend": "down",
-      "growthRate": -3.5,
+      "hypeIndex": 91,
+      "trend": "stable",
+      "growthRate": 4.1,
       "tags": [
         "popular",
         "browser"
@@ -108,41 +129,20 @@
       "url": "https://poki.com/en/g/cryzen-io"
     },
     {
-      "name": "Slime Keyboard Escape",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.3,
-      "ratingsCount": 6385,
-      "downloads": "27M+",
-      "downloadsNum": 19533991,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
-      "price": "Free",
-      "hypeIndex": 95,
-      "trend": "up",
-      "growthRate": 19.9,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/slime-keyboard-escape"
-    },
-    {
       "name": "Drift Boss",
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.1,
-      "ratingsCount": 41283,
-      "downloads": "24M+",
-      "downloadsNum": 25943880,
+      "rating": 4.8,
+      "ratingsCount": 75824,
+      "downloads": "38M+",
+      "downloadsNum": 41192180,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 89,
+      "hypeIndex": 85,
       "trend": "up",
-      "growthRate": 5.3,
+      "growthRate": 13.1,
       "tags": [
         "popular",
         "browser"
@@ -154,16 +154,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4,
-      "ratingsCount": 178019,
-      "downloads": "45M+",
-      "downloadsNum": 41671996,
+      "rating": 4.5,
+      "ratingsCount": 108134,
+      "downloads": "10M+",
+      "downloadsNum": 31934470,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 60,
-      "trend": "up",
-      "growthRate": 17.7,
+      "hypeIndex": 81,
+      "trend": "stable",
+      "growthRate": 0.5,
       "tags": [
         "popular",
         "browser"
@@ -175,16 +175,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 68195,
-      "downloads": "37M+",
-      "downloadsNum": 48165292,
+      "rating": 4.4,
+      "ratingsCount": 183877,
+      "downloads": "50M+",
+      "downloadsNum": 21385929,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 63,
+      "hypeIndex": 75,
       "trend": "up",
-      "growthRate": 8,
+      "growthRate": 8.1,
       "tags": [
         "popular",
         "browser"
@@ -197,15 +197,15 @@
       "genre": "Popular",
       "subGenre": "Browser Game",
       "rating": 4.3,
-      "ratingsCount": 143481,
-      "downloads": "3M+",
-      "downloadsNum": 40769466,
+      "ratingsCount": 116708,
+      "downloads": "14M+",
+      "downloadsNum": 36224833,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 58,
+      "hypeIndex": 83,
       "trend": "up",
-      "growthRate": 17.3,
+      "growthRate": 11,
       "tags": [
         "popular",
         "browser"
@@ -217,16 +217,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.1,
-      "ratingsCount": 89823,
-      "downloads": "16M+",
-      "downloadsNum": 13333301,
+      "rating": 4.3,
+      "ratingsCount": 65013,
+      "downloads": "33M+",
+      "downloadsNum": 13907042,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 56,
-      "trend": "up",
-      "growthRate": 10.3,
+      "hypeIndex": 95,
+      "trend": "stable",
+      "growthRate": 4.8,
       "tags": [
         "popular",
         "browser"
@@ -238,16 +238,16 @@
       "developer": "Poki Developer",
       "genre": "Popular",
       "subGenre": "Browser Game",
-      "rating": 4.7,
-      "ratingsCount": 113687,
-      "downloads": "49M+",
-      "downloadsNum": 31359218,
+      "rating": 4.1,
+      "ratingsCount": 48082,
+      "downloads": "4M+",
+      "downloadsNum": 31751857,
       "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-10-07",
+      "lastUpdate": "2026-10-08",
       "price": "Free",
-      "hypeIndex": 75,
+      "hypeIndex": 67,
       "trend": "up",
-      "growthRate": 14.5,
+      "growthRate": 12.2,
       "tags": [
         "popular",
         "browser"
@@ -287,27 +287,27 @@
   "trendHistory": [
     {
       "date": "2026-05",
-      "hypeAvg": 75
+      "hypeAvg": 82
     },
     {
       "date": "2026-06",
-      "hypeAvg": 74
+      "hypeAvg": 81
     },
     {
       "date": "2026-07",
-      "hypeAvg": 72
+      "hypeAvg": 78
     },
     {
       "date": "2026-08",
-      "hypeAvg": 74
+      "hypeAvg": 80
     },
     {
       "date": "2026-09",
-      "hypeAvg": 72
+      "hypeAvg": 78
     },
     {
       "date": "2026-10",
-      "hypeAvg": 74
+      "hypeAvg": 81
     }
   ]
 }
