@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="forestBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b1d" />
+      <stop offset="50%" stop-color="#143d28" />
+      <stop offset="100%" stop-color="#0a1811" />
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#e11d48" />
+    </linearGradient>
+    <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="512" height="512" rx="100" fill="url(#forestBg)" />
+  <rect width="480" height="480" x="16" y="16" rx="88" fill="none" stroke="#22c55e" stroke-opacity="0.2" stroke-width="4" />
+
+  <!-- Moon / Perimeter Light in Night Forest -->
+  <circle cx="256" cy="150" r="60" fill="url(#moonGrad)" opacity="0.9" filter="url(#glow)" />
+
+  <!-- Fog / Ambient Rings (Perimeter Boundary) -->
+  <circle cx="256" cy="270" r="160" fill="none" stroke="#22c55e" stroke-width="2" stroke-dasharray="10 14" opacity="0.4" />
+  <circle cx="256" cy="270" r="120" fill="none" stroke="#f97316" stroke-width="2" stroke-dasharray="8 12" opacity="0.3" />
+
+  <!-- Background Pine Trees Silhouette -->
+  <g fill="#07130c" opacity="0.8">
+    <!-- Tree Left 1 -->
+    <polygon points="120,380 90,380 120,300 100,300 120,240 105,240 120,200 135,240 120,240 140,300 120,300 150,380" />
+    <!-- Tree Right 1 -->
+    <polygon points="392,380 362,380 392,300 372,300 392,240 377,240 392,200 407,240 392,240 412,300 392,300 422,380" />
+    <!-- Tree Far Left -->
+    <polygon points="60,400 40,400 60,330 48,330 60,280 72,330 60,330 80,400" />
+    <!-- Tree Far Right -->
+    <polygon points="452,400 432,400 452,330 440,330 452,280 464,330 452,330 472,400" />
+  </g>
+
+  <!-- Ground Curve -->
+  <path d="M 0,440 Q 256,380 512,440 L 512,512 L 0,512 Z" fill="#050d08" />
+
+  <!-- Protective Shield / Perimeter Fortification Icon -->
+  <g filter="url(#shadow)">
+    <!-- Shield Outline -->
+    <path d="M 256,190 L 330,230 C 330,320 280,370 256,395 C 232,370 182,320 182,230 Z"
+          fill="url(#shieldGrad)" />
+    <!-- Shield Inner Inset -->
+    <path d="M 256,206 L 316,240 C 316,312 276,354 256,376 C 236,354 196,312 196,240 Z"
+          fill="#111c14" opacity="0.85" />
+    <!-- Glowing Campfire / Survival Flame inside Shelter -->
+    <path d="M 256,260 C 268,285 282,300 274,325 C 268,340 256,346 256,346 C 256,346 244,340 238,325 C 230,300 244,285 256,260 Z"
+          fill="url(#moonGrad)" filter="url(#glow)" />
+    <!-- Flame Core -->
+    <path d="M 256,290 C 262,305 270,314 266,328 C 262,336 256,340 256,340 C 256,340 250,336 246,328 C 242,314 250,305 256,290 Z"
+          fill="#ffffff" />
+  </g>
+</svg>
