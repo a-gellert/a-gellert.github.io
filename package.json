@@ -1,0 +1,26 @@
+{
+  "name": "a-gellert-portfolio-trends",
+  "version": "1.0.0",
+  "description": "Portfolio, devlog and automated AppMagic/SensorTower style market intelligence system",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "update-trends": "node scripts/update-market-intelligence.mjs"
+  },
+  "keywords": [
+    "gamedev",
+    "trends",
+    "market-intelligence",
+    "appmagic",
+    "sensortower",
+    "indie-games"
+  ],
+  "author": "Alexander Gellert",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "google-play-scraper": "^10.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}
+

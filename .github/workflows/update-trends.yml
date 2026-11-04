@@ -1,10 +1,16 @@
-name: Update Game Trends Data
+name: Auto-Update Game Trends & Niche Intelligence
 
 on:
   schedule:
-    # Run daily at 06:00 UTC
+    # Run daily at 06:00 UTC (automated unattended execution)
     - cron: '0 6 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # Allow one-click manual run in GitHub Actions tab
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/update-trends.yml'
 
 permissions:
   contents: write
@@ -21,28 +27,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
 
       - name: Install dependencies
         run: |
-          npm init -y
-          npm install google-play-scraper cheerio node-fetch
+          npm ci || npm install
 
-      - name: Fetch Steam data
-        run: node scripts/fetch-steam.mjs
-
-      - name: Fetch Google Play data
-        run: node scripts/fetch-google-play.mjs
-
-      - name: Fetch Poki data
-        run: node scripts/fetch-poki.mjs
-
-      - name: Fetch CrazyGames data
-        run: node scripts/fetch-crazygames.mjs
+      - name: Run Market Intelligence Pipeline (AppMagic & Sensor Tower)
+        run: |
+          node scripts/update-market-intelligence.mjs
 
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add trends/data/*.json
-          git diff --staged --quiet || git commit -m "📊 Auto-update game trends data [$(date -u +%Y-%m-%d)]"
+          git add trends/data/market-data.js trends/data/*.json
+          git diff --staged --quiet || git commit -m "📊 Auto-update market intelligence data [$(date -u +%Y-%m-%d)]"
           git push

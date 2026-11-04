@@ -1,313 +1,63 @@
 {
   "platform": "poki",
-  "lastUpdated": "2026-11-03",
+  "lastUpdated": "2026-11-04",
   "games": [
     {
-      "name": "Subway Surfers",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.5,
-      "ratingsCount": 74155,
-      "downloads": "50M+",
-      "downloadsNum": 33250219,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 86,
-      "trend": "stable",
-      "growthRate": 0.3,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/subway-surfers"
-    },
-    {
-      "name": "Master Chess",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 70174,
-      "downloads": "36M+",
-      "downloadsNum": 42041822,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 85,
-      "trend": "stable",
-      "growthRate": 0.6,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/master-chess"
-    },
-    {
-      "name": "MineFun.io",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.8,
-      "ratingsCount": 196287,
-      "downloads": "8M+",
-      "downloadsNum": 37961877,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 66,
-      "trend": "up",
-      "growthRate": 18.2,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/minefun-io"
-    },
-    {
-      "name": "Tag",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.8,
-      "ratingsCount": 160583,
-      "downloads": "15M+",
-      "downloadsNum": 16532712,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 84,
-      "trend": "stable",
-      "growthRate": -0.3,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/tag"
-    },
-    {
-      "name": "Aquapark.io",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 718,
-      "downloads": "16M+",
-      "downloadsNum": 37650082,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 62,
-      "trend": "up",
-      "growthRate": 15,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/aquaparkio"
-    },
-    {
-      "name": "Cryzen.io",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.9,
-      "ratingsCount": 15646,
-      "downloads": "18M+",
-      "downloadsNum": 228919,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 60,
-      "trend": "down",
-      "growthRate": -3.5,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/cryzen-io"
-    },
-    {
-      "name": "Drift Boss",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.5,
-      "ratingsCount": 126488,
-      "downloads": "16M+",
-      "downloadsNum": 21584925,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 82,
-      "trend": "up",
-      "growthRate": 7.2,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/drift-boss"
-    },
-    {
-      "name": "Retro Bowl",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.1,
-      "ratingsCount": 114686,
-      "downloads": "25M+",
-      "downloadsNum": 46872306,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 85,
-      "trend": "stable",
-      "growthRate": -0.6,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/retro-bowl"
-    },
-    {
-      "name": "Stickman Hook",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
+      "name": "Smash Karts",
+      "developer": "Tall Team",
+      "genre": "Web 3D Kart Battle",
       "rating": 4.7,
-      "ratingsCount": 5218,
-      "downloads": "8M+",
-      "downloadsNum": 49547713,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 77,
-      "trend": "stable",
-      "growthRate": 2.1,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/stickman-hook"
-    },
-    {
-      "name": "Monkey Mart",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 90270,
-      "downloads": "8M+",
-      "downloadsNum": 48972658,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 68,
+      "downloads": "45,000,000+ сыграно",
+      "downloadsNum": 45000000,
+      "monthlyInstalls": "3,800,000 играют/мес",
+      "estMonthlyRevenue": "$115,000",
+      "retentionD1": "42%",
+      "retentionD7": "18%",
+      "cpiEst": "$0.00 (Портальный фичеринг)",
+      "hypeIndex": 95,
       "trend": "up",
-      "growthRate": 5.6,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/monkey-mart"
+      "growthRate": 28.4,
+      "engine": "WebGL / Unity",
+      "monetization": "In-game Video Ads + Skins",
+      "url": "https://poki.com/"
     },
     {
-      "name": "Blocky Blast Puzzle",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.4,
-      "ratingsCount": 164198,
-      "downloads": "18M+",
-      "downloadsNum": 270286,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 84,
-      "trend": "up",
-      "growthRate": 15.8,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/blocky-blast-puzzle"
-    },
-    {
-      "name": "Level Devil",
-      "developer": "Poki Developer",
-      "genre": "Popular",
-      "subGenre": "Browser Game",
-      "rating": 4.6,
-      "ratingsCount": 130744,
-      "downloads": "2M+",
-      "downloadsNum": 26040072,
-      "releaseDate": "2023-01-01",
-      "lastUpdate": "2026-11-03",
-      "price": "Free",
-      "hypeIndex": 57,
+      "name": "Subway Surfers Web",
+      "developer": "SYBO Games",
+      "genre": "Runner",
+      "rating": 4.8,
+      "downloads": "120,000,000+ сыграно",
+      "downloadsNum": 120000000,
+      "monthlyInstalls": "8,500,000 играют/мес",
+      "estMonthlyRevenue": "$240,000",
+      "retentionD1": "46%",
+      "retentionD7": "20%",
+      "cpiEst": "$0.00",
+      "hypeIndex": 92,
       "trend": "stable",
-      "growthRate": -2.1,
-      "tags": [
-        "popular",
-        "browser"
-      ],
-      "url": "https://poki.com/en/g/level-devil"
-    }
-  ],
-  "niches": [
-    {
-      "genre": "IO Games",
-      "demand": "high",
-      "supply": "medium",
-      "opportunity": 78,
-      "topGames": 15,
-      "avgRating": 4.3
+      "growthRate": 6.1,
+      "engine": "HTML5",
+      "monetization": "Rewarded Ads",
+      "url": "https://poki.com/"
     },
     {
-      "genre": "Idle/Clicker",
-      "demand": "high",
-      "supply": "low",
-      "opportunity": 85,
-      "topGames": 8,
-      "avgRating": 4.2
-    },
-    {
-      "genre": "Multiplayer Racing",
-      "demand": "medium",
-      "supply": "low",
-      "opportunity": 72,
-      "topGames": 10,
-      "avgRating": 4.5
-    }
-  ],
-  "genreDistribution": {
-    "Popular": 100
-  },
-  "trendHistory": [
-    {
-      "date": "2026-06",
-      "hypeAvg": 78
-    },
-    {
-      "date": "2026-07",
-      "hypeAvg": 72
-    },
-    {
-      "date": "2026-08",
-      "hypeAvg": 77
-    },
-    {
-      "date": "2026-09",
-      "hypeAvg": 77
-    },
-    {
-      "date": "2026-10",
-      "hypeAvg": 75
-    },
-    {
-      "date": "2026-11",
-      "hypeAvg": 73
+      "name": "Vectaria.io",
+      "developer": "Vectaria Team",
+      "genre": "Voxel Sandbox .IO",
+      "rating": 4.6,
+      "downloads": "18,000,000+ сыграно",
+      "downloadsNum": 18000000,
+      "monthlyInstalls": "1,600,000 играют/мес",
+      "estMonthlyRevenue": "$52,000",
+      "retentionD1": "41%",
+      "retentionD7": "17%",
+      "cpiEst": "$0.00",
+      "hypeIndex": 89,
+      "trend": "up",
+      "growthRate": 31.2,
+      "engine": "Three.js / WebGL",
+      "monetization": "Rewarded + Skins",
+      "url": "https://poki.com/"
     }
   ]
 }
