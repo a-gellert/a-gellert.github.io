@@ -3,72 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аналитика игровых трендов | Дашборд</title>
+    <title>GameTrends Intelligence — Поиск ниш и аналитика рынков (AppMagic & Sensor Tower Style)</title>
+    <meta name="description" content="Профессиональная аналитика игровых рынков и поиск прибыльных инди-ниш: Google Play, Steam, Poki, CrazyGames. Оценка выручки, CPI, LTV, удержания и конкуренции.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="theme-niche">
     <div class="app-container">
-        <!-- Sidebar / Navigation -->
+
+        <!-- ===================================================================
+             SIDEBAR NAVIGATION
+             =================================================================== -->
         <aside class="sidebar">
             <div class="logo">
                 <i class="fa-solid fa-chart-line"></i>
-                <h2>GameTrends</h2>
+                <div>
+                    <h2>GameTrends</h2>
+                    <span class="logo-sub">Market Intelligence</span>
+                </div>
             </div>
-            <a href="../" class="back-link"><i class="fa-solid fa-arrow-left"></i> Назад на сайт</a>
+            
+            <a href="../index.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i> Назад в портфолио
+            </a>
             
             <nav class="platform-nav">
-                <h3>Платформы</h3>
-                <ul id="platform-tabs">
-                    <li data-platform="google_play" class="active"><i class="fa-brands fa-google-play"></i> Google Play</li>
-                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam</li>
-                    <li data-platform="poki"><i class="fa-solid fa-gamepad"></i> Poki</li>
-                    <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
-                    <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Yandex Games</li>
+                <h3>Инструменты разведки</h3>
+                <ul id="main-nav-tabs">
+                    <li data-view="niches" class="active nav-highlight">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i> Поиск ниш (Niche Scout)
+                    </li>
+                    <li data-view="breakout" class="nav-special">
+                        <i class="fa-solid fa-bolt"></i> Растущие новинки (&lt;60д)
+                    </li>
                 </ul>
-                <h3 style="margin-top:15px">Обзоры</h3>
-                <ul>
-                    <li id="new-releases-tab" class="nav-special"><i class="fa-solid fa-rocket"></i> Интересные новинки</li>
+
+                <h3 style="margin-top:20px">Базы платформ (Sensor Tower)</h3>
+                <ul id="platform-tabs">
+                    <li data-platform="google_play"><i class="fa-brands fa-google-play"></i> Google Play</li>
+                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam Indie</li>
+                    <li data-platform="poki"><i class="fa-solid fa-gamepad"></i> Poki Web</li>
+                    <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
+                    <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Яндекс Игры</li>
                 </ul>
             </nav>
             
-            <div class="filters">
-                <h3>Фильтры</h3>
-                <div class="filter-group">
-                    <label for="genre-filter">Жанр</label>
-                    <select id="genre-filter">
-                        <option value="all">Все жанры</option>
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="hype-filter">Мин. Индекс Хайпа</label>
-                    <input type="range" id="hype-filter" min="0" max="100" value="0">
-                    <span id="hype-filter-val">0</span>
-                </div>
-                <div class="filter-group">
-                    <label for="search-input">Поиск игры</label>
-                    <input type="text" id="search-input" placeholder="Название...">
-                </div>
+            <!-- Quick Insights Box -->
+            <div class="sidebar-insight-box">
+                <div class="sib-title"><i class="fa-solid fa-lightbulb"></i> Совет инди:</div>
+                <p>Избегайте ниш, где Top-3 студии держат &gt;50% выручки (Match-3, 4X). Ищите фрагментированные рынки с CPI &lt; $0.40.</p>
             </div>
         </aside>
 
-        <!-- Main Content -->
-        <main class="main-content" id="platform-view">
+        <!-- ===================================================================
+             VIEW 1: NICHE SCOUT (AppMagic Deep Niche Discovery) — DEFAULT
+             =================================================================== -->
+        <main class="main-content" id="niches-view">
             <header class="topbar">
                 <div>
-                    <h1 id="current-platform-title">Google Play Тренд Аналитика</h1>
-                    <p class="subtitle">Последнее обновление: <span id="last-updated">Загрузка...</span></p>
+                    <h1><i class="fa-solid fa-crosshairs" style="color:var(--accent)"></i> Матрица ниш и поиск возможностей</h1>
+                    <p class="subtitle">
+                        Оценка незанятых инди-ниш по формуле AppMagic / Sensor Tower: CPI, LTV, порог входа и виральный потенциал • 
+                        <span id="niche-updated-date">Обновлено: Ноябрь 2026</span>
+                    </p>
                 </div>
-                <button id="export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт в CSV</button>
+                <div class="topbar-actions">
+                    <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="btn-telegram-nav">
+                        <i class="fa-brands fa-telegram"></i> Канал @tiny_game
+                    </a>
+                </div>
             </header>
 
-            <!-- Overview Cards -->
+            <!-- Niche Filter Bar -->
+            <section class="niche-filter-bar">
+                <div class="filter-chip-group">
+                    <label>Потенциал для инди:</label>
+                    <div class="chips" id="filter-viability">
+                        <button class="chip-btn active" data-val="all">Все ниши</button>
+                        <button class="chip-btn" data-val="top">🔥 Топ-потенциал (&gt;85)</button>
+                        <button class="chip-btn" data-val="promising">⭐ Перспективные (75-85)</button>
+                    </div>
+                </div>
+
+                <div class="filter-chip-group">
+                    <label>Конкуренция (Top-3 Market Share):</label>
+                    <div class="chips" id="filter-competition">
+                        <button class="chip-btn active" data-val="all">Любая</button>
+                        <button class="chip-btn" data-val="low">🟢 Низкая (Рынок открыт)</button>
+                        <button class="chip-btn" data-val="medium">🟡 Умеренная</button>
+                    </div>
+                </div>
+
+                <div class="filter-controls-row">
+                    <div class="control-col">
+                        <label for="niche-cpi-filter">Стоимость трафика (CPI):</label>
+                        <select id="niche-cpi-filter">
+                            <option value="all">Любой CPI</option>
+                            <option value="low">Дешевый (&lt; $0.50)</option>
+                            <option value="medium">Умеренный ($0.50 - $1.00)</option>
+                            <option value="high">Высокий (&gt; $1.00)</option>
+                        </select>
+                    </div>
+
+                    <div class="control-col">
+                        <label for="niche-sort">Сортировка ниш:</label>
+                        <select id="niche-sort">
+                            <option value="viability">По Инди-потенциалу (Score)</option>
+                            <option value="revenue">По объему рынка ($/мес)</option>
+                            <option value="growth">По темпу роста (% YoY)</option>
+                            <option value="competition">По наименьшей конкуренции</option>
+                        </select>
+                    </div>
+
+                    <div class="control-col" style="flex: 1.5;">
+                        <label for="niche-search">Поиск по названию или механике:</label>
+                        <input type="text" id="niche-search" placeholder="Рэгдолл, выживание, Godot, Defold, тайлы...">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Niches Grid Container -->
+            <section class="niches-cards-container" id="niches-cards-grid">
+                <!-- Rendered dynamically by app.js -->
+            </section>
+        </main>
+
+        <!-- ===================================================================
+             VIEW 2: STORE EXPLORER (Sensor Tower Style Platform Database)
+             =================================================================== -->
+        <main class="main-content" id="platform-view" style="display:none">
+            <header class="topbar">
+                <div>
+                    <h1 id="current-platform-title">Google Play Аналитика</h1>
+                    <p class="subtitle">Рыночная база: скачивания, выручка, D1/D7 удержание и CPI • <span id="last-updated">Загрузка...</span></p>
+                </div>
+                <button id="export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт CSV</button>
+            </header>
+
+            <!-- Overview KPI Cards -->
             <section class="overview-cards">
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-dice"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
                     <div class="card-info">
-                        <h4>Всего игр</h4>
+                        <h4>База мониторинга</h4>
                         <div class="card-value" id="stat-total-games">-</div>
                     </div>
                 </div>
@@ -82,54 +160,47 @@
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
                     <div class="card-info">
-                        <h4>Средний Индекс Хайпа</h4>
+                        <h4>Средний Hype Index</h4>
                         <div class="card-value" id="stat-avg-hype">-</div>
                     </div>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
                     <div class="card-info">
-                        <h4>Топ жанр</h4>
-                        <div class="card-value" id="stat-top-genre">-</div>
+                        <h4>Лидирующая ниша</h4>
+                        <div class="card-value" id="stat-top-genre" style="font-size: 1.1rem;">-</div>
                     </div>
                 </div>
             </section>
 
-            <!-- Charts Section -->
-            <section class="charts-section">
-                <div class="chart-container">
-                    <h3>Распределение по жанрам</h3>
-                    <canvas id="genreChart"></canvas>
+            <!-- Store Filters Row -->
+            <section class="table-filter-bar">
+                <div class="filter-col">
+                    <label for="store-genre-filter">Жанр / Ниша:</label>
+                    <select id="store-genre-filter">
+                        <option value="all">Все жанры</option>
+                    </select>
                 </div>
-                <div class="chart-container">
-                    <h3>Тренд Индекса Хайпа (Последние 4 мес)</h3>
-                    <canvas id="trendChart"></canvas>
-                </div>
-            </section>
-
-            <!-- Niches Section -->
-            <section class="niches-section">
-                <h3><i class="fa-solid fa-magnifying-glass-chart"></i> Анализ ниш (Скрытый спрос)</h3>
-                <div class="niches-grid" id="niches-container">
-                    <!-- Niche cards will be injected here -->
+                <div class="filter-col">
+                    <label for="store-search-input">Поиск игры или студии:</label>
+                    <input type="text" id="store-search-input" placeholder="Название, разработчик...">
                 </div>
             </section>
 
             <!-- Games Table -->
             <section class="table-section">
-                <div class="table-header">
-                    <h3>Анализ игр</h3>
-                </div>
                 <div class="table-responsive">
                     <table id="games-table">
                         <thead>
                             <tr>
-                                <th data-sort="name">Название <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="genre">Жанр <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="name">Игра / Студия <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="genre">Ниша / Движок <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="downloadsNum">Установки <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="estMonthlyRevenue">Выручка (Оценка/мес) <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="downloadsNum">Скачивания/Игроки <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="hypeIndex">Индекс Хайпа <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="trend">Тренд <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="retentionD1">D1 / D7 <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="cpiEst">Оценка CPI <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="hypeIndex">Моментум <i class="fa-solid fa-sort"></i></th>
                             </tr>
                         </thead>
                         <tbody id="games-tbody">
@@ -140,102 +211,26 @@
             </section>
         </main>
 
-        <!-- New Releases Section (hidden by default) -->
-        <main class="main-content" id="new-releases-view" style="display:none">
+        <!-- ===================================================================
+             VIEW 3: BREAKOUT RELEASES (< 60 Days Old)
+             =================================================================== -->
+        <main class="main-content" id="breakout-view" style="display:none">
             <header class="topbar">
                 <div>
-                    <h1><i class="fa-solid fa-rocket" style="color:var(--accent)"></i> Интересные новинки</h1>
-                    <p class="subtitle">Игры за последние 30 дней с отличным ростом и удержанием • <span id="nr-last-updated">Загрузка...</span></p>
+                    <h1><i class="fa-solid fa-bolt" style="color:#f59e0b"></i> Растущие новинки (&lt; 60 дней)</h1>
+                    <p class="subtitle">Свежие релизы с аномально высоким ростом, виральным органиком и сильным удержанием</p>
                 </div>
-                <button id="nr-export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт CSV</button>
             </header>
 
-            <!-- New Releases Overview -->
-            <section class="overview-cards">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="card-info">
-                        <h4>Новинок</h4>
-                        <div class="card-value" id="nr-total">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
-                    <div class="card-info">
-                        <h4>Средний Hype</h4>
-                        <div class="card-value" id="nr-avg-hype">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-user-clock"></i></div>
-                    <div class="card-info">
-                        <h4>Retention D1 (ср.)</h4>
-                        <div class="card-value" id="nr-avg-d1">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-calendar-week"></i></div>
-                    <div class="card-info">
-                        <h4>Retention D7 (ср.)</h4>
-                        <div class="card-value" id="nr-avg-d7">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                    <div class="card-info">
-                        <h4>Средний рост</h4>
-                        <div class="card-value" id="nr-avg-growth">-</div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Charts Row -->
-            <section class="charts-section">
-                <div class="chart-container">
-                    <h3>Новинки по платформам</h3>
-                    <canvas id="nrPlatformChart"></canvas>
-                </div>
-                <div class="chart-container">
-                    <h3>Retention: D1 → D7 → D30 (топ-8 игр)</h3>
-                    <canvas id="nrRetentionChart"></canvas>
-                </div>
-            </section>
-
-            <!-- New Releases Niches -->
-            <section class="niches-section">
-                <h3><i class="fa-solid fa-lightbulb"></i> Горячие ниши новинок</h3>
-                <div class="niches-grid" id="nr-niches-container">
-                </div>
-            </section>
-
-            <!-- New Releases Table -->
-            <section class="table-section">
-                <div class="table-header">
-                    <h3><i class="fa-solid fa-list-check"></i> Все новинки (последние 30 дней)</h3>
-                </div>
-                <div class="table-responsive">
-                    <table id="nr-table">
-                        <thead>
-                            <tr>
-                                <th data-sort-nr="name">Название <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="platform">Платформа <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="genre">Жанр <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="hypeIndex">Hype <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="retentionDay1">D1 <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="retentionDay7">D7 <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort-nr="growthRate">Рост <i class="fa-solid fa-sort"></i></th>
-                                <th>Инсайт</th>
-                            </tr>
-                        </thead>
-                        <tbody id="nr-tbody">
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+            <div class="breakout-grid" id="breakout-cards-container">
+                <!-- Injected by JS -->
+            </div>
         </main>
+
     </div>
     
+    <!-- Universal Market Data Bundle (Offline-safe fallback for file:/// protocol) -->
+    <script src="data/market-data.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,675 +1,503 @@
-// Global State
-let currentPlatform = 'google_play';
-let gameData = null;
-let filteredData = [];
-let sortCol = 'hypeIndex';
-let sortDesc = true;
-let chartInstances = {};
+/**
+ * GameTrends Intelligence — App Engine (AppMagic & Sensor Tower styled)
+ * Provides real niche matrix scouting, store market databases, and breakout scanners.
+ */
 
-// Platform configurations
-const platforms = {
-    google_play: { title: 'Google Play', file: 'google_play.json' },
-    steam: { title: 'Steam', file: 'steam.json' },
-    poki: { title: 'Poki', file: 'poki.json' },
-    crazygames: { title: 'CrazyGames', file: 'crazygames.json' },
-    yandex_games: { title: 'Yandex Games', file: 'yandex_games.json' }
+// Global State
+let marketData = window.MARKET_DATA || null;
+let currentView = 'niches'; // 'niches' | 'platform' | 'breakout'
+let currentPlatform = 'google_play';
+
+let nicheFilters = {
+    viability: 'all',
+    competition: 'all',
+    cpi: 'all',
+    sort: 'viability',
+    search: ''
+};
+
+let storeFilters = {
+    genre: 'all',
+    search: '',
+    sortCol: 'downloadsNum',
+    sortDesc: true
 };
 
 // DOM Elements
+const mainNavTabs = document.querySelectorAll('#main-nav-tabs li');
 const platformTabs = document.querySelectorAll('#platform-tabs li');
-const currentPlatformTitle = document.getElementById('current-platform-title');
-const lastUpdatedEl = document.getElementById('last-updated');
-const tbody = document.getElementById('games-tbody');
-const genreFilter = document.getElementById('genre-filter');
-const hypeFilter = document.getElementById('hype-filter');
-const hypeFilterVal = document.getElementById('hype-filter-val');
-const searchInput = document.getElementById('search-input');
-const headers = document.querySelectorAll('th[data-sort]');
-const exportBtn = document.getElementById('export-btn');
 
-// Hype Index Formula Implementation (Dynamic recalculation if needed, or just standardizer)
-// Formula: hypeIndex = (ratingScore * 0.3) + (growthRate * 0.3) + (recencyBonus * 0.2) + (competitionFactor * 0.2)
-function calculateDynamicHype(game, totalGamesInGenre) {
-    // ratingScore 0-100
-    const ratingScore = (game.rating / 5) * 100;
+const nichesView = document.getElementById('niches-view');
+const platformView = document.getElementById('platform-view');
+const breakoutView = document.getElementById('breakout-view');
+
+const nichesContainer = document.getElementById('niches-cards-grid');
+const gamesTbody = document.getElementById('games-tbody');
+const storeGenreFilter = document.getElementById('store-genre-filter');
+const storeSearchInput = document.getElementById('store-search-input');
+const breakoutContainer = document.getElementById('breakout-cards-container');
+
+// Initialize
+document.addEventListener('DOMContentLoaded', async () => {
+    await initData();
+    setupNavigation();
+    setupNicheFilters();
+    setupStoreFilters();
     
-    // growthRate normalized (assume -20 to 100 scale maps to 0-100)
-    let growthScore = ((game.growthRate + 20) / 120) * 100;
-    growthScore = Math.max(0, Math.min(100, growthScore));
+    // Default render
+    renderNiches();
+});
+
+async function initData() {
+    if (!marketData && window.MARKET_DATA) {
+        marketData = window.MARKET_DATA;
+    }
     
-    // recencyBonus (decay over days)
-    const daysSinceUpdate = (new Date() - new Date(game.lastUpdate)) / (1000 * 3600 * 24);
-    const recencyBonus = Math.max(0, 100 - (daysSinceUpdate / 3));
-    
-    // competitionFactor (less games = higher score)
-    const competitionFactor = Math.max(0, 100 - (totalGamesInGenre * 2));
-    
-    return Math.round((ratingScore * 0.3) + (growthScore * 0.3) + (recencyBonus * 0.2) + (competitionFactor * 0.2));
+    // If not loaded through script tag, attempt fetch (for live server)
+    if (!marketData) {
+        try {
+            const res = await fetch('data/google_play.json');
+            // If fallback needed
+        } catch (e) {
+            console.warn('Fallback to bundled data');
+        }
+    }
 }
 
-// Initialization is done in the New Releases module section below
-// Event Listeners
-function setupEventListeners() {
+// Navigation between Niches, Platform Databases, and Breakouts
+function setupNavigation() {
+    mainNavTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            mainNavTabs.forEach(t => t.classList.remove('active'));
+            platformTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const view = tab.dataset.view;
+            switchView(view);
+        });
+    });
+
     platformTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             platformTabs.forEach(t => t.classList.remove('active'));
+            mainNavTabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            const platform = tab.dataset.platform;
-            changePlatform(platform);
+
+            currentPlatform = tab.dataset.platform;
+            switchView('platform');
+            renderStorePlatform(currentPlatform);
         });
     });
-
-    genreFilter.addEventListener('change', applyFilters);
-    hypeFilter.addEventListener('input', (e) => {
-        hypeFilterVal.textContent = e.target.value;
-        applyFilters();
-    });
-    searchInput.addEventListener('input', applyFilters);
-
-    headers.forEach(th => {
-        th.addEventListener('click', () => {
-            const col = th.dataset.sort;
-            if (sortCol === col) {
-                sortDesc = !sortDesc;
-            } else {
-                sortCol = col;
-                sortDesc = true;
-            }
-            renderTable();
-        });
-    });
-
-    exportBtn.addEventListener('click', exportToCSV);
 }
 
-async function changePlatform(platform) {
-    currentPlatform = platform;
-    document.body.className = `theme-${platform}`;
-    currentPlatformTitle.textContent = `${platforms[platform].title} Тренд Аналитика`;
-    await loadData(platform);
+function switchView(view) {
+    currentView = view;
+    nichesView.style.display = view === 'niches' ? 'block' : 'none';
+    platformView.style.display = view === 'platform' ? 'block' : 'none';
+    breakoutView.style.display = view === 'breakout' ? 'block' : 'none';
+
+    document.body.className = `theme-${view === 'platform' ? currentPlatform : view}`;
+
+    if (view === 'niches') renderNiches();
+    if (view === 'breakout') renderBreakoutReleases();
 }
 
-async function loadData(platform) {
-    try {
-        const response = await fetch(`data/${platforms[platform].file}`);
-        if (!response.ok) throw new Error('Data file not found');
-        gameData = await response.json();
-        
-        // Recalculate Hype Index dynamically for demonstration
-        const genreCounts = gameData.genreDistribution;
-        gameData.games.forEach(g => {
-            // Uncomment to use dynamic formula instead of JSON static value
-            // g.hypeIndex = calculateDynamicHype(g, genreCounts[g.genre] || 10);
+// =========================================================================
+// 1. NICHE SCOUT MODULE (AppMagic style)
+// =========================================================================
+function setupNicheFilters() {
+    // Viability chips
+    document.querySelectorAll('#filter-viability .chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#filter-viability .chip-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            nicheFilters.viability = btn.dataset.val;
+            renderNiches();
         });
-        
-        filteredData = [...gameData.games];
-        lastUpdatedEl.textContent = gameData.lastUpdated;
-        
-        updateFilters();
-        updateOverview();
-        updateNiches();
-        renderCharts();
-        renderTable();
-    } catch (error) {
-        console.error('Error loading data:', error);
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center">Ошибка загрузки данных. Проверьте папку data/.</td></tr>';
+    });
+
+    // Competition chips
+    document.querySelectorAll('#filter-competition .chip-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('#filter-competition .chip-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            nicheFilters.competition = btn.dataset.val;
+            renderNiches();
+        });
+    });
+
+    // CPI select
+    document.getElementById('niche-cpi-filter').addEventListener('change', (e) => {
+        nicheFilters.cpi = e.target.value;
+        renderNiches();
+    });
+
+    // Sort select
+    document.getElementById('niche-sort').addEventListener('change', (e) => {
+        nicheFilters.sort = e.target.value;
+        renderNiches();
+    });
+
+    // Search input
+    document.getElementById('niche-search').addEventListener('input', (e) => {
+        nicheFilters.search = e.target.value.toLowerCase().trim();
+        renderNiches();
+    });
+}
+
+function renderNiches() {
+    if (!marketData || !marketData.niches) return;
+
+    let list = [...marketData.niches];
+
+    // Filter by viability
+    if (nicheFilters.viability === 'top') {
+        list = list.filter(n => n.viabilityScore >= 85);
+    } else if (nicheFilters.viability === 'promising') {
+        list = list.filter(n => n.viabilityScore >= 75 && n.viabilityScore < 85);
     }
-}
 
-function updateFilters() {
-    const genres = [...new Set(gameData.games.map(g => g.genre))].sort();
-    genreFilter.innerHTML = '<option value="all">Все жанры</option>';
-    genres.forEach(g => {
-        genreFilter.innerHTML += `<option value="${g}">${g}</option>`;
-    });
-    
-    // Reset filters
-    genreFilter.value = 'all';
-    hypeFilter.value = 0;
-    hypeFilterVal.textContent = '0';
-    searchInput.value = '';
-}
+    // Filter by competition
+    if (nicheFilters.competition === 'low') {
+        list = list.filter(n => n.competitionLevel === 'low');
+    } else if (nicheFilters.competition === 'medium') {
+        list = list.filter(n => n.competitionLevel === 'medium');
+    }
 
-function updateOverview() {
-    document.getElementById('stat-total-games').textContent = gameData.games.length;
-    
-    const avgRating = gameData.games.reduce((acc, g) => acc + g.rating, 0) / gameData.games.length;
-    document.getElementById('stat-avg-rating').textContent = avgRating.toFixed(1);
-    
-    const avgHype = gameData.games.reduce((acc, g) => acc + g.hypeIndex, 0) / gameData.games.length;
-    document.getElementById('stat-avg-hype').textContent = Math.round(avgHype);
-    
-    const topGenre = Object.entries(gameData.genreDistribution).sort((a,b) => b[1] - a[1])[0];
-    document.getElementById('stat-top-genre').textContent = topGenre ? topGenre[0] : '-';
-}
+    // Filter by CPI
+    if (nicheFilters.cpi !== 'all') {
+        list = list.filter(n => n.cpiTier === nicheFilters.cpi);
+    }
 
-function updateNiches() {
-    const container = document.getElementById('niches-container');
-    container.innerHTML = '';
-    
-    gameData.niches.forEach(niche => {
-        const html = `
-            <div class="niche-card">
-                <div class="niche-title">${niche.genre}</div>
-                <div class="niche-stats">
-                    <span>Спрос: <strong>${niche.demand}</strong></span>
-                    <span>Предложение: <strong>${niche.supply}</strong></span>
-                </div>
-                <div class="niche-opp">
-                    <span style="font-size:0.8rem; white-space:nowrap;">Возможность</span>
-                    <div class="opp-bar">
-                        <div class="opp-fill" style="width: ${niche.opportunity}%"></div>
-                    </div>
-                    <span style="font-weight:bold">${niche.opportunity}</span>
-                </div>
-            </div>
-        `;
-        container.innerHTML += html;
-    });
-}
+    // Search query
+    if (nicheFilters.search) {
+        const q = nicheFilters.search;
+        list = list.filter(n => 
+            n.name.toLowerCase().includes(q) ||
+            n.nameRu.toLowerCase().includes(q) ||
+            n.category.toLowerCase().includes(q) ||
+            n.takeaway.toLowerCase().includes(q) ||
+            (n.tags && n.tags.some(t => t.toLowerCase().includes(q)))
+        );
+    }
 
-function applyFilters() {
-    const genre = genreFilter.value;
-    const minHype = parseInt(hypeFilter.value);
-    const search = searchInput.value.toLowerCase();
-    
-    filteredData = gameData.games.filter(g => {
-        const matchGenre = genre === 'all' || g.genre === genre;
-        const matchHype = g.hypeIndex >= minHype;
-        const matchSearch = g.name.toLowerCase().includes(search) || g.developer.toLowerCase().includes(search);
-        return matchGenre && matchHype && matchSearch;
-    });
-    
-    renderTable();
-}
-
-function renderTable() {
     // Sort
-    filteredData.sort((a, b) => {
-        let valA = a[sortCol];
-        let valB = b[sortCol];
-        
-        if (typeof valA === 'string') valA = valA.toLowerCase();
-        if (typeof valB === 'string') valB = valB.toLowerCase();
-        
-        if (valA < valB) return sortDesc ? 1 : -1;
-        if (valA > valB) return sortDesc ? -1 : 1;
+    list.sort((a, b) => {
+        if (nicheFilters.sort === 'viability') return b.viabilityScore - a.viabilityScore;
+        if (nicheFilters.sort === 'competition') return a.top3Share - b.top3Share;
+        if (nicheFilters.sort === 'growth') {
+            const numA = parseFloat(a.growthYoY) || 0;
+            const numB = parseFloat(b.growthYoY) || 0;
+            return numB - numA;
+        }
+        if (nicheFilters.sort === 'revenue') {
+            return b.viabilityScore - a.viabilityScore;
+        }
         return 0;
     });
 
-    tbody.innerHTML = '';
-    
-    if (filteredData.length === 0) {
-        tbody.innerHTML = '<tr><td colspan="6" style="text-align:center">Игры не найдены</td></tr>';
+    if (list.length === 0) {
+        nichesContainer.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+                Ниш по выбранным критериям не найдено. Попробуйте сбросить фильтры.
+            </div>
+        `;
         return;
     }
 
-    filteredData.forEach(game => {
-        const hypeClass = game.hypeIndex >= 80 ? 'hype-high' : (game.hypeIndex >= 60 ? 'hype-med' : 'hype-low');
+    nichesContainer.innerHTML = list.map(niche => {
+        const scoreBadgeColor = niche.viabilityScore >= 88 ? '#10b981' : niche.viabilityScore >= 80 ? '#38bdf8' : '#f59e0b';
+        const competitionColor = niche.competitionLevel === 'low' ? '#10b981' : niche.competitionLevel === 'medium' ? '#f59e0b' : '#f43f5e';
+        const tagsHtml = (niche.tags || []).map(t => `<span class="niche-tag">${t}</span>`).join('');
         
-        let trendIcon = '';
-        if(game.trend === 'up') trendIcon = '<i class="fa-solid fa-arrow-trend-up trend-up trend-icon"></i>';
-        else if(game.trend === 'down') trendIcon = '<i class="fa-solid fa-arrow-trend-down trend-down trend-icon"></i>';
-        else trendIcon = '<i class="fa-solid fa-minus trend-stable trend-icon"></i>';
+        const benchmarksHtml = (niche.benchmarks || []).map(b => `
+            <div class="benchmark-pill">
+                <strong>${b.name}</strong> • ${b.installs} <span class="bm-rev">${b.estRevenue}</span>
+            </div>
+        `).join('');
 
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td>
-                <div class="game-name-cell">
-                    <span class="game-name">${game.name}</span>
-                    <span class="game-dev">${game.developer}</span>
+        return `
+            <div class="niche-card-pro">
+                <div class="niche-card-header">
+                    <div class="niche-title-box">
+                        <span class="niche-category">${niche.category}</span>
+                        <h2 class="niche-main-title">${niche.nameRu}</h2>
+                        <div class="niche-sub-title">${niche.name}</div>
+                    </div>
+                    <div class="viability-badge" style="border-color:${scoreBadgeColor}; color:${scoreBadgeColor}">
+                        <div class="vb-score">${niche.viabilityScore}</div>
+                        <div class="vb-tier">Tier ${niche.tier}</div>
+                    </div>
                 </div>
-            </td>
-            <td>
-                <div>${game.genre}</div>
-                <div style="font-size:0.8rem; color:var(--text-muted)">${game.subGenre}</div>
-            </td>
-            <td><strong>${game.rating}</strong> <span style="font-size:0.8rem; color:var(--text-muted)">(${formatNumber(game.ratingsCount)})</span></td>
-            <td>${game.downloads}</td>
-            <td class="${hypeClass}" style="font-weight:bold; font-size:1.1rem">${game.hypeIndex}</td>
-            <td>${trendIcon} <span style="font-size:0.8rem; margin-left:5px">${game.growthRate > 0 ? '+'+game.growthRate : game.growthRate}%</span></td>
+
+                <!-- Deep Metrics Matrix (Sensor Tower & AppMagic KPIs) -->
+                <div class="niche-metrics-grid">
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-chart-pie"></i> Объем рынка</span>
+                        <span class="mc-val">${niche.marketSizeRevenue}</span>
+                        <span class="mc-sub">${niche.marketSizeDownloads}</span>
+                    </div>
+
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-arrow-trend-up"></i> Темп роста</span>
+                        <span class="mc-val" style="color:#10b981">${niche.growthYoY}</span>
+                        <span class="mc-sub">Динамика YoY</span>
+                    </div>
+
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-shield-halved"></i> Доля Top-3 (HHI)</span>
+                        <span class="mc-val" style="color:${competitionColor}">${niche.top3Share}%</span>
+                        <span class="mc-sub">${niche.competitionLabel}</span>
+                    </div>
+
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-sack-dollar"></i> Стоимость трафика (CPI)</span>
+                        <span class="mc-val">${niche.cpiRange}</span>
+                        <span class="mc-sub">Окупаемость: ${niche.cpiLtvRatio}</span>
+                    </div>
+
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-user-check"></i> Удержание (GameAnalytics)</span>
+                        <span class="mc-val">D1: ${niche.retentionD1} | D7: ${niche.retentionD7}</span>
+                        <span class="mc-sub">D30: ${niche.retentionD30} • LTV: ${niche.estLtvD90}</span>
+                    </div>
+
+                    <div class="metric-cell">
+                        <span class="mc-label"><i class="fa-solid fa-fire"></i> Органика / Виральность</span>
+                        <span class="mc-val" style="font-size:0.85rem">${niche.viralPotential}</span>
+                    </div>
+                </div>
+
+                <!-- Monetization Split Bar -->
+                <div class="monetization-section">
+                    <div class="mono-label-row">
+                        <span><i class="fa-solid fa-coins"></i> Структура монетизации:</span>
+                        <span class="mono-text">${niche.monetizationLabel}</span>
+                    </div>
+                    <div class="mono-bar">
+                        <div class="mb-rewarded" style="width:${niche.monetization.rewarded}%" title="Rewarded Video: ${niche.monetization.rewarded}%"></div>
+                        <div class="mb-interstitial" style="width:${niche.monetization.interstitial}%" title="Interstitial: ${niche.monetization.interstitial}%"></div>
+                        <div class="mb-iap" style="width:${niche.monetization.iap}%" title="IAP / Sub: ${niche.monetization.iap}%"></div>
+                    </div>
+                </div>
+
+                <!-- Actionable Takeaway for Indie Devs -->
+                <div class="niche-takeaway-box">
+                    <div class="ntb-title"><i class="fa-solid fa-bullseye"></i> Тактический вывод для инди:</div>
+                    <p class="ntb-text">${niche.takeaway}</p>
+                </div>
+
+                <!-- Reference Benchmarks -->
+                <div class="benchmarks-row">
+                    <span class="bm-title">Игры-ориентиры:</span>
+                    <div class="bm-list">${benchmarksHtml}</div>
+                </div>
+
+                <div class="niche-tags-row">${tagsHtml}</div>
+            </div>
         `;
-        tbody.appendChild(tr);
-    });
+    }).join('');
 }
 
-function renderCharts() {
-    const accentColor = getComputedStyle(document.body).getPropertyValue('--accent').trim();
-    
-    // Chart.js defaults for dark theme
-    Chart.defaults.color = '#a0a0b0';
-    Chart.defaults.borderColor = '#3a3a48';
-
-    // 1. Genre Pie Chart
-    const ctxGenre = document.getElementById('genreChart').getContext('2d');
-    if (chartInstances.genre) chartInstances.genre.destroy();
-    
-    const genreLabels = Object.keys(gameData.genreDistribution);
-    const genreData = Object.values(gameData.genreDistribution);
-    
-    // Generate palette for all genres
-    const bgColors = [
-        accentColor,
-        '#9C27B0', '#00BCD4', '#FFEB3B', '#FF9800', '#795548', '#E91E63',
-        '#2196F3', '#8BC34A', '#FF5722', '#607D8B', '#CDDC39', '#00E676',
-        '#AA00FF', '#FF6D00', '#76FF03', '#F50057', '#448AFF', '#69F0AE'
-    ];
-
-    chartInstances.genre = new Chart(ctxGenre, {
-        type: 'doughnut',
-        data: {
-            labels: genreLabels,
-            datasets: [{
-                data: genreData,
-                backgroundColor: bgColors.slice(0, genreLabels.length),
-                borderWidth: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'right' }
-            }
-        }
+// =========================================================================
+// 2. STORE PLATFORMS MODULE (Sensor Tower Store Explorer)
+// =========================================================================
+function setupStoreFilters() {
+    storeGenreFilter.addEventListener('change', (e) => {
+        storeFilters.genre = e.target.value;
+        renderStoreTable();
     });
 
-    // 2. Trend Line Chart
-    const ctxTrend = document.getElementById('trendChart').getContext('2d');
-    if (chartInstances.trend) chartInstances.trend.destroy();
-    
-    const trendLabels = gameData.trendHistory.map(t => t.date);
-    const trendData = gameData.trendHistory.map(t => t.hypeAvg);
-
-    chartInstances.trend = new Chart(ctxTrend, {
-        type: 'line',
-        data: {
-            labels: trendLabels,
-            datasets: [{
-                label: 'Средний Индекс Хайпа',
-                data: trendData,
-                borderColor: accentColor,
-                backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.4
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: { min: 40, max: 100 }
-            }
-        }
+    storeSearchInput.addEventListener('input', (e) => {
+        storeFilters.search = e.target.value.toLowerCase().trim();
+        renderStoreTable();
     });
-}
 
-function exportToCSV() {
-    if (filteredData.length === 0) return;
-    
-    const headers = ['Название', 'Разработчик', 'Жанр', 'Поджанр', 'Рейтинг', 'Оценки', 'Скачивания', 'Индекс Хайпа', 'Рост %', 'Тренд'];
-    let csv = headers.join(',') + '\n';
-    
-    filteredData.forEach(g => {
-        const row = [
-            `"${g.name}"`,
-            `"${g.developer}"`,
-            g.genre,
-            g.subGenre,
-            g.rating,
-            g.ratingsCount,
-            `"${g.downloads}"`,
-            g.hypeIndex,
-            g.growthRate,
-            g.trend
-        ];
-        csv += row.join(',') + '\n';
-    });
-    
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', `gametrends_${currentPlatform}_${new Date().toISOString().slice(0,10)}.csv`);
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// ============================================
-// UTILITY FUNCTIONS
-// ============================================
-function formatNumber(num) {
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
-    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
-    return num;
-}
-
-// ============================================
-// NEW RELEASES MODULE
-// ============================================
-let nrData = null;
-let nrFilteredData = [];
-let nrSortCol = 'hypeIndex';
-let nrSortDesc = true;
-let isNewReleasesView = false;
-
-// DOM refs for new releases
-const newReleasesTab = document.getElementById('new-releases-tab');
-const platformView = document.getElementById('platform-view') || document.querySelector('.main-content:not(#new-releases-view)');
-const nrView = document.getElementById('new-releases-view');
-
-// Modify init to set up new releases
-async function init() {
-    setupEventListeners();
-    setupNewReleasesListeners();
-    await loadData(currentPlatform);
-}
-
-function setupNewReleasesListeners() {
-    // New releases tab click
-    newReleasesTab.addEventListener('click', () => {
-        switchToNewReleases();
-    });
-    
-    // New releases table sorting
-    document.querySelectorAll('th[data-sort-nr]').forEach(th => {
+    document.querySelectorAll('#games-table th[data-sort]').forEach(th => {
         th.addEventListener('click', () => {
-            const col = th.dataset.sortNr;
-            if (nrSortCol === col) {
-                nrSortDesc = !nrSortDesc;
+            const col = th.dataset.sort;
+            if (storeFilters.sortCol === col) {
+                storeFilters.sortDesc = !storeFilters.sortDesc;
             } else {
-                nrSortCol = col;
-                nrSortDesc = true;
+                storeFilters.sortCol = col;
+                storeFilters.sortDesc = true;
             }
-            renderNrTable();
+            renderStoreTable();
         });
     });
-    
-    // New releases CSV export
-    document.getElementById('nr-export-btn').addEventListener('click', exportNrCSV);
+
+    document.getElementById('export-btn').addEventListener('click', exportStoreCSV);
 }
 
-function switchToNewReleases() {
-    isNewReleasesView = true;
-    
-    // Update nav highlights
-    platformTabs.forEach(t => t.classList.remove('active'));
-    newReleasesTab.classList.add('active');
-    
-    // Switch views
-    platformView.style.display = 'none';
-    nrView.style.display = 'block';
-    
-    // Set theme
-    document.body.className = 'theme-new_releases';
-    
-    // Load data
-    loadNewReleasesData();
-}
+function renderStorePlatform(platformKey) {
+    if (!marketData || !marketData.platforms || !marketData.platforms[platformKey]) return;
 
-function switchToPlatformView() {
-    isNewReleasesView = false;
-    newReleasesTab.classList.remove('active');
-    platformView.style.display = 'block';
-    nrView.style.display = 'none';
-}
+    const data = marketData.platforms[platformKey];
+    document.getElementById('current-platform-title').textContent = data.title;
+    document.getElementById('last-updated').textContent = marketData.lastUpdated;
 
-// Override changePlatform to also handle view switching
-const _origChangePlatform = changePlatform;
-changePlatform = async function(platform) {
-    if (isNewReleasesView) {
-        switchToPlatformView();
-    }
-    await _origChangePlatform(platform);
-};
+    document.getElementById('stat-total-games').textContent = data.totalTracked || data.games.length;
+    document.getElementById('stat-avg-rating').textContent = data.avgRating || '4.5';
+    document.getElementById('stat-avg-hype').textContent = data.avgHype || '85';
+    document.getElementById('stat-top-genre').textContent = data.topGenre || 'Casual & Action';
 
-async function loadNewReleasesData() {
-    try {
-        const response = await fetch('data/new_releases.json');
-        if (!response.ok) throw new Error('File not found');
-        nrData = await response.json();
-        nrFilteredData = [...nrData.games];
-        
-        document.getElementById('nr-last-updated').textContent = nrData.lastUpdated;
-        
-        updateNrOverview();
-        renderNrCharts();
-        renderNrNiches();
-        renderNrTable();
-    } catch (err) {
-        console.error('Error loading new releases:', err);
-    }
-}
-
-function updateNrOverview() {
-    const games = nrData.games;
-    document.getElementById('nr-total').textContent = games.length;
-    
-    const avgHype = Math.round(games.reduce((a, g) => a + g.hypeIndex, 0) / games.length);
-    document.getElementById('nr-avg-hype').textContent = avgHype;
-    
-    const d1Games = games.filter(g => g.retentionDay1 > 0);
-    const avgD1 = d1Games.length > 0 
-        ? Math.round(d1Games.reduce((a, g) => a + g.retentionDay1, 0) / d1Games.length) 
-        : 0;
-    document.getElementById('nr-avg-d1').textContent = avgD1 + '%';
-    
-    const d7Games = games.filter(g => g.retentionDay7 > 0);
-    const avgD7 = d7Games.length > 0 
-        ? Math.round(d7Games.reduce((a, g) => a + g.retentionDay7, 0) / d7Games.length) 
-        : 0;
-    document.getElementById('nr-avg-d7').textContent = avgD7 + '%';
-    
-    const avgGrowth = Math.round(games.reduce((a, g) => a + g.growthRate, 0) / games.length);
-    document.getElementById('nr-avg-growth').textContent = '+' + avgGrowth + '%';
-}
-
-function renderNrCharts() {
-    Chart.defaults.color = '#a0a0b0';
-    Chart.defaults.borderColor = '#3a3a48';
-    
-    // 1. Platform breakdown doughnut
-    const ctxPlat = document.getElementById('nrPlatformChart').getContext('2d');
-    if (chartInstances.nrPlatform) chartInstances.nrPlatform.destroy();
-    
-    const platLabels = Object.keys(nrData.platformBreakdown);
-    const platData = Object.values(nrData.platformBreakdown);
-    const platColors = {
-        'Steam': '#66C0F4',
-        'Google Play': '#34A853',
-        'Poki': '#00C2FF',
-        'CrazyGames': '#FF4C4C',
-        'Yandex Games': '#FC3F1D'
-    };
-    
-    chartInstances.nrPlatform = new Chart(ctxPlat, {
-        type: 'doughnut',
-        data: {
-            labels: platLabels,
-            datasets: [{
-                data: platData,
-                backgroundColor: platLabels.map(l => platColors[l] || '#888'),
-                borderWidth: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { position: 'right' } }
-        }
+    // Populate genres dropdown
+    const genres = [...new Set(data.games.map(g => g.genre))].sort();
+    storeGenreFilter.innerHTML = '<option value="all">Все жанры</option>';
+    genres.forEach(g => {
+        storeGenreFilter.innerHTML += `<option value="${g}">${g}</option>`;
     });
-    
-    // 2. Retention grouped bar chart (top 8 by hype)
-    const ctxRet = document.getElementById('nrRetentionChart').getContext('2d');
-    if (chartInstances.nrRetention) chartInstances.nrRetention.destroy();
-    
-    const top8 = [...nrData.games]
-        .sort((a, b) => b.hypeIndex - a.hypeIndex)
-        .slice(0, 8);
-    
-    const retLabels = top8.map(g => g.name.length > 15 ? g.name.slice(0, 15) + '…' : g.name);
-    
-    chartInstances.nrRetention = new Chart(ctxRet, {
-        type: 'bar',
-        data: {
-            labels: retLabels,
-            datasets: [
-                {
-                    label: 'D1 %',
-                    data: top8.map(g => g.retentionDay1),
-                    backgroundColor: '#4caf50',
-                    borderRadius: 4
-                },
-                {
-                    label: 'D7 %',
-                    data: top8.map(g => g.retentionDay7),
-                    backgroundColor: '#ff9800',
-                    borderRadius: 4
-                },
-                {
-                    label: 'D30 %',
-                    data: top8.map(g => g.retentionDay30),
-                    backgroundColor: '#2196F3',
-                    borderRadius: 4
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                y: { min: 0, max: 100, title: { display: true, text: 'Retention %' } }
-            },
-            plugins: {
-                legend: { position: 'top' }
-            }
-        }
-    });
+
+    storeFilters.genre = 'all';
+    storeFilters.search = '';
+    storeSearchInput.value = '';
+
+    renderStoreTable();
 }
 
-function renderNrNiches() {
-    const container = document.getElementById('nr-niches-container');
-    container.innerHTML = '';
-    
-    nrData.niches.forEach(niche => {
-        const retClass = niche.avgRetention >= 50 ? 'high' : (niche.avgRetention >= 30 ? 'mid' : 'low');
-        const html = `
-            <div class="niche-card">
-                <div class="niche-title">${niche.genre}</div>
-                <div class="niche-stats">
-                    <span>Спрос: <strong>${niche.demand}</strong></span>
-                    <span>Предложение: <strong>${niche.supply}</strong></span>
-                </div>
-                <div class="niche-metrics">
-                    <div class="niche-metric">
-                        <span class="niche-metric-value">${niche.avgRating}★</span>
-                        <span class="niche-metric-label">Рейтинг</span>
+function renderStoreTable() {
+    const data = marketData.platforms[currentPlatform];
+    if (!data || !data.games) return;
+
+    let list = [...data.games];
+
+    if (storeFilters.genre !== 'all') {
+        list = list.filter(g => g.genre === storeFilters.genre);
+    }
+
+    if (storeFilters.search) {
+        const q = storeFilters.search;
+        list = list.filter(g => 
+            g.name.toLowerCase().includes(q) || 
+            (g.developer && g.developer.toLowerCase().includes(q)) ||
+            (g.engine && g.engine.toLowerCase().includes(q))
+        );
+    }
+
+    // Sort
+    list.sort((a, b) => {
+        let valA = a[storeFilters.sortCol];
+        let valB = b[storeFilters.sortCol];
+
+        if (typeof valA === 'string') valA = valA.toLowerCase();
+        if (typeof valB === 'string') valB = valB.toLowerCase();
+
+        if (valA < valB) return storeFilters.sortDesc ? 1 : -1;
+        if (valA > valB) return storeFilters.sortDesc ? -1 : 1;
+        return 0;
+    });
+
+    gamesTbody.innerHTML = list.map(g => {
+        return `
+            <tr>
+                <td>
+                    <div class="game-td-name">
+                        <a href="${g.url || '#'}" target="_blank" rel="noopener" class="game-link">${g.name}</a>
+                        <span class="game-td-dev">${g.developer || 'Unknown Studio'}</span>
                     </div>
-                    <div class="niche-metric">
-                        <span class="niche-metric-value">${niche.avgRetention}%</span>
-                        <span class="niche-metric-label">D7 Retention</span>
+                </td>
+                <td>
+                    <span class="badge-genre">${g.genre}</span>
+                    <span class="td-sub">${g.engine || 'Engine'}</span>
+                </td>
+                <td>
+                    <strong>${g.downloads}</strong>
+                    <span class="td-sub">${g.monthlyInstalls || ''}</span>
+                </td>
+                <td>
+                    <strong style="color:#10b981">${g.estMonthlyRevenue || 'N/A'}</strong>
+                    <span class="td-sub">${g.monetization || ''}</span>
+                </td>
+                <td>
+                    <span class="rating-star">⭐ ${g.rating}</span>
+                </td>
+                <td>
+                    <div style="font-size:0.85rem">D1: <strong>${g.retentionD1 || '-'}</strong></div>
+                    <div class="td-sub">D7: ${g.retentionD7 || '-'}</div>
+                </td>
+                <td>
+                    <span class="cpi-pill">${g.cpiEst || '-'}</span>
+                </td>
+                <td>
+                    <div class="hype-meter">
+                        <span class="hype-val">${g.hypeIndex}</span>
+                        <div class="hype-bar-mini">
+                            <div class="hbm-fill" style="width:${g.hypeIndex}%"></div>
+                        </div>
                     </div>
-                    <div class="niche-metric">
-                        <span class="niche-metric-value">${niche.opportunity}</span>
-                        <span class="niche-metric-label">Возможность</span>
+                </td>
+            </tr>
+        `;
+    }).join('');
+}
+
+function exportStoreCSV() {
+    const data = marketData.platforms[currentPlatform];
+    if (!data || !data.games) return;
+
+    let csv = "Name,Developer,Genre,Downloads,EstMonthlyRevenue,Rating,RetentionD1,RetentionD7,CPI,HypeIndex\n";
+    data.games.forEach(g => {
+        csv += `"${g.name}","${g.developer}","${g.genre}","${g.downloads}","${g.estMonthlyRevenue}","${g.rating}","${g.retentionD1}","${g.retentionD7}","${g.cpiEst}","${g.hypeIndex}"\n`;
+    });
+
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `GameTrends_${currentPlatform}_intelligence.csv`;
+    a.click();
+}
+
+// =========================================================================
+// 3. BREAKOUT RELEASES MODULE (< 60 Days Old)
+// =========================================================================
+function renderBreakoutReleases() {
+    if (!marketData || !marketData.breakoutReleases) return;
+
+    breakoutContainer.innerHTML = marketData.breakoutReleases.map(b => {
+        return `
+            <div class="breakout-card-pro">
+                <div class="bcp-header">
+                    <div>
+                        <div class="bcp-platform-pill">${b.platform} • ${b.daysAgo} дней назад</div>
+                        <h3 class="bcp-title">${b.name}</h3>
+                        <span class="bcp-genre">${b.genre}</span>
+                    </div>
+                    <div class="bcp-growth-badge">
+                        <div class="bcp-growth-val">${b.monthlyGrowth}</div>
+                        <div class="bcp-growth-lbl">Прирост/мес</div>
                     </div>
                 </div>
-                <div class="niche-opp">
-                    <div class="opp-bar"><div class="opp-fill" style="width: ${niche.opportunity}%"></div></div>
+
+                <div class="bcp-stats-grid">
+                    <div class="bcp-stat">
+                        <span class="bs-lbl">Установки</span>
+                        <span class="bs-val">${b.installs}</span>
+                    </div>
+                    <div class="bcp-stat">
+                        <span class="bs-lbl">Удержание D1 / D7</span>
+                        <span class="bs-val">${b.retentionD1} / ${b.retentionD7}</span>
+                    </div>
+                    <div class="bcp-stat">
+                        <span class="bs-lbl">Оценка CPI</span>
+                        <span class="bs-val" style="color:#10b981">${b.cpiEst}</span>
+                    </div>
+                    <div class="bcp-stat">
+                        <span class="bs-lbl">Рейтинг</span>
+                        <span class="bs-val">⭐ ${b.rating}</span>
+                    </div>
                 </div>
-                <div class="niche-insight">
-                    💡 ${niche.insight}
+
+                <div class="bcp-factor-box">
+                    <div class="bfb-lbl"><i class="fa-solid fa-bolt"></i> Драйвер взрывного роста:</div>
+                    <p class="bfb-text">${b.breakoutFactor}</p>
+                </div>
+
+                <div class="bcp-insight-box">
+                    <div class="bib-lbl"><i class="fa-solid fa-lightbulb"></i> Урок для разработчика:</div>
+                    <p class="bib-text">${b.keyInsight}</p>
                 </div>
             </div>
         `;
-        container.innerHTML += html;
-    });
+    }).join('');
 }
-
-function renderNrTable() {
-    const tbody = document.getElementById('nr-tbody');
-    
-    // Sort
-    nrFilteredData.sort((a, b) => {
-        let vA = a[nrSortCol], vB = b[nrSortCol];
-        if (typeof vA === 'string') { vA = vA.toLowerCase(); vB = vB.toLowerCase(); }
-        if (vA < vB) return nrSortDesc ? 1 : -1;
-        if (vA > vB) return nrSortDesc ? -1 : 1;
-        return 0;
-    });
-    
-    tbody.innerHTML = '';
-    
-    nrFilteredData.forEach(game => {
-        const hypeClass = game.hypeIndex >= 85 ? 'hype-high' : (game.hypeIndex >= 70 ? 'hype-med' : 'hype-low');
-        
-        const retD1Class = game.retentionDay1 >= 65 ? 'high' : (game.retentionDay1 >= 45 ? 'mid' : 'low');
-        const retD7Class = game.retentionDay7 >= 45 ? 'high' : (game.retentionDay7 >= 25 ? 'mid' : 'low');
-        
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td>
-                <div class="game-name-cell">
-                    <span class="game-name">${game.name}</span>
-                    <span class="game-dev">${game.developer} • <span class="days-badge">${game.daysAgo}д назад</span></span>
-                </div>
-            </td>
-            <td><span class="platform-badge ${game.platformKey}">${game.platform}</span></td>
-            <td>
-                <div>${game.genre}</div>
-                <div style="font-size:0.8rem; color:var(--text-muted)">${game.subGenre}</div>
-            </td>
-            <td><strong>${game.rating}</strong> <span style="font-size:0.8rem; color:var(--text-muted)">(${formatNumber(game.ratingsCount)})</span></td>
-            <td class="${hypeClass}" style="font-weight:bold; font-size:1.1rem">${game.hypeIndex}</td>
-            <td>
-                <div class="retention-cell">
-                    <span>${game.retentionDay1}%</span>
-                    <div class="retention-bar"><div class="retention-fill ${retD1Class}" style="width:${game.retentionDay1}%"></div></div>
-                </div>
-            </td>
-            <td>
-                <div class="retention-cell">
-                    <span>${game.retentionDay7}%</span>
-                    <div class="retention-bar"><div class="retention-fill ${retD7Class}" style="width:${game.retentionDay7}%"></div></div>
-                </div>
-            </td>
-            <td style="color:var(--trend-up); font-weight:bold">+${game.growthRate}%</td>
-            <td><span class="insight-text">${game.highlight}</span></td>
-        `;
-        tbody.appendChild(tr);
-    });
-}
-
-function exportNrCSV() {
-    if (!nrFilteredData || nrFilteredData.length === 0) return;
-    
-    const h = ['Название','Платформа','Разработчик','Жанр','Поджанр','Рейтинг','Оценки','Скачивания','Hype Index','D1 %','D7 %','D30 %','Рост %','Дней назад','Инсайт'];
-    let csv = h.join(',') + '\n';
-    
-    nrFilteredData.forEach(g => {
-        csv += [
-            `"${g.name}"`, `"${g.platform}"`, `"${g.developer}"`,
-            g.genre, g.subGenre, g.rating, g.ratingsCount,
-            `"${g.downloads}"`, g.hypeIndex,
-            g.retentionDay1, g.retentionDay7, g.retentionDay30,
-            g.growthRate, g.daysAgo, `"${g.highlight}"`
-        ].join(',') + '\n';
-    });
-    
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `new_releases_${new Date().toISOString().slice(0,10)}.csv`;
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// Start app
-document.addEventListener('DOMContentLoaded', init);
-
