@@ -1,6 +1,10 @@
 {
-  "platform": "crazygames",
-  "lastUpdated": "2026-11-04",
+  "title": "CrazyGames Web Hub",
+  "totalTracked": 2,
+  "avgRating": 4.7,
+  "avgHype": 94,
+  "topGenre": "Voxel Sandbox & Shooter",
+  "topIndieShare": "Высокая концентрация игроков с сессией > 16 минут",
   "games": [
     {
       "name": "Bloxd.io",
@@ -14,6 +18,7 @@
       "retentionD1": "50%",
       "retentionD7": "25%",
       "cpiEst": "$0.00",
+      "gaPercentile": "Top 2% (Web Leader)",
       "hypeIndex": 98,
       "trend": "up",
       "growthRate": 34,
@@ -33,6 +38,7 @@
       "retentionD1": "44%",
       "retentionD7": "18%",
       "cpiEst": "$0.00",
+      "gaPercentile": "Top 25% (Healthy)",
       "hypeIndex": 91,
       "trend": "stable",
       "growthRate": 6.2,

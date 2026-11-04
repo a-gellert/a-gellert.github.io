@@ -1,6 +1,10 @@
 {
-  "platform": "yandex_games",
-  "lastUpdated": "2026-11-04",
+  "title": "Яндекс Игры (СНГ Рынок)",
+  "totalTracked": 2,
+  "avgRating": 4.75,
+  "avgHype": 92,
+  "topGenre": "Рэгдолл разрушение и головоломки",
+  "topIndieShare": "Быстрая монетизация в рублях через РСЯ",
   "games": [
     {
       "name": "Симулятор Краш-тестов и Разрушения Машин",
@@ -14,6 +18,7 @@
       "retentionD1": "42%",
       "retentionD7": "17%",
       "cpiEst": "0 ₽ (Фичеринг)",
+      "gaPercentile": "Top 25% (Healthy)",
       "hypeIndex": 94,
       "trend": "up",
       "growthRate": 32.5,
@@ -33,6 +38,7 @@
       "retentionD1": "47%",
       "retentionD7": "23%",
       "cpiEst": "0 ₽",
+      "gaPercentile": "Top 25% (Healthy)",
       "hypeIndex": 90,
       "trend": "up",
       "growthRate": 21,

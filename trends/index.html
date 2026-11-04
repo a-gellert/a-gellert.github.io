@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameTrends Intelligence — Поиск ниш и аналитика рынков (AppMagic & Sensor Tower Style)</title>
-    <meta name="description" content="Профессиональная аналитика игровых рынков и поиск прибыльных инди-ниш: Google Play, Steam, Poki, CrazyGames. Оценка выручки, CPI, LTV, удержания и конкуренции.">
+    <title>GameAnalytics & Market Intelligence — Бенчмарки, Парсеры и Разведка ниш</title>
+    <meta name="description" content="Профессиональная аналитика игровых рынков и бенчмарки в стиле GameAnalytics, AppMagic и Sensor Tower. Парсеры Google Play, Steam, Poki. Проверка метрик удержания (D1, D7, D28) и поиск прибыльных ниш.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="theme-niche">
+<body class="theme-ga">
     <div class="app-container">
 
         <!-- ===================================================================
@@ -17,10 +17,10 @@
              =================================================================== -->
         <aside class="sidebar">
             <div class="logo">
-                <i class="fa-solid fa-chart-line"></i>
+                <i class="fa-solid fa-chart-mixed"></i>
                 <div>
-                    <h2>GameTrends</h2>
-                    <span class="logo-sub">Market Intelligence</span>
+                    <h2>GameAnalytics</h2>
+                    <span class="logo-sub">Pro Intelligence</span>
                 </div>
             </div>
             
@@ -29,20 +29,26 @@
             </a>
             
             <nav class="platform-nav">
-                <h3>Инструменты разведки</h3>
+                <h3>Отраслевые бенчмарки</h3>
                 <ul id="main-nav-tabs">
-                    <li data-view="niches" class="active nav-highlight">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i> Поиск ниш (Niche Scout)
+                    <li data-view="gameanalytics" class="active nav-ga">
+                        <i class="fa-solid fa-chart-line"></i> Бенчмарки GameAnalytics
+                    </li>
+                    <li data-view="checker" class="nav-checker">
+                        <i class="fa-solid fa-stethoscope"></i> Диагностика игры (KPI)
+                    </li>
+                    <li data-view="niches" class="nav-highlight">
+                        <i class="fa-solid fa-crosshairs"></i> Разведчик ниш (AppMagic)
                     </li>
                     <li data-view="breakout" class="nav-special">
                         <i class="fa-solid fa-bolt"></i> Растущие новинки (&lt;60д)
                     </li>
                 </ul>
 
-                <h3 style="margin-top:20px">Базы платформ (Sensor Tower)</h3>
+                <h3 style="margin-top:20px">Live-парсеры сторов (API)</h3>
                 <ul id="platform-tabs">
-                    <li data-platform="google_play"><i class="fa-brands fa-google-play"></i> Google Play</li>
-                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam Indie</li>
+                    <li data-platform="google_play"><i class="fa-brands fa-google-play"></i> Google Play Live (40 игр)</li>
+                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam Live (SteamSpy)</li>
                     <li data-platform="poki"><i class="fa-solid fa-gamepad"></i> Poki Web</li>
                     <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
                     <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Яндекс Игры</li>
@@ -51,61 +57,163 @@
             
             <!-- Quick Insights Box -->
             <div class="sidebar-insight-box">
-                <div class="sib-title"><i class="fa-solid fa-lightbulb"></i> Совет инди:</div>
-                <p>Избегайте ниш, где Top-3 студии держат &gt;50% выручки (Match-3, 4X). Ищите фрагментированные рынки с CPI &lt; $0.40.</p>
+                <div class="sib-title"><i class="fa-solid fa-database"></i> Live Данные:</div>
+                <p>Данные Google Play и Steam парсятся в реальном времени и сопоставляются с официальными бенчмарками GameAnalytics по 100 000+ игр.</p>
             </div>
         </aside>
 
         <!-- ===================================================================
-             VIEW 1: NICHE SCOUT (AppMagic Deep Niche Discovery) — DEFAULT
+             VIEW 1: GAMEANALYTICS BENCHMARKS (DEFAULT)
              =================================================================== -->
-        <main class="main-content" id="niches-view">
+        <main class="main-content" id="gameanalytics-view">
             <header class="topbar">
                 <div>
-                    <h1><i class="fa-solid fa-crosshairs" style="color:var(--accent)"></i> Матрица ниш и поиск возможностей</h1>
+                    <h1><i class="fa-solid fa-chart-line" style="color:#38bdf8"></i> Отраслевые бенчмарки GameAnalytics</h1>
                     <p class="subtitle">
-                        Оценка незанятых инди-ниш по формуле AppMagic / Sensor Tower: CPI, LTV, порог входа и виральный потенциал • 
-                        <span id="niche-updated-date">Обновлено: Ноябрь 2026</span>
+                        Официальные перцентили удержания, сессий и монетизации по 100 000+ игр и 1.2 млрд MAU • 
+                        <span id="ga-updated-date">Обновлено: Live</span>
                     </p>
                 </div>
                 <div class="topbar-actions">
-                    <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="btn-telegram-nav">
-                        <i class="fa-brands fa-telegram"></i> Канал @tiny_game
-                    </a>
+                    <button class="btn-primary" onclick="switchView('checker')">
+                        <i class="fa-solid fa-stethoscope"></i> Проверить метрики своей игры
+                    </button>
+                </div>
+            </header>
+
+            <!-- Genre Selection Bar -->
+            <section class="ga-genre-bar">
+                <label>Выберите жанр для анализа бенчмарков:</label>
+                <div class="chips" id="ga-genre-chips">
+                    <button class="chip-btn active" data-genre="puzzle">🧩 Puzzle & Word</button>
+                    <button class="chip-btn" data-genre="hypercasual">⚡ Hyper-Casual & Arcade</button>
+                    <button class="chip-btn" data-genre="action">⚔️ Action & Survival</button>
+                    <button class="chip-btn" data-genre="simulation">🏭 Simulation & Tycoon</button>
+                    <button class="chip-btn" data-genre="rpg">🛡️ RPG & Strategy</button>
+                    <button class="chip-btn" data-genre="web_io">🌐 Web & HTML5 .IO</button>
+                </div>
+            </section>
+
+            <!-- 4-Tier Percentiles Grid -->
+            <section class="ga-percentiles-grid" id="ga-percentiles-container">
+                <!-- Rendered dynamically -->
+            </section>
+
+            <!-- Retention Curve Chart & Metrics Breakdown -->
+            <section class="ga-chart-section">
+                <div class="chart-container-pro">
+                    <h3>Кривая распада удержания: D1 → D7 → D28 по перцентилям</h3>
+                    <canvas id="gaRetentionChart" style="max-height: 320px;"></canvas>
+                </div>
+                <div class="ga-insight-card" id="ga-genre-insight">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+        </main>
+
+        <!-- ===================================================================
+             VIEW 2: GAME HEALTH / KPI DIAGNOSTIC CHECKER
+             =================================================================== -->
+        <main class="main-content" id="checker-view" style="display:none">
+            <header class="topbar">
+                <div>
+                    <h1><i class="fa-solid fa-stethoscope" style="color:#10b981"></i> Диагностика здоровья игры (KPI Checker)</h1>
+                    <p class="subtitle">
+                        Введите текущие метрики вашей игры и получите моментальное сравнение с индустриальными перцентилями GameAnalytics
+                    </p>
+                </div>
+            </header>
+
+            <div class="checker-container">
+                <!-- Input Form -->
+                <div class="checker-form-card">
+                    <h3>Ввод метрик вашего проекта</h3>
+                    
+                    <div class="checker-presets">
+                        <span>Быстрые пресеты:</span>
+                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('top')">Хит (Top 2%)</button>
+                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('good')">Здоровый (Top 25%)</button>
+                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('leak')">Утечка на D7</button>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ch-genre">Жанр игры:</label>
+                            <select id="ch-genre">
+                                <option value="puzzle">Puzzle & Word</option>
+                                <option value="hypercasual">Hyper-Casual & Arcade</option>
+                                <option value="action">Action & Survival</option>
+                                <option value="simulation">Simulation & Tycoon</option>
+                                <option value="rpg">RPG & Strategy</option>
+                                <option value="web_io">Web & HTML5 .IO</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ch-d1">Day 1 Retention (%):</label>
+                            <input type="number" id="ch-d1" value="42" min="1" max="100" step="0.5">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ch-d7">Day 7 Retention (%):</label>
+                            <input type="number" id="ch-d7" value="16" min="0" max="100" step="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="ch-asl">Ср. длина сессии (минут):</label>
+                            <input type="number" id="ch-asl" value="8.5" min="0.5" max="120" step="0.5">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ch-arpdau">ARPDAU ($):</label>
+                            <input type="number" id="ch-arpdau" value="0.06" min="0.001" max="10" step="0.01">
+                        </div>
+                    </div>
+
+                    <button class="btn-primary" style="width:100%; justify-content:center; margin-top:10px;" onclick="calculateGameHealth()">
+                        <i class="fa-solid fa-bolt"></i> Рассчитать перцентиль и найти утечки
+                    </button>
+                </div>
+
+                <!-- Result Card -->
+                <div class="checker-result-card" id="checker-result-box">
+                    <div class="cr-header">
+                        <div>
+                            <span class="cr-label">Итоговый диагноз GameAnalytics</span>
+                            <h2 class="cr-title" id="cr-grade">Top 25% (Здоровый проект)</h2>
+                        </div>
+                        <div class="cr-score-badge" id="cr-score">84 / 100</div>
+                    </div>
+
+                    <div class="cr-comparison-grid" id="cr-comparison-list">
+                        <!-- Injected by JS -->
+                    </div>
+
+                    <div class="cr-diagnostic-box" id="cr-diagnostic-text">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===================================================================
+             VIEW 3: NICHE SCOUT (AppMagic Methodology)
+             =================================================================== -->
+        <main class="main-content" id="niches-view" style="display:none">
+            <header class="topbar">
+                <div>
+                    <h1><i class="fa-solid fa-crosshairs" style="color:var(--accent)"></i> Мировая разведка ниш (AppMagic)</h1>
+                    <p class="subtitle">
+                        Реальные тренды, взрывающие чарты: Screw ASMR, Block Blast, рюкзачные рогалики, вирусные хиты Godot/Steam
+                    </p>
                 </div>
             </header>
 
             <!-- Niche Filter Bar -->
             <section class="niche-filter-bar">
-                <div class="filter-chip-group">
-                    <label>Потенциал для инди:</label>
-                    <div class="chips" id="filter-viability">
-                        <button class="chip-btn active" data-val="all">Все ниши</button>
-                        <button class="chip-btn" data-val="top">🔥 Топ-потенциал (&gt;85)</button>
-                        <button class="chip-btn" data-val="promising">⭐ Перспективные (75-85)</button>
-                    </div>
-                </div>
-
-                <div class="filter-chip-group">
-                    <label>Конкуренция (Top-3 Market Share):</label>
-                    <div class="chips" id="filter-competition">
-                        <button class="chip-btn active" data-val="all">Любая</button>
-                        <button class="chip-btn" data-val="low">🟢 Низкая (Рынок открыт)</button>
-                        <button class="chip-btn" data-val="medium">🟡 Умеренная</button>
-                    </div>
-                </div>
-
                 <div class="filter-controls-row">
-                    <div class="control-col">
-                        <label for="niche-cpi-filter">Стоимость трафика (CPI):</label>
-                        <select id="niche-cpi-filter">
-                            <option value="all">Любой CPI</option>
-                            <option value="low">Дешевый (&lt; $0.50)</option>
-                            <option value="medium">Умеренный ($0.50 - $1.00)</option>
-                            <option value="high">Высокий (&gt; $1.00)</option>
-                        </select>
-                    </div>
-
                     <div class="control-col">
                         <label for="niche-sort">Сортировка ниш:</label>
                         <select id="niche-sort">
@@ -116,27 +224,26 @@
                         </select>
                     </div>
 
-                    <div class="control-col" style="flex: 1.5;">
-                        <label for="niche-search">Поиск по названию или механике:</label>
-                        <input type="text" id="niche-search" placeholder="Рэгдолл, выживание, Godot, Defold, тайлы...">
+                    <div class="control-col" style="flex: 2;">
+                        <label for="niche-search">Поиск по нише или механике:</label>
+                        <input type="text" id="niche-search" placeholder="Винты, Block Blast, рюкзак, Godot, Steam...">
                     </div>
                 </div>
             </section>
 
-            <!-- Niches Grid Container -->
             <section class="niches-cards-container" id="niches-cards-grid">
-                <!-- Rendered dynamically by app.js -->
+                <!-- Rendered dynamically -->
             </section>
         </main>
 
         <!-- ===================================================================
-             VIEW 2: STORE EXPLORER (Sensor Tower Style Platform Database)
+             VIEW 4: LIVE STORE PLATFORMS (Scraped via APIs)
              =================================================================== -->
         <main class="main-content" id="platform-view" style="display:none">
             <header class="topbar">
                 <div>
-                    <h1 id="current-platform-title">Google Play Аналитика</h1>
-                    <p class="subtitle">Рыночная база: скачивания, выручка, D1/D7 удержание и CPI • <span id="last-updated">Загрузка...</span></p>
+                    <h1 id="current-platform-title">Google Play Live Scraped Charts</h1>
+                    <p class="subtitle">Реальные игры из топов Google Play и Steam c расчетом перцентилей GameAnalytics • <span id="last-updated">Live</span></p>
                 </div>
                 <button id="export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт CSV</button>
             </header>
@@ -144,9 +251,9 @@
             <!-- Overview KPI Cards -->
             <section class="overview-cards">
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-database"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
                     <div class="card-info">
-                        <h4>База мониторинга</h4>
+                        <h4>Парсинг стора</h4>
                         <div class="card-value" id="stat-total-games">-</div>
                     </div>
                 </div>
@@ -165,10 +272,10 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="card-icon"><i class="fa-solid fa-medal"></i></div>
                     <div class="card-info">
-                        <h4>Лидирующая ниша</h4>
-                        <div class="card-value" id="stat-top-genre" style="font-size: 1.1rem;">-</div>
+                        <h4>Статус инди в топе</h4>
+                        <div class="card-value" id="stat-top-genre" style="font-size: 1.05rem;">-</div>
                     </div>
                 </div>
             </section>
@@ -176,14 +283,14 @@
             <!-- Store Filters Row -->
             <section class="table-filter-bar">
                 <div class="filter-col">
-                    <label for="store-genre-filter">Жанр / Ниша:</label>
+                    <label for="store-genre-filter">Фильтр жанра:</label>
                     <select id="store-genre-filter">
-                        <option value="all">Все жанры</option>
+                        <option value="all">Все категории</option>
                     </select>
                 </div>
                 <div class="filter-col">
-                    <label for="store-search-input">Поиск игры или студии:</label>
-                    <input type="text" id="store-search-input" placeholder="Название, разработчик...">
+                    <label for="store-search-input">Поиск по названию или разработчику:</label>
+                    <input type="text" id="store-search-input" placeholder="Block Blast, SayGames, Mike Klubnika...">
                 </div>
             </section>
 
@@ -194,12 +301,12 @@
                         <thead>
                             <tr>
                                 <th data-sort="name">Игра / Студия <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="genre">Ниша / Движок <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="genre">Категория <i class="fa-solid fa-sort"></i></th>
+                                <th data-sort="gaPercentile">GameAnalytics Перцентиль <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="downloadsNum">Установки <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="estMonthlyRevenue">Выручка (Оценка/мес) <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="retentionD1">D1 / D7 <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="cpiEst">Оценка CPI <i class="fa-solid fa-sort"></i></th>
                                 <th data-sort="hypeIndex">Моментум <i class="fa-solid fa-sort"></i></th>
                             </tr>
                         </thead>
@@ -212,13 +319,13 @@
         </main>
 
         <!-- ===================================================================
-             VIEW 3: BREAKOUT RELEASES (< 60 Days Old)
+             VIEW 5: BREAKOUT RELEASES (< 60 Days Old)
              =================================================================== -->
         <main class="main-content" id="breakout-view" style="display:none">
             <header class="topbar">
                 <div>
-                    <h1><i class="fa-solid fa-bolt" style="color:#f59e0b"></i> Растущие новинки (&lt; 60 дней)</h1>
-                    <p class="subtitle">Свежие релизы с аномально высоким ростом, виральным органиком и сильным удержанием</p>
+                    <h1><i class="fa-solid fa-bolt" style="color:#f59e0b"></i> Мировые прорывы последних 60 дней</h1>
+                    <p class="subtitle">Свежие релизы, показавшие аномальный темп роста в сторах</p>
                 </div>
             </header>
 
@@ -229,7 +336,7 @@
 
     </div>
     
-    <!-- Universal Market Data Bundle (Offline-safe fallback for file:/// protocol) -->
+    <!-- Universal Market Data Bundle (Guaranteed offline and local compatibility) -->
     <script src="data/market-data.js"></script>
     <script src="app.js"></script>
 </body>

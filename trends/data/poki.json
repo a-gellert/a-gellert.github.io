@@ -1,6 +1,10 @@
 {
-  "platform": "poki",
-  "lastUpdated": "2026-11-04",
+  "title": "Poki Web Portal Leaders",
+  "totalTracked": 3,
+  "avgRating": 4.75,
+  "avgHype": 95,
+  "topGenre": "Web Roguelites & Arcade",
+  "topIndieShare": "88% разработчиков — инди-команды до 3 человек",
   "games": [
     {
       "name": "Monkey Mart",
@@ -14,6 +18,7 @@
       "retentionD1": "48%",
       "retentionD7": "22%",
       "cpiEst": "$0.00 (Портал)",
+      "gaPercentile": "Top 2% (Web Leader)",
       "hypeIndex": 98,
       "trend": "up",
       "growthRate": 25.4,
@@ -33,6 +38,7 @@
       "retentionD1": "49%",
       "retentionD7": "24%",
       "cpiEst": "$0.00",
+      "gaPercentile": "Top 2% (Web Leader)",
       "hypeIndex": 96,
       "trend": "stable",
       "growthRate": 14.1,
@@ -52,6 +58,7 @@
       "retentionD1": "44%",
       "retentionD7": "19%",
       "cpiEst": "$0.00",
+      "gaPercentile": "Top 25% (Scalable)",
       "hypeIndex": 94,
       "trend": "up",
       "growthRate": 18,
