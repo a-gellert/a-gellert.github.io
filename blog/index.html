@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог разработчика игр — Alexander Gellert | Devlog, Туториалы, Ассеты, Аналитика</title>
+    <meta name="description" content="Блог инди-разработчика игр Alexander Gellert (Tiny Heart Studios). Дневник разработки, уроки по Defold и Godot 4, бесплатные ассеты и шейдеры, аналитика трендов игрового рынка.">
+    <meta name="keywords" content="блог разработчика игр, геймдев, devlog, дневник разработки, Defold, Godot 4, как сделать игру, шейдеры, ассеты, аналитика игр, Александр Геллерт, tiny_game">
+    <meta name="author" content="Alexander Gellert">
+    <link rel="canonical" href="https://a-gellert.github.io/blog/">
+
+    <!-- Open Graph / Facebook / Telegram -->
+    <meta property="og:type" content="blog">
+    <meta property="og:site_name" content="Alexander Gellert — Dev Blog">
+    <meta property="og:url" content="https://a-gellert.github.io/blog/">
+    <meta property="og:title" content="Блог инди-разработчика игр — Дневники, Туториалы, Ассеты">
+    <meta property="og:description" content="Инсайды разработки мобильных и веб-игр на Defold и Godot, готовые шейдеры, аналитика рынка и разборы архитектуры.">
+    <meta property="og:image" content="https://a-gellert.github.io/images/smash_arena.png">
+    <meta property="og:locale" content="ru_RU">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Блог разработчика игр — Alexander Gellert">
+    <meta name="twitter:description" content="Дневники разработки, уроки, ассеты и аналитика игровой индустрии.">
+    <meta name="twitter:image" content="https://a-gellert.github.io/images/smash_arena.png">
+
+    <!-- Structured Data (JSON-LD) for Search Engines & AI Assistants -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Alexander Gellert Game Dev Blog",
+      "url": "https://a-gellert.github.io/blog/",
+      "description": "Инди-разработка игр, уроки по Defold и Godot, шейдеры и аналитика трендов",
+      "author": {
+        "@type": "Person",
+        "name": "Alexander Gellert",
+        "jobTitle": "Indie Game Developer",
+        "url": "https://a-gellert.github.io/",
+        "sameAs": [
+          "https://t.me/tiny_game",
+          "https://github.com/a-gellert"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tiny Heart Studios",
+        "url": "https://a-gellert.github.io/"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="top-nav">
+    <div class="nav-container">
+        <a href="../" class="nav-brand">
+            <span class="nav-avatar-mini">AG</span>
+            <span>Alexander Gellert</span>
+        </a>
+        <div class="nav-links">
+            <a href="../index.html#games" class="nav-link">Игры</a>
+            <a href="index.html" class="nav-link active">Блог</a>
+            <a href="../trends/index.html" class="nav-link">Аналитика</a>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="nav-tg-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                @tiny_game
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header>
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            Tiny Heart Studios • Game Dev Blog
+        </div>
+        <h1>Блог разработчика</h1>
+        <p class="subtitle">
+            Инсайды инди-разработки, исходники шейдеров, практические туториалы и аналитика игровых платформ.
+        </p>
+
+        <!-- Telegram Hero Banner -->
+        <div class="tg-hero-banner">
+            <div class="tg-hero-left">
+                <div class="tg-hero-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                </div>
+                <div>
+                    <div class="tg-hero-title">
+                        Канал в Telegram
+                        <span class="tg-hero-badge">@tiny_game</span>
+                    </div>
+                    <div class="tg-hero-desc">
+                        Регулярные посты о релизах, коде и экспериментах без цензуры. Обсуждение статей с автором!
+                    </div>
+                </div>
+            </div>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="tg-hero-btn">
+                Подписаться на канал
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Filter Tabs & Search -->
+        <div class="blog-controls">
+            <div class="filter-tabs" id="filter-tabs">
+                <button class="filter-btn active" data-category="all">Все статьи (<span id="count-all">0</span>)</button>
+                <button class="filter-btn" data-category="devlog">🛠 Дневник разработки (<span id="count-devlog">0</span>)</button>
+                <button class="filter-btn" data-category="how-to">💡 Как сделать (<span id="count-how-to">0</span>)</button>
+                <button class="filter-btn" data-category="assets">🎨 Ассеты (<span id="count-assets">0</span>)</button>
+                <button class="filter-btn" data-category="analytics">📊 Аналитика (<span id="count-analytics">0</span>)</button>
+            </div>
+
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="blog-search" class="search-input" placeholder="Поиск по названию, тегам или описанию статей...">
+            </div>
+        </div>
+
+        <!-- Articles Container -->
+        <div class="blog-grid" id="articles-grid">
+            <!-- Rendered dynamically -->
+        </div>
+
+        <div id="no-articles-msg" style="display:none; text-align:center; padding: 40px 20px; color: var(--text-muted);">
+            Статьи по вашему запросу не найдены.
+        </div>
+    </main>
+
+    <!-- Modal Article Reader -->
+    <div class="modal-overlay" id="article-modal">
+        <div class="modal-content">
+            <button class="modal-close-btn" id="modal-close" aria-label="Закрыть">✕</button>
+            <div class="blog-meta-top" id="modal-meta">
+                <!-- category & read time -->
+            </div>
+            <h1 class="modal-article-title" id="modal-title">Название статьи</h1>
+            <div class="blog-card-tags" id="modal-tags"></div>
+            <div class="modal-body-text" id="modal-body"></div>
+
+            <div class="modal-tg-cta">
+                <div>
+                    <strong style="color: #ffffff; display: block; margin-bottom: 4px;">Понравился материал?</strong>
+                    <span style="color: var(--text-secondary); font-size: 0.9rem;">Обсудите эту статью и задайте вопрос в канале @tiny_game</span>
+                </div>
+                <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="btn btn-telegram">
+                    Перейти в Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../index.html">Главная</a>
+            <a href="../index.html#games">Игры</a>
+            <a href="index.html">Блог</a>
+            <a href="../trends/index.html">Аналитика трендов</a>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="footer-tg-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                Telegram @tiny_game
+            </a>
+            <a href="mailto:oblistud@gmail.com">Контакты</a>
+        </div>
+        <div>© 2026 Alexander Gellert. Все права защищены.</div>
+    </footer>
+
+</div>
+
+<!-- Universal articles data (enables local file:/// browsing without CORS issues) -->
+<script src="../articles/articles-data.js"></script>
+<script>
+let allArticles = [];
+let currentCategory = 'all';
+
+const categoryClassMap = {
+    'devlog': 'cat-devlog',
+    'how-to': 'cat-how-to',
+    'assets': 'cat-assets',
+    'analytics': 'cat-analytics'
+};
+
+const categoryTitleMap = {
+    'devlog': 'Дневник разработки',
+    'how-to': 'Как сделать',
+    'assets': 'Ассеты',
+    'analytics': 'Аналитика'
+};
+
+async function loadArticles() {
+    // 1. Check local preloaded data first (works on file:/// protocol and offline)
+    if (window.ARTICLES_DATA && window.ARTICLES_DATA.length > 0) {
+        allArticles = window.ARTICLES_DATA;
+        updateCounts();
+        renderArticles();
+        checkUrlHash();
+        return;
+    }
+
+    // 2. Fetch over HTTP/HTTPS if needed
+    try {
+        const res = await fetch('../articles/articles.json');
+        if (!res.ok) throw new Error('Failed to load articles');
+        allArticles = await res.json();
+        updateCounts();
+        renderArticles();
+        checkUrlHash();
+    } catch (err) {
+        console.error(err);
+        document.getElementById('articles-grid').innerHTML = '<p style="color:var(--text-muted);text-align:center;">Не удалось загрузить статьи.</p>';
+    }
+}
+
+function updateCounts() {
+    document.getElementById('count-all').innerText = allArticles.length;
+    ['devlog', 'how-to', 'assets', 'analytics'].forEach(cat => {
+        const count = allArticles.filter(a => a.category === cat).length;
+        const el = document.getElementById('count-' + cat);
+        if (el) el.innerText = count;
+    });
+}
+
+function renderArticles() {
+    const grid = document.getElementById('articles-grid');
+    const query = document.getElementById('blog-search').value.toLowerCase().trim();
+    
+    const filtered = allArticles.filter(article => {
+        const matchesCategory = currentCategory === 'all' || article.category === currentCategory;
+        const matchesQuery = !query || 
+            article.title.toLowerCase().includes(query) ||
+            article.excerpt.toLowerCase().includes(query) ||
+            (article.tags && article.tags.some(t => t.toLowerCase().includes(query)));
+        return matchesCategory && matchesQuery;
+    });
+
+    if (filtered.length === 0) {
+        grid.innerHTML = '';
+        document.getElementById('no-articles-msg').style.display = 'block';
+        return;
+    }
+
+    document.getElementById('no-articles-msg').style.display = 'none';
+
+    grid.innerHTML = filtered.map(art => {
+        const catClass = categoryClassMap[art.category] || 'cat-devlog';
+        const catTitle = art.categoryTitle || categoryTitleMap[art.category] || art.category;
+        const tagsHtml = (art.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+
+        return `
+            <article class="card blog-card" onclick="openArticle('${art.id}')">
+                <div>
+                    <div class="blog-meta-top">
+                        <span class="category-badge ${catClass}">${catTitle}</span>
+                        <span class="read-time">⏱️ ${art.readTime || '5 мин'}</span>
+                    </div>
+                    <h2 class="blog-card-title">${art.title}</h2>
+                    <p class="blog-card-desc">${art.excerpt}</p>
+                </div>
+                <div>
+                    <div class="blog-card-tags">${tagsHtml}</div>
+                    <div class="blog-footer-row">
+                        <span class="blog-date">📅 ${art.date}</span>
+                        <span class="blog-read-link">Читать →</span>
+                    </div>
+                </div>
+            </article>
+        `;
+    }).join('');
+}
+
+async function openArticle(id) {
+    let data = null;
+
+    // 1. Try local data first
+    if (window.ARTICLES_DATA) {
+        data = window.ARTICLES_DATA.find(a => a.id === id || a.slug === id);
+    }
+
+    // 2. Fallback to fetch
+    if (!data) {
+        try {
+            const res = await fetch(`../articles/${id}.json`);
+            if (res.ok) data = await res.json();
+        } catch (e) {
+            console.warn(e);
+        }
+    }
+
+    if (data) {
+        const catClass = categoryClassMap[data.category] || 'cat-devlog';
+        const catTitle = data.categoryTitle || categoryTitleMap[data.category] || data.category;
+        
+        document.getElementById('modal-meta').innerHTML = `
+            <span class="category-badge ${catClass}">${catTitle}</span>
+            <span class="read-time">⏱️ ${data.readTime || '5 мин'} • 📅 ${data.date}</span>
+        `;
+        document.getElementById('modal-title').innerText = data.title;
+        document.getElementById('modal-tags').innerHTML = (data.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+        document.getElementById('modal-body').innerHTML = data.content || `<p>${data.excerpt}</p>`;
+
+        document.getElementById('article-modal').classList.add('active');
+        window.location.hash = data.slug || data.id;
+    } else {
+        alert('Не удалось открыть статью.');
+    }
+}
+
+function closeModal() {
+    document.getElementById('article-modal').classList.remove('active');
+    history.pushState("", document.title, window.location.pathname + window.location.search);
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('article-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'article-modal') closeModal();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+
+// Category tabs
+document.getElementById('filter-tabs').addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.getAttribute('data-category');
+    renderArticles();
+});
+
+// Search input
+document.getElementById('blog-search').addEventListener('input', renderArticles);
+
+function checkUrlHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        openArticle(hash);
+    }
+}
+
+loadArticles();
+</script>
+
+</body>
+</html>
+

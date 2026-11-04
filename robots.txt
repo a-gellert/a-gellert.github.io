@@ -1,0 +1,33 @@
+# Robots.txt for Alexander Gellert / Tiny Heart Studios Portfolio & Blog
+# https://a-gellert.github.io/
+
+User-agent: *
+Allow: /
+
+# AI crawlers and search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://a-gellert.github.io/sitemap.xml
+

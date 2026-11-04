@@ -1,0 +1,80 @@
+[
+  {
+    "id": "game-trends-analytics-q4",
+    "slug": "game-trends-analytics-q4",
+    "title": "Анализ трендов мобильных и веб-игр: Steam, Google Play, Poki, CrazyGames и Яндекс",
+    "category": "analytics",
+    "categoryTitle": "Аналитика",
+    "date": "2026-11-01",
+    "readTime": "5 мин",
+    "excerpt": "Разбор данных нашего дашборда Game Trends Analytics: какие жанры растут быстрее всего, где ниже конкуренция для инди-разработчиков и как рассчитывается Индекс Хайпа.",
+    "tags": ["Аналитика", "Тренды", "Google Play", "Steam", "Веб-игры"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  },
+  {
+    "id": "smash-arena-netcode-defold",
+    "slug": "smash-arena-netcode-defold",
+    "title": "Сетевой код и оптимизация физики в Smash Arena на Defold",
+    "category": "devlog",
+    "categoryTitle": "Дневник разработки",
+    "date": "2026-10-28",
+    "readTime": "6 мин",
+    "excerpt": "Как мы проектировали быстрый мультиплеер и предсказание движения персонажей в Defold Engine. Проблемы с задержкой, оптимизация collision detection и синхронизация состояний.",
+    "tags": ["Defold", "Netcode", "PvP", "Дневник разработки"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  },
+  {
+    "id": "godot4-mobile-optimization",
+    "slug": "godot4-mobile-optimization",
+    "title": "Оптимизация 3D под мобильные устройства в Godot 4: уроки разработки Perimeter",
+    "category": "how-to",
+    "categoryTitle": "Как сделать",
+    "date": "2026-10-15",
+    "readTime": "7 мин",
+    "excerpt": "Практическое руководство по получению стабильных 60 FPS на средних смартфонах в Godot 4.3+. Настройка Mobile рендера, LOD, сжатие текстур VRAM и сокращение Draw Calls.",
+    "tags": ["Godot 4", "Mobile", "3D", "Оптимизация", "Как сделать"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  },
+  {
+    "id": "free-vfx-and-shaders-mobile",
+    "slug": "free-vfx-and-shaders-mobile",
+    "title": "Подборка эффективных мобильных шейдеров: от симуляции воды до растворения (Dissolve FX)",
+    "category": "assets",
+    "categoryTitle": "Ассеты",
+    "date": "2026-10-05",
+    "readTime": "4 мин",
+    "excerpt": "Бесплатные легковесные GLSL-шейдеры для Defold и Godot: растворение с огненной каймой, стилизованная водная гладь без оверхеда и оптимизированный силуэт персонажа.",
+    "tags": ["Ассеты", "Шейдеры", "GLSL", "VFX", "Defold", "Godot"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  },
+  {
+    "id": "numbert-math-puzzle-architecture",
+    "slug": "numbert-math-puzzle-architecture",
+    "title": "Архитектура логической головоломки: генератор решаемых уровней в Numbert",
+    "category": "how-to",
+    "categoryTitle": "Как сделать",
+    "date": "2026-09-20",
+    "readTime": "8 мин",
+    "excerpt": "Как построить процедурную генерацию математических головоломок с гарантией единственного решения. Алгоритм обратного поиска, контроль кривой сложности и адаптивная подсказка.",
+    "tags": ["Геймдизайн", "Математика", "Алгоритмы", "Numbert", "Как сделать"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  },
+  {
+    "id": "ragdoll-physics-sandbox-breakdown",
+    "slug": "ragdoll-physics-sandbox-breakdown",
+    "title": "Сэндбокс и рэгдолл-физика: как мы удерживали 100+ сочленений без падения FPS",
+    "category": "devlog",
+    "categoryTitle": "Дневник разработки",
+    "date": "2026-08-14",
+    "readTime": "5 мин",
+    "excerpt": "Опыт создания Ragdoll Destruction Playground: настройка физических связей (hinge, spring), предотвращение «взрывов» сочленений и эффективный спавн интерактивных объектов.",
+    "tags": ["Физика", "Ragdoll", "Sandbox", "Дневник разработки"],
+    "author": "Alexander Gellert",
+    "telegramChannel": "https://t.me/tiny_game"
+  }
+]

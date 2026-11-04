@@ -1,0 +1,14 @@
+{
+  "id": "godot4-mobile-optimization",
+  "slug": "godot4-mobile-optimization",
+  "title": "Оптимизация 3D под мобильные устройства в Godot 4: уроки разработки Perimeter",
+  "category": "how-to",
+  "categoryTitle": "Как сделать",
+  "date": "2026-10-15",
+  "readTime": "7 мин",
+  "excerpt": "Практическое руководство по получению стабильных 60 FPS на средних смартфонах в Godot 4.3+. Настройка Mobile рендера, LOD, сжатие текстур VRAM и сокращение Draw Calls.",
+  "tags": ["Godot 4", "Mobile", "3D", "Оптимизация", "Как сделать"],
+  "author": "Alexander Gellert",
+  "telegramChannel": "https://t.me/tiny_game",
+  "content": "<p>Разработка 3D-выживача в лесу <em>Perimeter: 3D Forest Survival</em> потребовала глубокой оптимизации движка Godot 4. Лес — один из самых коварных биомов: сотни деревьев, листва с прозрачностью, тени и система времени суток легко просаживают FPS даже на предфлагманских чипсетах.</p><h3>1. Выбор рендерера: Mobile (Vulkan) vs Compatibility (OpenGL ES 3.0)</h3><p>Для широкой совместимости с Android-устройствами мы используем <strong>Mobile</strong> рендерер с откатом на <strong>Compatibility</strong> для старых чипов Mali. В настройках проекта важно отключить избыточные пост-эффекты: SSAO, SSR и объемный свет на мобильных чипах «съедают» до половины времени кадра.</p><h3>2. Борьба с Draw Calls: MultiMeshInstance3D</h3><p>Каждое отдельное дерево и куст создают свой вызов отрисовки. Объединение растительности через <code>MultiMeshInstance3D</code> позволило сократить количество Draw Calls со 1200+ до менее 120 на кадр при сохранении той же плотности леса.</p><h3>3. LOD (Levels of Detail) и Occlusion Culling</h3><ul><li>Настроили автоматическую генерацию LOD-мешей в Godot 4 для высокополигональных объектов окружения.</li><li>Использовали запеченный Occlusion Culling для скрытия геометрии за холмами и стенами убежища.</li><li>Текстуры перевели в формат VRAM Compression (ETC2 / ASTC), что снизило потребление оперативной памяти на 60%.</li></ul><p>Делитесь своими вопросами по Godot 4 и читайте разборы в нашем канале <a href=\"https://t.me/tiny_game\" target=\"_blank\" rel=\"noopener\">t.me/tiny_game</a>!</p>"
+}
