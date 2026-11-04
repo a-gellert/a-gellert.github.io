@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameAnalytics & Market Intelligence — Бенчмарки, Парсеры и Разведка ниш</title>
-    <meta name="description" content="Профессиональная аналитика игровых рынков и бенчмарки в стиле GameAnalytics, AppMagic и Sensor Tower. Парсеры Google Play, Steam, Poki. Проверка метрик удержания (D1, D7, D28) и поиск прибыльных ниш.">
+    <title>WebGameAnalytics — Аналитика Яндекс Игр, Poki, CrazyGames, Google Play и Steam</title>
+    <meta name="description" content="Аналитическая платформа в стиле game-analytics.ru: прорывы за 30 дней, динамика оценок, популярные игры, новинки и топ разработчиков Яндекс Игр, Poki и CrazyGames, сопоставленные с бенчмарками GameAnalytics.">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="theme-ga">
+<body class="theme-yandex_games">
     <div class="app-container">
 
         <!-- ===================================================================
-             SIDEBAR NAVIGATION
+             SIDEBAR NAVIGATION (game-analytics.ru style)
              =================================================================== -->
         <aside class="sidebar">
             <div class="logo">
-                <i class="fa-solid fa-chart-mixed"></i>
+                <i class="fa-solid fa-chart-line"></i>
                 <div>
                     <h2>GameAnalytics</h2>
-                    <span class="logo-sub">Pro Intelligence</span>
+                    <span class="logo-sub">Web & Mobile Intelligence</span>
                 </div>
             </div>
             
@@ -29,314 +29,320 @@
             </a>
             
             <nav class="platform-nav">
-                <h3>Отраслевые бенчмарки</h3>
-                <ul id="main-nav-tabs">
-                    <li data-view="gameanalytics" class="active nav-ga">
-                        <i class="fa-solid fa-chart-line"></i> Бенчмарки GameAnalytics
+                <h3>Игровые платформы</h3>
+                <ul id="platform-tabs">
+                    <li data-platform="yandex_games" class="active">
+                        <i class="fa-brands fa-yandex" style="color:#FC3F1D"></i> Яндекс Игры
                     </li>
-                    <li data-view="checker" class="nav-checker">
-                        <i class="fa-solid fa-stethoscope"></i> Диагностика игры (KPI)
+                    <li data-platform="poki">
+                        <i class="fa-solid fa-gamepad" style="color:#00C2FF"></i> Poki Web
                     </li>
-                    <li data-view="niches" class="nav-highlight">
-                        <i class="fa-solid fa-crosshairs"></i> Разведчик ниш (AppMagic)
+                    <li data-platform="crazygames">
+                        <i class="fa-solid fa-ghost" style="color:#FF4C4C"></i> CrazyGames
                     </li>
-                    <li data-view="breakout" class="nav-special">
-                        <i class="fa-solid fa-bolt"></i> Растущие новинки (&lt;60д)
+                    <li data-platform="google_play">
+                        <i class="fa-brands fa-google-play" style="color:#34A853"></i> Google Play
+                    </li>
+                    <li data-platform="steam">
+                        <i class="fa-brands fa-steam" style="color:#66C0F4"></i> Steam (SteamSpy)
                     </li>
                 </ul>
 
-                <h3 style="margin-top:20px">Live-парсеры сторов (API)</h3>
-                <ul id="platform-tabs">
-                    <li data-platform="google_play"><i class="fa-brands fa-google-play"></i> Google Play Live (40 игр)</li>
-                    <li data-platform="steam"><i class="fa-brands fa-steam"></i> Steam Live (SteamSpy)</li>
-                    <li data-platform="poki"><i class="fa-solid fa-gamepad"></i> Poki Web</li>
-                    <li data-platform="crazygames"><i class="fa-solid fa-ghost"></i> CrazyGames</li>
-                    <li data-platform="yandex_games"><i class="fa-brands fa-yandex"></i> Яндекс Игры</li>
+                <h3 style="margin-top:20px">Разделы аналитики</h3>
+                <ul id="section-tabs">
+                    <li data-section="breakthroughs" class="active">
+                        <i class="fa-solid fa-rocket" style="color:#10b981"></i> Прорывы за 30 дней
+                    </li>
+                    <li data-section="popular">
+                        <i class="fa-solid fa-fire" style="color:#f59e0b"></i> Популярные игры
+                    </li>
+                    <li data-section="new">
+                        <i class="fa-solid fa-sparkles" style="color:#38bdf8"></i> Новинки
+                    </li>
+                    <li data-section="ratings">
+                        <i class="fa-solid fa-trophy" style="color:#fbbf24"></i> Рейтинг игр
+                    </li>
+                    <li data-section="developers">
+                        <i class="fa-solid fa-users" style="color:#a855f7"></i> Разработчики
+                    </li>
+                    <li data-section="benchmarks">
+                        <i class="fa-solid fa-chart-pie" style="color:#2dd4bf"></i> GameAnalytics бенчмарки
+                    </li>
+                    <li data-section="checker">
+                        <i class="fa-solid fa-stethoscope" style="color:#ec4899"></i> Диагностика KPI
+                    </li>
                 </ul>
             </nav>
             
-            <!-- Quick Insights Box -->
+            <!-- Live Parser Status Box -->
             <div class="sidebar-insight-box">
-                <div class="sib-title"><i class="fa-solid fa-database"></i> Live Данные:</div>
-                <p>Данные Google Play и Steam парсятся в реальном времени и сопоставляются с официальными бенчмарками GameAnalytics по 100 000+ игр.</p>
+                <div class="sib-title"><i class="fa-solid fa-circle-check" style="color:#10b981"></i> Источник данных:</div>
+                <p>Парсер живых данных <strong>game-analytics.ru</strong>, Google Play и Steam API. Обновляется автоматически ежедневно через GitHub Actions.</p>
             </div>
         </aside>
 
         <!-- ===================================================================
-             VIEW 1: GAMEANALYTICS BENCHMARKS (DEFAULT)
+             MAIN CONTENT WORKSPACE
              =================================================================== -->
-        <main class="main-content" id="gameanalytics-view">
+        <main class="main-content">
+            
+            <!-- Top Bar -->
             <header class="topbar">
                 <div>
-                    <h1><i class="fa-solid fa-chart-line" style="color:#38bdf8"></i> Отраслевые бенчмарки GameAnalytics</h1>
-                    <p class="subtitle">
-                        Официальные перцентили удержания, сессий и монетизации по 100 000+ игр и 1.2 млрд MAU • 
-                        <span id="ga-updated-date">Обновлено: Live</span>
+                    <h1 id="view-title">
+                        <span id="platform-icon"><i class="fa-brands fa-yandex" style="color:#FC3F1D"></i></span>
+                        <span id="platform-name">Яндекс Игры</span>: 
+                        <span id="section-title">Прорывы за 30 дней</span>
+                    </h1>
+                    <p class="subtitle" id="view-subtitle">
+                        Игры с максимальным множителем прироста оценок за последние 30 дней • 
+                        <span id="last-updated-badge" class="badge-live">● Live Парсер game-analytics.ru</span>
                     </p>
                 </div>
                 <div class="topbar-actions">
-                    <button class="btn-primary" onclick="switchView('checker')">
-                        <i class="fa-solid fa-stethoscope"></i> Проверить метрики своей игры
-                    </button>
+                    <a href="https://game-analytics.ru/" target="_blank" rel="noopener" class="btn-secondary">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Открыть game-analytics.ru
+                    </a>
                 </div>
             </header>
 
-            <!-- Genre Selection Bar -->
-            <section class="ga-genre-bar">
-                <label>Выберите жанр для анализа бенчмарков:</label>
-                <div class="chips" id="ga-genre-chips">
-                    <button class="chip-btn active" data-genre="puzzle">🧩 Puzzle & Word</button>
-                    <button class="chip-btn" data-genre="hypercasual">⚡ Hyper-Casual & Arcade</button>
-                    <button class="chip-btn" data-genre="action">⚔️ Action & Survival</button>
-                    <button class="chip-btn" data-genre="simulation">🏭 Simulation & Tycoon</button>
-                    <button class="chip-btn" data-genre="rpg">🛡️ RPG & Strategy</button>
-                    <button class="chip-btn" data-genre="web_io">🌐 Web & HTML5 .IO</button>
-                </div>
-            </section>
-
-            <!-- 4-Tier Percentiles Grid -->
-            <section class="ga-percentiles-grid" id="ga-percentiles-container">
-                <!-- Rendered dynamically -->
-            </section>
-
-            <!-- Retention Curve Chart & Metrics Breakdown -->
-            <section class="ga-chart-section">
-                <div class="chart-container-pro">
-                    <h3>Кривая распада удержания: D1 → D7 → D28 по перцентилям</h3>
-                    <canvas id="gaRetentionChart" style="max-height: 320px;"></canvas>
-                </div>
-                <div class="ga-insight-card" id="ga-genre-insight">
-                    <!-- Injected by JS -->
-                </div>
-            </section>
-        </main>
-
-        <!-- ===================================================================
-             VIEW 2: GAME HEALTH / KPI DIAGNOSTIC CHECKER
-             =================================================================== -->
-        <main class="main-content" id="checker-view" style="display:none">
-            <header class="topbar">
-                <div>
-                    <h1><i class="fa-solid fa-stethoscope" style="color:#10b981"></i> Диагностика здоровья игры (KPI Checker)</h1>
-                    <p class="subtitle">
-                        Введите текущие метрики вашей игры и получите моментальное сравнение с индустриальными перцентилями GameAnalytics
-                    </p>
-                </div>
-            </header>
-
-            <div class="checker-container">
-                <!-- Input Form -->
-                <div class="checker-form-card">
-                    <h3>Ввод метрик вашего проекта</h3>
-                    
-                    <div class="checker-presets">
-                        <span>Быстрые пресеты:</span>
-                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('top')">Хит (Top 2%)</button>
-                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('good')">Здоровый (Top 25%)</button>
-                        <button type="button" class="preset-btn" onclick="applyCheckerPreset('leak')">Утечка на D7</button>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="ch-genre">Жанр игры:</label>
-                            <select id="ch-genre">
-                                <option value="puzzle">Puzzle & Word</option>
-                                <option value="hypercasual">Hyper-Casual & Arcade</option>
-                                <option value="action">Action & Survival</option>
-                                <option value="simulation">Simulation & Tycoon</option>
-                                <option value="rpg">RPG & Strategy</option>
-                                <option value="web_io">Web & HTML5 .IO</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="ch-d1">Day 1 Retention (%):</label>
-                            <input type="number" id="ch-d1" value="42" min="1" max="100" step="0.5">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="ch-d7">Day 7 Retention (%):</label>
-                            <input type="number" id="ch-d7" value="16" min="0" max="100" step="0.5">
-                        </div>
-                        <div class="form-group">
-                            <label for="ch-asl">Ср. длина сессии (минут):</label>
-                            <input type="number" id="ch-asl" value="8.5" min="0.5" max="120" step="0.5">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="ch-arpdau">ARPDAU ($):</label>
-                            <input type="number" id="ch-arpdau" value="0.06" min="0.001" max="10" step="0.01">
-                        </div>
-                    </div>
-
-                    <button class="btn-primary" style="width:100%; justify-content:center; margin-top:10px;" onclick="calculateGameHealth()">
-                        <i class="fa-solid fa-bolt"></i> Рассчитать перцентиль и найти утечки
-                    </button>
-                </div>
-
-                <!-- Result Card -->
-                <div class="checker-result-card" id="checker-result-box">
-                    <div class="cr-header">
-                        <div>
-                            <span class="cr-label">Итоговый диагноз GameAnalytics</span>
-                            <h2 class="cr-title" id="cr-grade">Top 25% (Здоровый проект)</h2>
-                        </div>
-                        <div class="cr-score-badge" id="cr-score">84 / 100</div>
-                    </div>
-
-                    <div class="cr-comparison-grid" id="cr-comparison-list">
-                        <!-- Injected by JS -->
-                    </div>
-
-                    <div class="cr-diagnostic-box" id="cr-diagnostic-text">
-                        <!-- Injected by JS -->
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <!-- ===================================================================
-             VIEW 3: NICHE SCOUT (AppMagic Methodology)
-             =================================================================== -->
-        <main class="main-content" id="niches-view" style="display:none">
-            <header class="topbar">
-                <div>
-                    <h1><i class="fa-solid fa-crosshairs" style="color:var(--accent)"></i> Мировая разведка ниш (AppMagic)</h1>
-                    <p class="subtitle">
-                        Реальные тренды, взрывающие чарты: Screw ASMR, Block Blast, рюкзачные рогалики, вирусные хиты Godot/Steam
-                    </p>
-                </div>
-            </header>
-
-            <!-- Niche Filter Bar -->
-            <section class="niche-filter-bar">
+            <!-- Search and Filter Bar -->
+            <section class="filter-bar" id="filter-controls-area">
                 <div class="filter-controls-row">
-                    <div class="control-col">
-                        <label for="niche-sort">Сортировка ниш:</label>
-                        <select id="niche-sort">
-                            <option value="viability">По Инди-потенциалу (Score)</option>
-                            <option value="revenue">По объему рынка ($/мес)</option>
-                            <option value="growth">По темпу роста (% YoY)</option>
-                            <option value="competition">По наименьшей конкуренции</option>
-                        </select>
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="global-search-input" placeholder="Поиск по названию игры или разработчику...">
+                        <button type="button" id="clear-search-btn" style="display:none;">✕</button>
                     </div>
 
-                    <div class="control-col" style="flex: 2;">
-                        <label for="niche-search">Поиск по нише или механике:</label>
-                        <input type="text" id="niche-search" placeholder="Винты, Block Blast, рюкзак, Godot, Steam...">
+                    <div class="filter-chips-row" id="multiplier-chips">
+                        <span class="chips-label">Множитель:</span>
+                        <button class="chip-filter active" data-filter="all">Все</button>
+                        <button class="chip-filter" data-filter="x15">Рост > ×1.5</button>
+                        <button class="chip-filter" data-filter="x2">Рост > ×2.0</button>
+                        <button class="chip-filter" data-filter="x5">Рост > ×5.0</button>
                     </div>
-                </div>
-            </section>
 
-            <section class="niches-cards-container" id="niches-cards-grid">
-                <!-- Rendered dynamically -->
-            </section>
-        </main>
-
-        <!-- ===================================================================
-             VIEW 4: LIVE STORE PLATFORMS (Scraped via APIs)
-             =================================================================== -->
-        <main class="main-content" id="platform-view" style="display:none">
-            <header class="topbar">
-                <div>
-                    <h1 id="current-platform-title">Google Play Live Scraped Charts</h1>
-                    <p class="subtitle">Реальные игры из топов Google Play и Steam c расчетом перцентилей GameAnalytics • <span id="last-updated">Live</span></p>
-                </div>
-                <button id="export-btn" class="btn-primary"><i class="fa-solid fa-download"></i> Экспорт CSV</button>
-            </header>
-
-            <!-- Overview KPI Cards -->
-            <section class="overview-cards">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <div class="card-info">
-                        <h4>Парсинг стора</h4>
-                        <div class="card-value" id="stat-total-games">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-star"></i></div>
-                    <div class="card-info">
-                        <h4>Средний рейтинг</h4>
-                        <div class="card-value" id="stat-avg-rating">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-fire"></i></div>
-                    <div class="card-info">
-                        <h4>Средний Hype Index</h4>
-                        <div class="card-value" id="stat-avg-hype">-</div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-medal"></i></div>
-                    <div class="card-info">
-                        <h4>Статус инди в топе</h4>
-                        <div class="card-value" id="stat-top-genre" style="font-size: 1.05rem;">-</div>
+                    <div class="counter-badge">
+                        Найдено: <strong id="items-count-badge">0</strong>
                     </div>
                 </div>
             </section>
 
-            <!-- Store Filters Row -->
-            <section class="table-filter-bar">
-                <div class="filter-col">
-                    <label for="store-genre-filter">Фильтр жанра:</label>
-                    <select id="store-genre-filter">
-                        <option value="all">Все категории</option>
-                    </select>
-                </div>
-                <div class="filter-col">
-                    <label for="store-search-input">Поиск по названию или разработчику:</label>
-                    <input type="text" id="store-search-input" placeholder="Block Blast, SayGames, Mike Klubnika...">
-                </div>
-            </section>
-
-            <!-- Games Table -->
-            <section class="table-section">
-                <div class="table-responsive">
-                    <table id="games-table">
+            <!-- ===============================================================
+                 DYNAMIC CONTENT CONTAINERS
+                 =============================================================== -->
+            
+            <!-- 1. Breakthroughs View (Table with Was -> Became, Multiplier Index, Delta) -->
+            <section id="breakthroughs-container" class="data-view-section">
+                <div class="table-container">
+                    <table class="data-table" id="breakthroughs-table">
                         <thead>
                             <tr>
-                                <th data-sort="name">Игра / Студия <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="genre">Категория <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="gaPercentile">GameAnalytics Перцентиль <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="downloadsNum">Установки <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="estMonthlyRevenue">Выручка (Оценка/мес) <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="rating">Рейтинг <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="retentionD1">D1 / D7 <i class="fa-solid fa-sort"></i></th>
-                                <th data-sort="hypeIndex">Моментум <i class="fa-solid fa-sort"></i></th>
+                                <th style="width: 50px;">#</th>
+                                <th>Игра и разработчик</th>
+                                <th>Было → стало оценок</th>
+                                <th>Индекс роста</th>
+                                <th>Прирост за 30 дней</th>
+                                <th style="width: 140px; text-align: center;">Действия</th>
                             </tr>
                         </thead>
-                        <tbody id="games-tbody">
-                            <!-- Rows injected by JS -->
+                        <tbody id="breakthroughs-tbody">
+                            <!-- Injected by JS -->
                         </tbody>
                     </table>
                 </div>
             </section>
-        </main>
 
-        <!-- ===================================================================
-             VIEW 5: BREAKOUT RELEASES (< 60 Days Old)
-             =================================================================== -->
-        <main class="main-content" id="breakout-view" style="display:none">
-            <header class="topbar">
-                <div>
-                    <h1><i class="fa-solid fa-bolt" style="color:#f59e0b"></i> Мировые прорывы последних 60 дней</h1>
-                    <p class="subtitle">Свежие релизы, показавшие аномальный темп роста в сторах</p>
+            <!-- 2. Popular Games View -->
+            <section id="popular-container" class="data-view-section" style="display:none;">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">#</th>
+                                <th>Игра</th>
+                                <th>Разработчик</th>
+                                <th>Статус</th>
+                                <th>RU</th>
+                                <th>EN</th>
+                                <th>Всего оценок</th>
+                                <th>+30 дней</th>
+                                <th>Дата публикации</th>
+                                <th style="width: 110px; text-align: center;">Ссылка</th>
+                            </tr>
+                        </thead>
+                        <tbody id="popular-tbody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
                 </div>
-            </header>
+            </section>
 
-            <div class="breakout-grid" id="breakout-cards-container">
-                <!-- Injected by JS -->
-            </div>
+            <!-- 3. New Releases View (Grid of Cards) -->
+            <section id="new-container" class="data-view-section" style="display:none;">
+                <div class="new-games-grid" id="new-games-grid">
+                    <!-- Injected by JS -->
+                </div>
+            </section>
+
+            <!-- 4. Top Rated Games View -->
+            <section id="ratings-container" class="data-view-section" style="display:none;">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">#</th>
+                                <th>Игра</th>
+                                <th>Разработчик</th>
+                                <th>RU балл</th>
+                                <th>EN балл</th>
+                                <th>Всего оценок</th>
+                                <th>Прирост (+30д)</th>
+                                <th>Опубликована</th>
+                                <th style="width: 110px; text-align: center;">Ссылка</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ratings-tbody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 5. Developers Ranking View -->
+            <section id="developers-container" class="data-view-section" style="display:none;">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">#</th>
+                                <th>Студия / Разработчик</th>
+                                <th>Всего игр</th>
+                                <th>Опубликовано</th>
+                                <th>Новых</th>
+                                <th>Удалено</th>
+                                <th>Всего оценок</th>
+                                <th>RU балл</th>
+                                <th>EN балл</th>
+                                <th>Посл. релиз</th>
+                            </tr>
+                        </thead>
+                        <tbody id="developers-tbody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 6. Google Play / Steam Stores View -->
+            <section id="store-table-container" class="data-view-section" style="display:none;">
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Игра</th>
+                                <th>Разработчик</th>
+                                <th>Жанр</th>
+                                <th>Рейтинг</th>
+                                <th>Установки / Копии</th>
+                                <th>D1 Ret.</th>
+                                <th>D7 Ret.</th>
+                                <th>CPI (Орг.)</th>
+                                <th>Перцентиль</th>
+                                <th>Ссылка</th>
+                            </tr>
+                        </thead>
+                        <tbody id="store-tbody">
+                            <!-- Injected by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 7. GameAnalytics Industry Benchmarks View -->
+            <section id="benchmarks-container" class="data-view-section" style="display:none;">
+                <div class="ga-genre-bar">
+                    <label>Выберите жанр для просмотра бенчмарков:</label>
+                    <div class="chips" id="ga-genre-chips">
+                        <button class="chip-btn active" data-genre="puzzle">🧩 Puzzle & Word</button>
+                        <button class="chip-btn" data-genre="hypercasual">⚡ Hyper-Casual & Arcade</button>
+                        <button class="chip-btn" data-genre="action">⚔️ Action & Survival</button>
+                        <button class="chip-btn" data-genre="simulation">🏭 Simulation & Tycoon</button>
+                        <button class="chip-btn" data-genre="web_io">🌐 Web & HTML5 .IO</button>
+                    </div>
+                </div>
+
+                <div class="ga-percentiles-grid" id="ga-percentiles-container">
+                    <!-- Injected by JS -->
+                </div>
+
+                <div class="ga-chart-section">
+                    <div class="chart-container-pro">
+                        <h3>Кривая распада удержания: D1 → D7 → D28 по 4 перцентилям</h3>
+                        <canvas id="gaRetentionChart" style="max-height: 320px;"></canvas>
+                    </div>
+                    <div class="ga-insight-card" id="ga-genre-insight">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. KPI Diagnostic Checker View -->
+            <section id="checker-container" class="data-view-section" style="display:none;">
+                <div class="checker-container">
+                    <div class="checker-form-card">
+                        <h3>Диагностика вашей игры по базе GameAnalytics</h3>
+                        <div class="checker-presets">
+                            <span>Пресеты:</span>
+                            <button type="button" class="preset-btn" onclick="applyPreset('hit')">Хит (Top 2%)</button>
+                            <button type="button" class="preset-btn" onclick="applyPreset('good')">Здоровый (Top 25%)</button>
+                            <button type="button" class="preset-btn" onclick="applyPreset('leak')">Утечка D7</button>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ch-genre">Жанр:</label>
+                                <select id="ch-genre">
+                                    <option value="puzzle">Puzzle & Word</option>
+                                    <option value="hypercasual">Hyper-Casual & Arcade</option>
+                                    <option value="action">Action & Survival</option>
+                                    <option value="simulation">Simulation & Tycoon</option>
+                                    <option value="web_io">Web & HTML5 .IO</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ch-d1">Day 1 Retention (%):</label>
+                                <input type="number" id="ch-d1" value="44" min="1" max="100" step="0.5">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ch-d7">Day 7 Retention (%):</label>
+                                <input type="number" id="ch-d7" value="18" min="0" max="100" step="0.5">
+                            </div>
+                            <div class="form-group">
+                                <label for="ch-asl">Ср. длина сессии (мин):</label>
+                                <input type="number" id="ch-asl" value="12" min="1" max="120" step="0.5">
+                            </div>
+                        </div>
+
+                        <button class="btn-primary" style="width:100%; justify-content:center; margin-top:14px;" onclick="runKPIChecker()">
+                            <i class="fa-solid fa-stethoscope"></i> Рассчитать здоровье и выявить утечки
+                        </button>
+                    </div>
+
+                    <div class="checker-result-card" id="checker-result-card">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </section>
+
         </main>
-
     </div>
-    
-    <!-- Universal Market Data Bundle (Guaranteed offline and local compatibility) -->
+
+    <!-- Data bundles -->
     <script src="data/market-data.js"></script>
     <script src="app.js"></script>
 </body>
