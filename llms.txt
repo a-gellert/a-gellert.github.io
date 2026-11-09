@@ -2,7 +2,7 @@
 > Portfolio, Mobile & Web Games, Game Development Blog and Market Analytics.
 
 ## Summary
-Alexander Gellert (Tiny Heart Studios) is an independent game developer specializing in mobile, 3D, and web game development using Defold, Godot 4, and Web technologies.
+Alexander Gellert (Tiny Heart Studios) is an independent game developer specializing in mobile, 3D, and web game development using Defold, Unity, Godot 4, and Web technologies.
 
 ## Official Links
 - Main Website: https://a-gellert.github.io/
@@ -16,7 +16,7 @@ Alexander Gellert (Tiny Heart Studios) is an independent game developer speciali
 - Numbert: Brain Puzzles (Defold, Math & Logic IQ Trainer) on Google Play: https://play.google.com/store/apps/details?id=brain.puzzles.iq.braintraining.math.logictrainer
 - Ragdoll Destruction Playground (Physics Sandbox) on Google Play: https://play.google.com/store/apps/details?id=com.Ragdoll.Playground.Sandbox.Physics.RagdollDestructionPlayground
 - Master Of 3 Tiles (Mahjong / Tile Matching) on Google Play: https://play.google.com/store/apps/details?id=com.tinyheartstudios.brainstorm
-- Perimeter Survival (Godot 4, 3D Forest Shelter Survival) on Google Play: https://play.google.com/store/apps/details?id=com.ths.survival.forest.shelter.monsters
+- Perimeter Survival (Unity, 3D Forest Shelter Survival) on Google Play: https://play.google.com/store/apps/details?id=com.ths.survival.forest.shelter.monsters
 
 ## Blog Categories
 - Дневник разработки (Devlog): Technical deep dives into netcode, physics, architecture.
