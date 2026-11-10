@@ -2418,7 +2418,7 @@
       "ratings": "42 912",
       "scoreRu": "68.8",
       "scoreEn": "65.32",
-      "lastPub": "29 дней назад",
+      "lastPub": "30 дней назад",
       "platform": "Яндекс Игры"
     },
     {
@@ -2432,21 +2432,21 @@
       "ratings": "578 912",
       "scoreRu": "49.86",
       "scoreEn": "47.37",
-      "lastPub": "22 часа назад",
+      "lastPub": "1 день назад",
       "platform": "Яндекс Игры"
     },
     {
       "rank": 13,
       "name": "Prime Publishing",
       "url": "https://game-analytics.ruhttps://game-analytics.ru/yg/developer/prime-publishing-146187",
-      "totalGames": "86",
-      "published": "86",
-      "newGames": "0",
+      "totalGames": "87",
+      "published": "87",
+      "newGames": "1",
       "deleted": "0",
       "ratings": "45 003",
       "scoreRu": "45.96",
       "scoreEn": "44.69",
-      "lastPub": "32 дня назад",
+      "lastPub": "3 часа назад",
       "platform": "Яндекс Игры"
     },
     {
@@ -2572,7 +2572,7 @@
       "ratings": "33 912",
       "scoreRu": "36.98",
       "scoreEn": "38.14",
-      "lastPub": "4 дня назад",
+      "lastPub": "5 дней назад",
       "platform": "Яндекс Игры"
     },
     {
@@ -2614,18 +2614,38 @@
       "ratings": "150 778",
       "scoreRu": "49.4",
       "scoreEn": "49.65",
-      "lastPub": "82 дня назад",
+      "lastPub": "83 дня назад",
       "platform": "Яндекс Игры"
     }
   ],
   "newReleases": [
+    {
+      "name": "Lovely Merge",
+      "developer": "Null Fall",
+      "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=625779",
+      "gaUrl": "https://game-analytics.ru/yg/games/lovely-merge-625779",
+      "img": "https://avatars.mds.yandex.net/get-games/1890793/2a000001a118272c01f1328f004ee631f491//pjpg526x314",
+      "timeAgo": "Недавно",
+      "platform": "Яндекс Игры",
+      "status": "Новая"
+    },
+    {
+      "name": "Соедини Блоки Соедини",
+      "developer": "lordrollgames",
+      "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=294621",
+      "gaUrl": "https://game-analytics.ru/yg/games/soedini-bloki-soedini-294621",
+      "img": "https://avatars.mds.yandex.net/get-games/1892995/2a00000190dc8a56b153da794e20cfc4daae//pjpg526x314",
+      "timeAgo": "Недавно",
+      "platform": "Яндекс Игры",
+      "status": "Новая"
+    },
     {
       "name": "Мать-Птица Тут!",
       "developer": "Prime Publishing",
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=629548",
       "gaUrl": "https://game-analytics.ru/yg/games/mat-ptica-tut-629548",
       "img": "https://avatars.mds.yandex.net/get-games/11374519/2a000001a1b2a34c6affb156c2fab54f3653//pjpg526x314",
-      "timeAgo": "1 час назад",
+      "timeAgo": "Недавно",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2655,7 +2675,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=534243",
       "gaUrl": "https://game-analytics.ru/yg/games/candy-charm-maker-diy-asmr-534243",
       "img": "https://avatars.mds.yandex.net/get-games/2977039/2a000001a1399f8ab5ac79d0c51fd32228c7//pjpg526x314",
-      "timeAgo": "Недавно",
+      "timeAgo": "1 день назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2665,7 +2685,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=636063",
       "gaUrl": "https://game-analytics.ru/yg/games/sou-miss-kak-popalo-636063",
       "img": "https://avatars.mds.yandex.net/get-games/17999008/2a000001a1649dd4b5a7946261aef358e986//pjpg526x314",
-      "timeAgo": "Недавно",
+      "timeAgo": "1 день назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2695,7 +2715,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=576780",
       "gaUrl": "https://game-analytics.ru/yg/games/honest-war-rts-strategiia-576780",
       "img": "https://avatars.mds.yandex.net/get-games/17921938/2a000001a03d9e8fcaf41c2db476bb2713d6//pjpg526x314",
-      "timeAgo": "3 дня назад",
+      "timeAgo": "4 дня назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2705,7 +2725,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=627658",
       "gaUrl": "https://game-analytics.ru/yg/games/cernyi-staratel-627658",
       "img": "https://avatars.mds.yandex.net/get-games/17921938/2a000001a122a996d914c3a1f8c7ffa965db//pjpg526x314",
-      "timeAgo": "3 дня назад",
+      "timeAgo": "4 дня назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2715,7 +2735,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=631452",
       "gaUrl": "https://game-analytics.ru/yg/games/barbersop-cimuliator-631452",
       "img": "https://avatars.mds.yandex.net/get-games/14244614/2a000001a143a7c59e00f7d017f1afda2063//pjpg526x314",
-      "timeAgo": "3 дня назад",
+      "timeAgo": "4 дня назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2735,7 +2755,7 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=550265",
       "gaUrl": "https://game-analytics.ru/yg/games/flappi-io-onlain-550265",
       "img": "https://avatars.mds.yandex.net/get-games/15351989/2a0000019fd81b745ec3f8d3393d647946ba//pjpg526x314",
-      "timeAgo": "4 дня назад",
+      "timeAgo": "5 дней назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
     },
@@ -2845,26 +2865,6 @@
       "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=586912",
       "gaUrl": "https://game-analytics.ru/yg/games/pusecnyi-xaos-razgromi-vsex-586912",
       "img": "https://avatars.mds.yandex.net/get-games/17921938/2a000001a12599d5a51a3b385b7ef2789d4f//pjpg526x314",
-      "timeAgo": "6 дней назад",
-      "platform": "Яндекс Игры",
-      "status": "Новая"
-    },
-    {
-      "name": "Геометри кубик: Sunset Sandstorm",
-      "developer": "love_apples",
-      "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=622398",
-      "gaUrl": "https://game-analytics.ru/yg/games/geometri-kubik-sunset-sandstorm-622398",
-      "img": "https://avatars.mds.yandex.net/get-games/17999308/2a000001a117dcb2d8534a031eb344b53038//pjpg526x314",
-      "timeAgo": "6 дней назад",
-      "platform": "Яндекс Игры",
-      "status": "Новая"
-    },
-    {
-      "name": "5 уроков с училкой!",
-      "developer": "MAAI games",
-      "directUrl": "https://yandex.ru/games/?utm_source=distrib&utm_medium=vyacheslav-dev&clid=2968906-33&vid=wga#app=610791",
-      "gaUrl": "https://game-analytics.ru/yg/games/5-urokov-s-ucilkoi-610791",
-      "img": "https://avatars.mds.yandex.net/get-games/11374519/2a000001a0c33a5804ac5df13b04053d5a22//pjpg526x314",
       "timeAgo": "6 дней назад",
       "platform": "Яндекс Игры",
       "status": "Новая"
