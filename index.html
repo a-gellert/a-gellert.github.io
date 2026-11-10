@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <title>Alexander Gellert — Indie Game Developer, Блог & Игры | Tiny Heart Studios</title>
-    <meta name="description" content="Официальный сайт инди-разработчика Alexander Gellert (Tiny Heart Studios). Мобильные игры на Defold и Unity: Smash Arena, Numbert, Perimeter Survival. Блог по геймдеву и Telegram-канал @tiny_game.">
-    <meta name="keywords" content="Alexander Gellert, Александр Геллерт, Tiny Heart Studios, инди-разработчик, геймдев, Defold, Unity, Godot 4, Smash Arena, Numbert, Perimeter Survival, блог разработчика игр, tiny_game, mobile games, devlog">
+    <meta name="description" content="Официальный сайт инди-разработчика Alexander Gellert (Tiny Heart Studios). Мобильные игры на Defold и Unity, блог по геймдеву, аналитика игрового рынка и TinyAnalytics.">
+    <meta name="keywords" content="Alexander Gellert, Александр Геллерт, Tiny Heart Studios, инди-разработчик, геймдев, Defold, Unity, Godot 4, Smash Arena, Numbert, Perimeter Survival, блог разработчика игр, аналитика игр, TinyAnalytics, tiny_game, mobile games, devlog">
     <meta name="author" content="Alexander Gellert">
     <link rel="canonical" href="https://a-gellert.github.io/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Facebook / Telegram -->
     <meta property="og:type" content="website">
@@ -76,20 +82,32 @@
     </script>
 
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.documentElement.classList.add('js');
+        window.setTimeout(function () {
+            if (!window.__UI_MOTION_BOOTED__) document.documentElement.classList.remove('js');
+        }, 3000);
+    </script>
 </head>
 <body>
+
+<div class="scroll-progress"><div class="scroll-progress__bar"></div></div>
 
 <!-- Navigation Bar -->
 <nav class="top-nav">
     <div class="nav-container">
-        <a href="#" class="nav-brand">
+        <a href="./" class="nav-brand">
             <span class="nav-avatar-mini">AG</span>
             <span>Alexander Gellert</span>
         </a>
+        <button class="nav-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <div class="nav-links">
             <a href="#blog" class="nav-link">Блог</a>
             <a href="#games" class="nav-link">Мои игры</a>
-            <a href="trends/index.html" class="nav-link">Аналитика</a>
+            <a href="trends/" class="nav-link">Рынок</a>
+            <a href="analytics/" class="nav-link">Аналитика сайта</a>
             <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="nav-tg-btn">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
                 @tiny_game
@@ -101,7 +119,7 @@
 <div class="container">
 
     <!-- Hero Header -->
-    <header>
+    <header data-reveal>
         <div class="avatar-wrapper">
             <div class="avatar">AG</div>
             <span class="avatar-badge" title="Active in Dev"></span>
@@ -112,8 +130,27 @@
         </div>
         <h1>Alexander Gellert</h1>
         <p class="subtitle">
-            Indie Mobile & Web Game Developer • Defold, Unity, Godot 4, HTML5. Создатель соревновательных игр, головоломок и игровых инструментов.
+            Indie Mobile &amp; Web Game Developer • Defold, Unity, Godot 4, HTML5. Создатель соревновательных игр, головоломок и игровых инструментов.
         </p>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <strong data-count="5">5</strong>
+                <span>игр в сторах</span>
+            </div>
+            <div class="hero-stat">
+                <strong data-count="6">6</strong>
+                <span>статей в блоге</span>
+            </div>
+            <div class="hero-stat">
+                <strong data-count="5">5</strong>
+                <span>платформ рынка</span>
+            </div>
+            <div class="hero-stat">
+                <strong>2026</strong>
+                <span>год в разработке</span>
+            </div>
+        </div>
 
         <!-- Telegram Hero Banner -->
         <div class="tg-hero-banner">
@@ -143,11 +180,11 @@
              1. ТОП-5 СТАТЕЙ ИЗ БЛОГА
              =================================================================== -->
         <section id="blog">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2 class="section-title">
                     <span class="sec-num">01 //</span> Свежие статьи блога
                 </h2>
-                <a href="blog/index.html" class="section-header-link">
+                <a href="blog/" class="section-header-link">
                     Все статьи блога →
                 </a>
             </div>
@@ -156,15 +193,15 @@
             <div class="blog-grid" id="top-articles-grid">
 
                 <!-- Article 1: Analytics -->
-                <article class="card blog-card" onclick="openArticle('game-trends-analytics-q4')">
+                <article class="card blog-card" data-reveal onclick="openArticle('game-trends-analytics-q4')">
                     <div>
                         <div class="blog-meta-top">
                             <span class="category-badge cat-analytics">Аналитика</span>
-                            <span class="read-time">⏱️ 5 мин</span>
+                            <span class="read-time">10 мин</span>
                         </div>
-                        <h3 class="blog-card-title">Анализ трендов мобильных и веб-игр: Steam, Google Play, Poki, CrazyGames и Яндекс</h3>
+                        <h3 class="blog-card-title">Аналитика рынка игр Q4 2026: как читать данные, а не тонуть в них</h3>
                         <p class="blog-card-desc">
-                            Разбор данных нашего дашборда Game Trends Analytics: какие жанры растут быстрее всего, где ниже конкуренция и как рассчитывается Индекс Хайпа.
+                            Методика чтения рынка: какие метрики показывают рост, как сравнивать Steam, Google Play, Poki, CrazyGames и Яндекс Игры и где искать свободные ниши.
                         </p>
                     </div>
                     <div>
@@ -174,22 +211,22 @@
                             <span class="tag">Steam & GP</span>
                         </div>
                         <div class="blog-footer-row">
-                            <span class="blog-date">📅 2026-11-01</span>
+                            <span class="blog-date">2026-11-08</span>
                             <span class="blog-read-link">Читать →</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Article 2: Devlog Smash Arena -->
-                <article class="card blog-card" onclick="openArticle('smash-arena-netcode-defold')">
+                <article class="card blog-card" data-reveal onclick="openArticle('smash-arena-netcode-defold')">
                     <div>
                         <div class="blog-meta-top">
                             <span class="category-badge cat-devlog">Дневник разработки</span>
-                            <span class="read-time">⏱️ 6 мин</span>
+                            <span class="read-time">12 мин</span>
                         </div>
-                        <h3 class="blog-card-title">Сетевой код и оптимизация физики в Smash Arena на Defold</h3>
+                        <h3 class="blog-card-title">Сетевой код Smash Arena на Defold: предсказание, реконсиляция и 60 FPS</h3>
                         <p class="blog-card-desc">
-                            Как мы проектировали быстрый мультиплеер и предсказание движения персонажей в Defold Engine. Проблемы с задержкой и синхронизация состояний.
+                            Как устроен мультиплеер Smash Arena: фиксированный тик, буфер ввода, клиентское предсказание, снепшоты с дельтой и пространственный хеш.
                         </p>
                     </div>
                     <div>
@@ -199,22 +236,22 @@
                             <span class="tag">PvP</span>
                         </div>
                         <div class="blog-footer-row">
-                            <span class="blog-date">📅 2026-10-28</span>
+                            <span class="blog-date">2026-10-28</span>
                             <span class="blog-read-link">Читать →</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Article 3: How-to Godot 4 -->
-                <article class="card blog-card" onclick="openArticle('godot4-mobile-optimization')">
+                <article class="card blog-card" data-reveal onclick="openArticle('godot4-mobile-optimization')">
                     <div>
                         <div class="blog-meta-top">
                             <span class="category-badge cat-how-to">Как сделать</span>
-                            <span class="read-time">⏱️ 7 мин</span>
+                            <span class="read-time">11 мин</span>
                         </div>
-                        <h3 class="blog-card-title">Оптимизация 3D под мобильные устройства в Godot 4: уроки Perimeter</h3>
+                        <h3 class="blog-card-title">Godot 4 на мобильных: как получить стабильные 60 FPS в 3D-лесу</h3>
                         <p class="blog-card-desc">
-                            Практическое руководство по получению стабильных 60 FPS на средних смартфонах в Godot 4.3+. Mobile рендер, MultiMesh, LOD и сжатие VRAM текстур.
+                            Практический разбор Perimeter: выбор рендерера, MultiMesh, LOD, occlusion culling, сжатие текстур, бюджеты кадра и профилирование на Android.
                         </p>
                     </div>
                     <div>
@@ -224,22 +261,22 @@
                             <span class="tag">Оптимизация</span>
                         </div>
                         <div class="blog-footer-row">
-                            <span class="blog-date">📅 2026-10-15</span>
+                            <span class="blog-date">2026-10-15</span>
                             <span class="blog-read-link">Читать →</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Article 4: Assets & Shaders -->
-                <article class="card blog-card" onclick="openArticle('free-vfx-and-shaders-mobile')">
+                <article class="card blog-card" data-reveal onclick="openArticle('free-vfx-and-shaders-mobile')">
                     <div>
                         <div class="blog-meta-top">
                             <span class="category-badge cat-assets">Ассеты</span>
-                            <span class="read-time">⏱️ 4 мин</span>
+                            <span class="read-time">9 мин</span>
                         </div>
-                        <h3 class="blog-card-title">Подборка эффективных мобильных шейдеров: от симуляции воды до растворения (Dissolve FX)</h3>
+                        <h3 class="blog-card-title">Мобильные шейдеры без убитой батареи: Dissolve, вода и X-Ray</h3>
                         <p class="blog-card-desc">
-                            Бесплатные легковесные GLSL-шейдеры для Defold и Godot: растворение с огненной каймой, стилизованная водная гладь и X-Ray силуэт.
+                            Три лёгких GLSL-эффекта для Defold и Godot: растворение с каймой, стилизованная вода без отражений и силуэт за препятствиями. С кодом и параметрами.
                         </p>
                     </div>
                     <div>
@@ -249,22 +286,22 @@
                             <span class="tag">GLSL VFX</span>
                         </div>
                         <div class="blog-footer-row">
-                            <span class="blog-date">📅 2026-10-05</span>
+                            <span class="blog-date">2026-10-05</span>
                             <span class="blog-read-link">Читать →</span>
                         </div>
                     </div>
                 </article>
 
                 <!-- Article 5: How-to Math Architecture -->
-                <article class="card blog-card" onclick="openArticle('numbert-math-puzzle-architecture')">
+                <article class="card blog-card" data-reveal onclick="openArticle('numbert-math-puzzle-architecture')">
                     <div>
                         <div class="blog-meta-top">
                             <span class="category-badge cat-how-to">Как сделать</span>
-                            <span class="read-time">⏱️ 8 мин</span>
+                            <span class="read-time">12 мин</span>
                         </div>
-                        <h3 class="blog-card-title">Архитектура логической головоломки: генератор решаемых уровней в Numbert</h3>
+                        <h3 class="blog-card-title">Генератор головоломок Numbert: как гарантировать решение и не убить интерес</h3>
                         <p class="blog-card-desc">
-                            Как построить процедурную генерацию математических головоломок с гарантией единственного решения. Алгоритм обратного поиска и адаптивная подсказка.
+                            Архитектура процедурной генерации: обратное конструирование, дерево решений, метрика сложности и адаптивные подсказки без спойлеров.
                         </p>
                     </div>
                     <div>
@@ -274,11 +311,37 @@
                             <span class="tag">Numbert</span>
                         </div>
                         <div class="blog-footer-row">
-                            <span class="blog-date">📅 2026-09-20</span>
+                            <span class="blog-date">2026-09-20</span>
                             <span class="blog-read-link">Читать →</span>
                         </div>
                     </div>
                 </article>
+
+                <!-- Archive CTA -->
+                <a class="card blog-card blog-card--cta" href="blog/" data-reveal>
+                    <div>
+                        <div class="blog-meta-top">
+                            <span class="category-badge cat-devlog">Архив</span>
+                            <span class="read-time">6 материалов</span>
+                        </div>
+                        <h3 class="blog-card-title">Все статьи блога</h3>
+                        <p class="blog-card-desc">
+                            Дневники разработки, практические туториалы, шейдеры и разборы рынка — с фильтрами по категориям и поиском.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="blog-card-tags">
+                            <span class="tag">Devlog</span>
+                            <span class="tag">How-to</span>
+                            <span class="tag">Assets</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <div class="blog-footer-row">
+                            <span class="blog-date">Полный архив</span>
+                            <span class="blog-read-link">Открыть →</span>
+                        </div>
+                    </div>
+                </a>
 
             </div>
         </section>
@@ -287,7 +350,7 @@
              2. МОИ ИГРЫ (Снизу статей)
              =================================================================== -->
         <section id="games">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2 class="section-title">
                     <span class="sec-num">02 //</span> Игровые проекты
                 </h2>
@@ -295,9 +358,9 @@
 
             <div class="games-grid">
                 <!-- Smash Arena Card -->
-                <div class="card game-card">
+                <div class="card game-card" data-reveal>
                     <div class="game-card-top">
-                        <img src="images/smash_arena.png" alt="Smash Arena Icon" class="game-icon">
+                        <img src="images/smash_arena.png" alt="Smash Arena Icon" class="game-icon" loading="lazy" decoding="async">
                         <div class="game-info">
                             <h3 class="game-title">Smash Arena</h3>
                             <div class="tags-row">
@@ -318,7 +381,7 @@
                             </svg>
                             Google Play
                         </a>
-                        <a href="smash_arena_privacy.html" class="btn btn-outline">
+                        <a href="privacy/smash-arena/" class="btn btn-outline">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                             </svg>
@@ -328,9 +391,9 @@
                 </div>
 
                 <!-- Numbert Card -->
-                <div class="card game-card">
+                <div class="card game-card" data-reveal>
                     <div class="game-card-top">
-                        <img src="images/numbert.png" alt="Numbert Icon" class="game-icon">
+                        <img src="images/numbert.png" alt="Numbert Icon" class="game-icon" loading="lazy" decoding="async">
                         <div class="game-info">
                             <h3 class="game-title">Numbert: Brain Puzzles</h3>
                             <div class="tags-row">
@@ -352,7 +415,7 @@
                             </svg>
                             Google Play
                         </a>
-                        <a href="numbert_privacy.html" class="btn btn-outline">
+                        <a href="privacy/numbert/" class="btn btn-outline">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                             </svg>
@@ -362,9 +425,9 @@
                 </div>
 
                 <!-- Ragdoll Destruction Playground Card -->
-                <div class="card game-card">
+                <div class="card game-card" data-reveal>
                     <div class="game-card-top">
-                        <img src="images/ragdoll.png" alt="Ragdoll Destruction Playground Icon" class="game-icon">
+                        <img src="images/ragdoll.png" alt="Ragdoll Destruction Playground Icon" class="game-icon" loading="lazy" decoding="async">
                         <div class="game-info">
                             <h3 class="game-title">Ragdoll Destruction</h3>
                             <div class="tags-row">
@@ -385,7 +448,7 @@
                             </svg>
                             Google Play
                         </a>
-                        <a href="ragdoll_destruction_privacy.html" class="btn btn-outline">
+                        <a href="privacy/ragdoll-destruction/" class="btn btn-outline">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                             </svg>
@@ -395,9 +458,9 @@
                 </div>
 
                 <!-- Master Of 3 Tiles Card -->
-                <div class="card game-card">
+                <div class="card game-card" data-reveal>
                     <div class="game-card-top">
-                        <img src="images/master_tiles.png" alt="Master Of 3 Tiles Icon" class="game-icon">
+                        <img src="images/master_tiles.png" alt="Master Of 3 Tiles Icon" class="game-icon" loading="lazy" decoding="async">
                         <div class="game-info">
                             <h3 class="game-title">Master Of 3 Tiles</h3>
                             <div class="tags-row">
@@ -418,7 +481,7 @@
                             </svg>
                             Google Play
                         </a>
-                        <a href="master_of_3_tiles_privacy.html" class="btn btn-outline">
+                        <a href="privacy/master-of-3-tiles/" class="btn btn-outline">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                             </svg>
@@ -428,9 +491,9 @@
                 </div>
 
                 <!-- Perimeter: 3D Forest Survival Card -->
-                <div class="card game-card">
+                <div class="card game-card" data-reveal>
                     <div class="game-card-top">
-                        <img src="images/perimeter.png" alt="Perimeter: 3D Forest Survival Icon" class="game-icon">
+                        <img src="images/perimeter.png" alt="Perimeter: 3D Forest Survival Icon" class="game-icon" loading="lazy" decoding="async">
                         <div class="game-info">
                             <h3 class="game-title">Perimeter Survival</h3>
                             <div class="tags-row">
@@ -451,7 +514,7 @@
                             </svg>
                             Google Play
                         </a>
-                        <a href="perimeter_privacy.html" class="btn btn-outline">
+                        <a href="privacy/perimeter/" class="btn btn-outline">
                             <svg viewBox="0 0 24 24" aria-hidden="true">
                                 <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-5.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
                             </svg>
@@ -466,41 +529,75 @@
              3. ИНСТРУМЕНТЫ & АНАЛИТИКА
              =================================================================== -->
         <section id="tools">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2 class="section-title">
-                    <span class="sec-num">03 //</span> Аналитика & Инструменты
+                    <span class="sec-num">03 //</span> Аналитика &amp; Инструменты
                 </h2>
             </div>
 
-            <!-- Game Trends Analytics -->
-            <div class="card game-card">
-                <div class="game-card-top">
-                    <div class="game-icon" style="display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, #181c26 0%, #222938 100%); color: #66C0F4; border: 1px solid rgba(102, 192, 244, 0.25);">📊</div>
-                    <div class="game-info">
-                        <h3 class="game-title">WebGameAnalytics (game-analytics.ru)</h3>
-                        <div class="tags-row">
-                            <span class="tag tag-highlight">Live Парсер</span>
-                            <span class="tag">Прорывы за 30 дней</span>
-                            <span class="tag">Яндекс, Poki & Crazy</span>
-                            <span class="tag">GameAnalytics KPI</span>
+            <div class="games-grid">
+                <!-- Game Trends Analytics -->
+                <div class="card game-card" data-reveal>
+                    <div class="game-card-top">
+                        <div class="game-icon" style="display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, #181c26 0%, #222938 100%); color: #66C0F4; border: 1px solid rgba(102, 192, 244, 0.25);">📊</div>
+                        <div class="game-info">
+                            <h3 class="game-title">WebGameAnalytics</h3>
+                            <div class="tags-row">
+                                <span class="tag tag-highlight">Live парсер</span>
+                                <span class="tag">Прорывы за 30 дней</span>
+                                <span class="tag">Яндекс, Poki &amp; Crazy</span>
+                                <span class="tag">GameAnalytics KPI</span>
+                            </div>
                         </div>
+                    </div>
+
+                    <p class="game-desc">
+                        Аналитика браузерных и мобильных игр в стиле <strong>game-analytics.ru</strong>: прорывы за 30 дней, динамика оценок, популярные игры, новинки и топ разработчиков Яндекс Игр, Poki и CrazyGames — с отраслевыми бенчмарками D1, D7 и D28.
+                    </p>
+
+                    <div class="links-row">
+                        <a href="trends/" class="btn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                            </svg>
+                            Открыть рынок →
+                        </a>
+                        <a href="blog/#game-trends-analytics-q4" class="btn btn-outline">
+                            Читать разбор
+                        </a>
                     </div>
                 </div>
 
-                <p class="game-desc">
-                    Аналитика и статистика браузерных и мобильных игр в стиле <strong>game-analytics.ru</strong>: прорывы за 30 дней, динамика оценок, популярные игры, новинки и топ разработчиков Яндекс Игр, Poki и CrazyGames, сопоставленные с отраслевыми бенчмарками GameAnalytics (D1, D7, D28).
-                </p>
+                <!-- TinyAnalytics -->
+                <div class="card game-card" data-reveal>
+                    <div class="game-card-top">
+                        <div class="game-icon" style="display: flex; align-items: center; justify-content: center; font-size: 2rem; background: linear-gradient(135deg, #0f1c1a 0%, #122a24 100%); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.25);">📈</div>
+                        <div class="game-info">
+                            <h3 class="game-title">TinyAnalytics</h3>
+                            <div class="tags-row">
+                                <span class="tag tag-highlight">DAU &amp; Retention</span>
+                                <span class="tag">События</span>
+                                <span class="tag">Воронки</span>
+                                <span class="tag">Без cookie</span>
+                            </div>
+                        </div>
+                    </div>
 
-                <div class="links-row">
-                    <a href="trends/index.html" class="btn">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
-                        </svg>
-                        Открыть аналитику и прорывы →
-                    </a>
-                    <a href="blog/index.html#game-trends-analytics-q4" class="btn btn-outline">
-                        Читать разбор метрик
-                    </a>
+                    <p class="game-desc">
+                        Продуктовая аналитика самого сайта в духе <strong>GameAnalytics</strong>: уникальные посетители, сессии, удержание D1/D7/D28, таксономия событий и воронка «визит → статья → Telegram». Всё считается локально, без сторонних трекеров.
+                    </p>
+
+                    <div class="links-row">
+                        <a href="analytics/" class="btn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/>
+                            </svg>
+                            Открыть дашборд →
+                        </a>
+                        <a href="analytics/?demo=1" class="btn btn-outline">
+                            Посмотреть демо
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -509,14 +606,14 @@
              4. TELEGRAM КАНАЛ & СВЯЗЬ
              =================================================================== -->
         <section id="contact">
-            <div class="section-header">
+            <div class="section-header" data-reveal>
                 <h2 class="section-title">
-                    <span class="sec-num">04 //</span> Сообщество & Контакты
+                    <span class="sec-num">04 //</span> Сообщество &amp; Контакты
                 </h2>
             </div>
 
             <!-- Telegram Channel Card -->
-            <div class="card tg-community-card">
+            <div class="card tg-community-card" data-reveal>
                 <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
                     <div style="width: 40px; height: 40px; background: rgba(34, 158, 217, 0.12); border: 1px solid rgba(34, 158, 217, 0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #38bdf8;">
                         <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
@@ -549,7 +646,7 @@
     </main>
 
     <!-- Modal Article Reader -->
-    <div class="modal-overlay" id="article-modal">
+    <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <button class="modal-close-btn" id="modal-close" aria-label="Закрыть">✕</button>
             <div class="blog-meta-top" id="modal-meta"></div>
@@ -573,27 +670,33 @@
     <footer>
         <div class="footer-nav">
             <a href="#blog">Блог</a>
-            <a href="blog/index.html">Все статьи</a>
+            <a href="blog/">Все статьи</a>
             <a href="#games">Игры</a>
-            <a href="trends/index.html">Аналитика</a>
+            <a href="trends/">Рынок</a>
+            <a href="analytics/">Аналитика сайта</a>
             <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="footer-tg-link">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
                 Telegram @tiny_game
             </a>
             <a href="mailto:oblistud@gmail.com">Контакты</a>
         </div>
-        <div style="margin-top: 10px; color: var(--text-muted); font-size: 0.82rem;">
+        <div class="footer-bottom">
             © 2026 Alexander Gellert. Tiny Heart Studios. All rights reserved.<br>
-            <a href="smash_arena_privacy.html">Smash Arena Privacy</a> • 
-            <a href="numbert_privacy.html">Numbert Privacy</a> • 
-            <a href="ragdoll_destruction_privacy.html">Ragdoll Privacy</a> • 
-            <a href="master_of_3_tiles_privacy.html">Master of 3 Tiles Privacy</a> • 
-            <a href="perimeter_privacy.html">Perimeter Privacy</a> • 
+            <a href="privacy/">Privacy</a> •
+            <a href="privacy/smash-arena/">Smash Arena</a> •
+            <a href="privacy/numbert/">Numbert</a> •
+            <a href="privacy/ragdoll-destruction/">Ragdoll</a> •
+            <a href="privacy/master-of-3-tiles/">Master of 3 Tiles</a> •
+            <a href="privacy/perimeter/">Perimeter</a> •
             <a href="app-ads.txt">app-ads.txt</a>
         </div>
     </footer>
 
 </div>
+
+<!-- Analytics pipeline first so hash-opened articles are tracked too -->
+<script src="js/analytics-config.js"></script>
+<script src="js/analytics.js"></script>
 
 <!-- Universal articles data (enables local file:/// browsing without CORS issues) -->
 <script src="articles/articles-data.js"></script>
@@ -636,23 +739,33 @@ async function openArticle(id) {
         
         document.getElementById('modal-meta').innerHTML = `
             <span class="category-badge ${catClass}">${catTitle}</span>
-            <span class="read-time">⏱️ ${data.readTime || '5 мин'} • 📅 ${data.date}</span>
+            <span class="read-time">${data.readTime || '5 мин'} • ${data.date}</span>
         `;
         document.getElementById('modal-title').innerText = data.title;
         document.getElementById('modal-tags').innerHTML = (data.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
         document.getElementById('modal-body').innerHTML = data.content || `<p>${data.excerpt}</p>`;
 
         document.getElementById('article-modal').classList.add('active');
+        document.body.classList.add('modal-open');
         window.location.hash = data.slug || data.id;
+
+        if (window.TinyAnalytics) {
+            window.TinyAnalytics.articleOpen(data.slug || data.id, {
+                category: data.category,
+                title: data.title
+            });
+        }
     } else {
-        // Fallback: navigate to dedicated blog page with explicit index.html
-        window.location.href = `blog/index.html#${id}`;
+        // Fallback: navigate to the blog page with a clean URL
+        window.location.href = `blog/#${id}`;
     }
 }
 
 function closeModal() {
     document.getElementById('article-modal').classList.remove('active');
+    document.body.classList.remove('modal-open');
     history.pushState("", document.title, window.location.pathname + window.location.search);
+    if (window.TinyAnalytics) window.TinyAnalytics.articleClose();
 }
 
 document.getElementById('modal-close').addEventListener('click', closeModal);
@@ -664,14 +777,27 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
 });
 
-// Check if URL hash matches an article
-if (window.location.hash) {
+// Keyboard access for the static article cards
+document.querySelectorAll('.blog-card[onclick]').forEach((card) => {
+    card.tabIndex = 0;
+    card.setAttribute('role', 'button');
+    card.addEventListener('keydown', (event) => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        card.click();
+    });
+});
+
+// Check if URL hash matches an article after the analytics session is ready.
+document.addEventListener('DOMContentLoaded', () => {
+    if (!window.location.hash) return;
     const hash = window.location.hash.replace('#', '');
     if (hash && hash !== 'blog' && hash !== 'games' && hash !== 'tools' && hash !== 'contact') {
         openArticle(hash);
     }
-}
+}, { once: true });
 </script>
+<script src="js/main.js"></script>
 
 </body>
 </html>

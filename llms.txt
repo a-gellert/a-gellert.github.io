@@ -1,13 +1,15 @@
 # Alexander Gellert — Indie Game Developer & Tiny Heart Studios
-> Portfolio, Mobile & Web Games, Game Development Blog and Market Analytics.
+> Portfolio, mobile & web games, game development blog and market analytics.
 
 ## Summary
-Alexander Gellert (Tiny Heart Studios) is an independent game developer specializing in mobile, 3D, and web game development using Defold, Unity, Godot 4, and Web technologies.
+Alexander Gellert (Tiny Heart Studios) is an independent game developer specializing in mobile, 3D and web game development using Defold, Unity, Godot 4 and web technologies.
 
 ## Official Links
 - Main Website: https://a-gellert.github.io/
 - Blog & Devlogs: https://a-gellert.github.io/blog/
-- Game Trends Analytics Dashboard: https://a-gellert.github.io/trends/
+- Game Market Analytics: https://a-gellert.github.io/trends/
+- Site Product Analytics: https://a-gellert.github.io/analytics/
+- Privacy Policies: https://a-gellert.github.io/privacy/
 - Telegram Channel: https://t.me/tiny_game (@tiny_game)
 - Developer Email: oblistud@gmail.com
 
@@ -19,8 +21,7 @@ Alexander Gellert (Tiny Heart Studios) is an independent game developer speciali
 - Perimeter Survival (Unity, 3D Forest Shelter Survival) on Google Play: https://play.google.com/store/apps/details?id=com.ths.survival.forest.shelter.monsters
 
 ## Blog Categories
-- Дневник разработки (Devlog): Technical deep dives into netcode, physics, architecture.
-- Как сделать (How-to): Guides on mobile optimization, 3D rendering in Godot 4, procedural puzzle generation.
-- Ассеты (Assets): Shaders, VFX, open-source resources for game developers.
-- Аналитика (Analytics): Market trends across Steam, Google Play, Poki, CrazyGames, and Yandex Games.
-
+- Devlog: Technical deep dives into netcode, physics, architecture and production decisions.
+- How-to: Guides on mobile optimization, 3D rendering in Godot 4 and procedural puzzle generation.
+- Assets: Shaders, VFX and open-source resources for game developers.
+- Analytics: Market trends across Steam, Google Play, Poki, CrazyGames and Yandex Games.

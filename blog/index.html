@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <title>Блог разработчика игр — Alexander Gellert | Devlog, Туториалы, Ассеты, Аналитика</title>
     <meta name="description" content="Блог инди-разработчика игр Alexander Gellert (Tiny Heart Studios). Дневник разработки, уроки по Defold и Godot 4, бесплатные ассеты и шейдеры, аналитика трендов игрового рынка.">
     <meta name="keywords" content="блог разработчика игр, геймдев, devlog, дневник разработки, Defold, Godot 4, как сделать игру, шейдеры, ассеты, аналитика игр, Александр Геллерт, tiny_game">
     <meta name="author" content="Alexander Gellert">
     <link rel="canonical" href="https://a-gellert.github.io/blog/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph / Facebook / Telegram -->
     <meta property="og:type" content="blog">
@@ -51,8 +57,16 @@
     </script>
 
     <link rel="stylesheet" href="../style.css">
+    <script>
+        document.documentElement.classList.add('js');
+        window.setTimeout(function () {
+            if (!window.__UI_MOTION_BOOTED__) document.documentElement.classList.remove('js');
+        }, 3000);
+    </script>
 </head>
 <body>
+
+<div class="scroll-progress"><div class="scroll-progress__bar"></div></div>
 
 <!-- Navigation Bar -->
 <nav class="top-nav">
@@ -61,10 +75,14 @@
             <span class="nav-avatar-mini">AG</span>
             <span>Alexander Gellert</span>
         </a>
+        <button class="nav-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <div class="nav-links">
-            <a href="../index.html#games" class="nav-link">Игры</a>
-            <a href="index.html" class="nav-link active">Блог</a>
-            <a href="../trends/index.html" class="nav-link">Аналитика</a>
+            <a href="../#games" class="nav-link">Игры</a>
+            <a href="./" class="nav-link active">Блог</a>
+            <a href="../trends/" class="nav-link">Рынок</a>
+            <a href="../analytics/" class="nav-link">Аналитика сайта</a>
             <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="nav-tg-btn">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
                 @tiny_game
@@ -75,7 +93,7 @@
 
 <div class="container">
 
-    <header>
+    <header data-reveal>
         <div class="status-pill">
             <span class="status-dot"></span>
             Tiny Heart Studios • Game Dev Blog
@@ -112,10 +130,10 @@
         <div class="blog-controls">
             <div class="filter-tabs" id="filter-tabs">
                 <button class="filter-btn active" data-category="all">Все статьи (<span id="count-all">0</span>)</button>
-                <button class="filter-btn" data-category="devlog">🛠 Дневник разработки (<span id="count-devlog">0</span>)</button>
-                <button class="filter-btn" data-category="how-to">💡 Как сделать (<span id="count-how-to">0</span>)</button>
-                <button class="filter-btn" data-category="assets">🎨 Ассеты (<span id="count-assets">0</span>)</button>
-                <button class="filter-btn" data-category="analytics">📊 Аналитика (<span id="count-analytics">0</span>)</button>
+                <button class="filter-btn" data-category="devlog">Дневник разработки (<span id="count-devlog">0</span>)</button>
+                <button class="filter-btn" data-category="how-to">Как сделать (<span id="count-how-to">0</span>)</button>
+                <button class="filter-btn" data-category="assets">Ассеты (<span id="count-assets">0</span>)</button>
+                <button class="filter-btn" data-category="analytics">Аналитика (<span id="count-analytics">0</span>)</button>
             </div>
 
             <div class="search-input-wrapper">
@@ -135,7 +153,7 @@
     </main>
 
     <!-- Modal Article Reader -->
-    <div class="modal-overlay" id="article-modal">
+    <div class="modal-overlay" id="article-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <div class="modal-content">
             <button class="modal-close-btn" id="modal-close" aria-label="Закрыть">✕</button>
             <div class="blog-meta-top" id="modal-meta">
@@ -159,10 +177,11 @@
 
     <footer>
         <div class="footer-nav">
-            <a href="../index.html">Главная</a>
-            <a href="../index.html#games">Игры</a>
-            <a href="index.html">Блог</a>
-            <a href="../trends/index.html">Аналитика трендов</a>
+            <a href="../">Главная</a>
+            <a href="../#games">Игры</a>
+            <a href="./">Блог</a>
+            <a href="../trends/">Аналитика рынка</a>
+            <a href="../analytics/">Аналитика сайта</a>
             <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="footer-tg-link">
                 <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
                 Telegram @tiny_game
@@ -173,6 +192,10 @@
     </footer>
 
 </div>
+
+<!-- Analytics pipeline first so hash-opened articles are tracked too -->
+<script src="../js/analytics-config.js"></script>
+<script src="../js/analytics.js"></script>
 
 <!-- Universal articles data (enables local file:/// browsing without CORS issues) -->
 <script src="../articles/articles-data.js"></script>
@@ -248,17 +271,17 @@ function renderArticles() {
 
     document.getElementById('no-articles-msg').style.display = 'none';
 
-    grid.innerHTML = filtered.map(art => {
+    grid.innerHTML = filtered.map((art, index) => {
         const catClass = categoryClassMap[art.category] || 'cat-devlog';
         const catTitle = art.categoryTitle || categoryTitleMap[art.category] || art.category;
         const tagsHtml = (art.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
 
         return `
-            <article class="card blog-card" onclick="openArticle('${art.id}')">
+            <article class="card blog-card card-in" style="--i:${index}" onclick="openArticle('${art.id}')" tabindex="0" role="button" data-article-id="${art.id}" aria-label="${art.title}">
                 <div>
                     <div class="blog-meta-top">
                         <span class="category-badge ${catClass}">${catTitle}</span>
-                        <span class="read-time">⏱️ ${art.readTime || '5 мин'}</span>
+                        <span class="read-time">${art.readTime || '5 мин'}</span>
                     </div>
                     <h2 class="blog-card-title">${art.title}</h2>
                     <p class="blog-card-desc">${art.excerpt}</p>
@@ -266,7 +289,7 @@ function renderArticles() {
                 <div>
                     <div class="blog-card-tags">${tagsHtml}</div>
                     <div class="blog-footer-row">
-                        <span class="blog-date">📅 ${art.date}</span>
+                        <span class="blog-date">${art.date}</span>
                         <span class="blog-read-link">Читать →</span>
                     </div>
                 </div>
@@ -299,14 +322,22 @@ async function openArticle(id) {
         
         document.getElementById('modal-meta').innerHTML = `
             <span class="category-badge ${catClass}">${catTitle}</span>
-            <span class="read-time">⏱️ ${data.readTime || '5 мин'} • 📅 ${data.date}</span>
+            <span class="read-time">${data.readTime || '5 мин'} • ${data.date}</span>
         `;
         document.getElementById('modal-title').innerText = data.title;
         document.getElementById('modal-tags').innerHTML = (data.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
         document.getElementById('modal-body').innerHTML = data.content || `<p>${data.excerpt}</p>`;
 
         document.getElementById('article-modal').classList.add('active');
+        document.body.classList.add('modal-open');
         window.location.hash = data.slug || data.id;
+
+        if (window.TinyAnalytics) {
+            window.TinyAnalytics.articleOpen(data.slug || data.id, {
+                category: data.category,
+                title: data.title
+            });
+        }
     } else {
         alert('Не удалось открыть статью.');
     }
@@ -314,7 +345,9 @@ async function openArticle(id) {
 
 function closeModal() {
     document.getElementById('article-modal').classList.remove('active');
+    document.body.classList.remove('modal-open');
     history.pushState("", document.title, window.location.pathname + window.location.search);
+    if (window.TinyAnalytics) window.TinyAnalytics.articleClose();
 }
 
 document.getElementById('modal-close').addEventListener('click', closeModal);
@@ -334,10 +367,31 @@ document.getElementById('filter-tabs').addEventListener('click', (e) => {
     btn.classList.add('active');
     currentCategory = btn.getAttribute('data-category');
     renderArticles();
+    if (window.TinyAnalytics) window.TinyAnalytics.track('design', 'filter', { category: currentCategory });
 });
 
 // Search input
-document.getElementById('blog-search').addEventListener('input', renderArticles);
+let searchTrackTimer = null;
+document.getElementById('blog-search').addEventListener('input', (event) => {
+    renderArticles();
+    clearTimeout(searchTrackTimer);
+    searchTrackTimer = setTimeout(() => {
+        const query = event.target.value.trim();
+        if (query.length >= 2 && window.TinyAnalytics) {
+            window.TinyAnalytics.track('design', 'search', { query_length: query.length });
+        }
+    }, 650);
+});
+
+// Keyboard access for article cards
+document.getElementById('articles-grid').addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    const card = event.target.closest('.blog-card');
+    if (!card) return;
+    event.preventDefault();
+    const id = card.getAttribute('data-article-id');
+    if (id) openArticle(id);
+});
 
 function checkUrlHash() {
     const hash = window.location.hash.replace('#', '');
@@ -346,8 +400,13 @@ function checkUrlHash() {
     }
 }
 
-loadArticles();
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadArticles, { once: true });
+} else {
+    loadArticles();
+}
 </script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>

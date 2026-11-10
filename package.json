@@ -5,7 +5,9 @@
   "type": "module",
   "main": "index.html",
   "scripts": {
-    "update-trends": "node scripts/update-market-intelligence.mjs"
+    "update-trends": "node scripts/update-market-intelligence.mjs",
+    "build-articles": "node scripts/build-articles.mjs",
+    "check-links": "node scripts/check-links.mjs"
   },
   "keywords": [
     "gamedev",

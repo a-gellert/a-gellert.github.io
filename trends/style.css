@@ -1082,3 +1082,80 @@ body {
         padding: 18px 16px;
     }
 }
+
+/* ==========================================================================
+   Motion layer — subtle terminal-style entrance and hover feedback
+   ========================================================================== */
+@keyframes trendsSidebarIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes trendsRowIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes trendsFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.sidebar {
+    animation: trendsSidebarIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.data-table tbody tr {
+    animation: trendsRowIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.data-table tbody tr:nth-child(1) { animation-delay: 0.02s; }
+.data-table tbody tr:nth-child(2) { animation-delay: 0.04s; }
+.data-table tbody tr:nth-child(3) { animation-delay: 0.06s; }
+.data-table tbody tr:nth-child(4) { animation-delay: 0.08s; }
+.data-table tbody tr:nth-child(5) { animation-delay: 0.1s; }
+.data-table tbody tr:nth-child(6) { animation-delay: 0.12s; }
+.data-table tbody tr:nth-child(7) { animation-delay: 0.14s; }
+.data-table tbody tr:nth-child(8) { animation-delay: 0.16s; }
+.data-table tbody tr:nth-child(9) { animation-delay: 0.18s; }
+.data-table tbody tr:nth-child(10) { animation-delay: 0.2s; }
+
+.chart-container-pro,
+.ga-tier-card,
+.new-game-card,
+.checker-form-card,
+.checker-result-card {
+    animation: trendsFadeIn 0.45s ease both;
+}
+
+.ga-tier-card,
+.new-game-card {
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ga-tier-card:hover,
+.new-game-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-hover);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.platform-nav li {
+    transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease, padding-left 0.2s ease;
+}
+
+.platform-nav li:hover {
+    padding-left: 24px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sidebar,
+    .data-table tbody tr,
+    .chart-container-pro,
+    .ga-tier-card,
+    .new-game-card,
+    .checker-form-card,
+    .checker-result-card {
+        animation: none !important;
+    }
+}

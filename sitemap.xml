@@ -2,48 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://a-gellert.github.io/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://a-gellert.github.io/blog/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://a-gellert.github.io/trends/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://a-gellert.github.io/smash_arena_privacy.html</loc>
+    <loc>https://a-gellert.github.io/privacy/</loc>
+    <lastmod>2026-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://a-gellert.github.io/privacy/smash-arena/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://a-gellert.github.io/numbert_privacy.html</loc>
+    <loc>https://a-gellert.github.io/privacy/numbert/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://a-gellert.github.io/perimeter_privacy.html</loc>
+    <loc>https://a-gellert.github.io/privacy/perimeter/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://a-gellert.github.io/ragdoll_destruction_privacy.html</loc>
+    <loc>https://a-gellert.github.io/privacy/ragdoll-destruction/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://a-gellert.github.io/master_of_3_tiles_privacy.html</loc>
+    <loc>https://a-gellert.github.io/privacy/master-of-3-tiles/</loc>
     <lastmod>2026-10-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

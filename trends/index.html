@@ -3,8 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <title>WebGameAnalytics — Аналитика Яндекс Игр, Poki, CrazyGames, Google Play и Steam</title>
     <meta name="description" content="Аналитическая платформа в стиле game-analytics.ru: прорывы за 30 дней, динамика оценок, популярные игры, новинки и топ разработчиков Яндекс Игр, Poki и CrazyGames, сопоставленные с бенчмарками GameAnalytics.">
+    <link rel="canonical" href="https://a-gellert.github.io/trends/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="WebGameAnalytics — рынок Яндекс Игр, Poki, CrazyGames, Google Play и Steam">
+    <meta property="og:description" content="Прорывы за 30 дней, динамика оценок, новинки, разработчики и бенчмарки удержания D1/D7/D28.">
+    <meta property="og:url" content="https://a-gellert.github.io/trends/">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,8 +36,14 @@
                 </div>
             </div>
             
-            <a href="../index.html" class="back-link">
+            <a href="../" class="back-link">
                 <i class="fa-solid fa-arrow-left"></i> Назад в портфолио
+            </a>
+            <a href="../analytics/" class="back-link">
+                <i class="fa-solid fa-chart-column"></i> Аналитика сайта
+            </a>
+            <a href="../blog/" class="back-link">
+                <i class="fa-solid fa-newspaper"></i> Блог и разборы
             </a>
             
             <nav class="platform-nav">
@@ -345,5 +363,8 @@
     <!-- Data bundles -->
     <script src="data/market-data.js"></script>
     <script src="app.js"></script>
+    <script src="../js/analytics-config.js"></script>
+<script src="../js/analytics.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>

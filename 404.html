@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <title>404 — Страница не найдена | Alexander Gellert</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script>
+        document.documentElement.classList.add('js');
+        window.setTimeout(function () {
+            if (!window.__UI_MOTION_BOOTED__) document.documentElement.classList.remove('js');
+        }, 3000);
+    </script>
+    <script>
+    (function () {
+        var path = window.location.pathname;
+        var hash = window.location.hash || '';
+        if (path === '/404.html') return;
+        var exact = {
+            '/blog.html': '/blog/',
+            '/index.html': '/',
+            '/trends/index.html': '/trends/',
+            '/analytics/index.html': '/analytics/',
+            '/smash_arena_privacy.html': '/privacy/smash-arena/',
+            '/numbert_privacy.html': '/privacy/numbert/',
+            '/ragdoll_destruction_privacy.html': '/privacy/ragdoll-destruction/',
+            '/master_of_3_tiles_privacy.html': '/privacy/master-of-3-tiles/',
+            '/perimeter_privacy.html': '/privacy/perimeter/'
+        };
+        var target = exact[path];
+        if (!target && /\/index\.html$/.test(path)) target = path.replace(/index\.html$/, '');
+        if (!target && /\.html$/.test(path)) target = path.replace(/\.html$/, '/');
+        if (!target && /^\/(blog|trends|analytics|privacy)$/.test(path)) target = path + '/';
+        if (!target && /^\/privacy\/[^/]+$/.test(path)) target = path + '/';
+        if (target) window.location.replace(target + hash);
+    }());
+    </script>
+</head>
+<body>
+
+<div class="scroll-progress"><div class="scroll-progress__bar"></div></div>
+
+<nav class="top-nav">
+    <div class="nav-container">
+        <a href="/" class="nav-brand">
+            <span class="nav-avatar-mini">AG</span>
+            <span>Alexander Gellert</span>
+        </a>
+        <button class="nav-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="/#blog" class="nav-link">Блог</a>
+            <a href="/#games" class="nav-link">Игры</a>
+            <a href="/trends/" class="nav-link">Рынок</a>
+            <a href="/analytics/" class="nav-link">Аналитика сайта</a>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="nav-tg-btn">@tiny_game</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <main class="error-page">
+        <div class="error-code">404</div>
+        <h1>Страница не найдена</h1>
+        <p>Похоже, ссылка устарела или содержит опечатку. Мы убрали <code>.html</code> из адресов — все разделы теперь живут по чистым URL.</p>
+        <div class="links-row" style="max-width: 520px; justify-content: center;">
+            <a href="/" class="btn btn-primary">На главную →</a>
+            <a href="/blog/" class="btn btn-outline">Блог</a>
+            <a href="/trends/" class="btn btn-outline">Аналитика рынка</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="/">Главная</a>
+            <a href="/blog/">Блог</a>
+            <a href="/trends/">Аналитика рынка</a>
+            <a href="/analytics/">Аналитика сайта</a>
+            <a href="/privacy/">Privacy</a>
+            <a href="mailto:oblistud@gmail.com">Контакты</a>
+        </div>
+        <div class="footer-bottom">© 2026 Alexander Gellert. Tiny Heart Studios.</div>
+    </footer>
+</div>
+
+<script src="/js/analytics-config.js"></script>
+<script src="/js/analytics.js"></script>
+<script src="/js/main.js"></script>
+<script>
+    if (window.TinyAnalytics) {
+        window.TinyAnalytics.track('error', '404', { path: location.pathname }, { severity: 'warning' });
+    }
+</script>
+</body>
+</html>

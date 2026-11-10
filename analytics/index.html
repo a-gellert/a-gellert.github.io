@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <title>TinyAnalytics — продуктовые метрики сайта в стиле GameAnalytics</title>
+    <meta name="description" content="TinyAnalytics: приватная продуктовая аналитика портфолио — DAU, сессии, удержание D1/D7/D28, воронка чтения статей и события без cookie.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://a-gellert.github.io/analytics/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.documentElement.classList.add('js');
+        window.setTimeout(function () {
+            if (!window.__UI_MOTION_BOOTED__) document.documentElement.classList.remove('js');
+        }, 3000);
+    </script>
+</head>
+<body class="analytics-page">
+
+<div class="scroll-progress"><div class="scroll-progress__bar"></div></div>
+
+<nav class="top-nav">
+    <div class="nav-container">
+        <a href="../" class="nav-brand">
+            <span class="nav-avatar-mini">AG</span>
+            <span>Alexander Gellert</span>
+        </a>
+        <button class="nav-menu-btn" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="../#blog" class="nav-link">Блог</a>
+            <a href="../#games" class="nav-link">Игры</a>
+            <a href="../trends/" class="nav-link">Рынок</a>
+            <a href="./" class="nav-link active">Аналитика сайта</a>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="nav-tg-btn">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                @tiny_game
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container analytics-shell">
+
+    <header class="analytics-header">
+        <div class="status-pill">
+            <span class="status-dot"></span>
+            TinyAnalytics • first-party event pipeline
+        </div>
+        <h1>Аналитика сайта</h1>
+        <p class="subtitle">
+            Метрики в духе GameAnalytics: активные игроки, сессии, удержание, события и воронка —
+            без cookie, сторонних скриптов и передачи персональных данных.
+        </p>
+
+        <div class="analytics-toolbar">
+            <div class="source-switch" role="group" aria-label="Источник данных">
+                <button type="button" class="source-btn active" data-source="real">Реальные данные</button>
+                <button type="button" class="source-btn" data-source="demo">Демо-данные</button>
+            </div>
+            <div class="range-switch" role="group" aria-label="Период">
+                <button type="button" class="range-btn" data-range="7">7 дней</button>
+                <button type="button" class="range-btn active" data-range="30">30 дней</button>
+                <button type="button" class="range-btn" data-range="90">90 дней</button>
+            </div>
+            <div class="toolbar-actions">
+                <button type="button" class="btn btn-outline" id="export-btn">Экспорт JSON</button>
+                <button type="button" class="btn btn-outline" id="seed-btn">Загрузить демо</button>
+            </div>
+        </div>
+
+        <div class="demo-banner" id="demo-banner" hidden>
+            <span class="demo-dot"></span>
+            <span><strong>Демо-режим.</strong> Синтетические события для проверки дашборда. Реальные данные не смешиваются с демо.</span>
+            <button type="button" class="demo-banner__btn" id="clear-demo-btn">Очистить демо</button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="kpi-grid" aria-label="Ключевые метрики">
+            <article class="kpi-card" data-reveal>
+                <div class="kpi-label">Уникальные посетители</div>
+                <div class="kpi-value" id="kpi-visitors">0</div>
+                <div class="kpi-hint" id="kpi-visitors-hint">DAU-подобная метрика за период</div>
+            </article>
+            <article class="kpi-card" data-reveal>
+                <div class="kpi-label">Сессии</div>
+                <div class="kpi-value" id="kpi-sessions">0</div>
+                <div class="kpi-hint" id="kpi-sessions-hint">уникальные session_id</div>
+            </article>
+            <article class="kpi-card" data-reveal>
+                <div class="kpi-label">События</div>
+                <div class="kpi-value" id="kpi-events">0</div>
+                <div class="kpi-hint" id="kpi-events-hint">все категории</div>
+            </article>
+            <article class="kpi-card" data-reveal>
+                <div class="kpi-label">Средняя сессия</div>
+                <div class="kpi-value" id="kpi-avg-session">0с</div>
+                <div class="kpi-hint">время на сайте</div>
+            </article>
+            <article class="kpi-card kpi-card--accent" data-reveal>
+                <div class="kpi-label">D1 Retention</div>
+                <div class="kpi-value" id="kpi-d1">0%</div>
+                <div class="kpi-hint">возврат на следующий день</div>
+            </article>
+            <article class="kpi-card kpi-card--accent" data-reveal>
+                <div class="kpi-label">D7 Retention</div>
+                <div class="kpi-value" id="kpi-d7">0%</div>
+                <div class="kpi-hint">возврат через неделю</div>
+            </article>
+            <article class="kpi-card kpi-card--accent" data-reveal>
+                <div class="kpi-label">D28 Retention</div>
+                <div class="kpi-value" id="kpi-d28">0%</div>
+                <div class="kpi-hint">долгосрочный интерес</div>
+            </article>
+            <article class="kpi-card" data-reveal>
+                <div class="kpi-label">Bounce rate</div>
+                <div class="kpi-value" id="kpi-bounce">0%</div>
+                <div class="kpi-hint">сессии с одной страницей</div>
+            </article>
+        </section>
+
+        <section class="panel chart-panel" data-reveal>
+            <div class="panel-head">
+                <div>
+                    <h2>Динамика активности</h2>
+                    <p class="panel-sub">Посетители, сессии и события по дням</p>
+                </div>
+                <div class="chart-legend">
+                    <span><i class="dot dot--visitors"></i> Посетители</span>
+                    <span><i class="dot dot--sessions"></i> Сессии</span>
+                </div>
+            </div>
+            <div class="chart-frame">
+                <canvas id="activity-chart" aria-label="График активности по дням" role="img"></canvas>
+                <div class="chart-fallback" id="chart-fallback" hidden></div>
+            </div>
+        </section>
+
+        <div class="analytics-grid">
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>Удержание по когортам</h2>
+                        <p class="panel-sub">Первый визит → возвраты D1 / D3 / D7 / D14 / D28</p>
+                    </div>
+                    <span class="panel-badge" id="retention-cohorts-badge">0 когорт</span>
+                </div>
+                <div class="retention-table-wrap">
+                    <table class="retention-table" id="retention-table">
+                        <thead>
+                            <tr>
+                                <th>Когорта</th>
+                                <th>Размер</th>
+                                <th>D0</th>
+                                <th>D1</th>
+                                <th>D3</th>
+                                <th>D7</th>
+                                <th>D14</th>
+                                <th>D28</th>
+                            </tr>
+                        </thead>
+                        <tbody id="retention-body">
+                            <tr><td colspan="8" class="empty-cell">Пока нет когорт — данных недостаточно.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="panel-note" id="retention-note">
+                    Когорта определяется по первому визиту. Удержание считается по любому событию в соответствующий день.
+                </p>
+            </section>
+
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>Воронка чтения</h2>
+                        <p class="panel-sub">Путь от визита до перехода в Telegram или стор</p>
+                    </div>
+                    <span class="panel-badge" id="funnel-sessions-badge">0 сессий</span>
+                </div>
+                <div class="funnel" id="funnel">
+                    <div class="empty-cell">Пока нет данных для воронки.</div>
+                </div>
+            </section>
+        </div>
+
+        <div class="analytics-grid">
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>События</h2>
+                        <p class="panel-sub">Топ событий по категориям GameAnalytics-таксономии</p>
+                    </div>
+                    <span class="panel-badge" id="events-badge">0 типов</span>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table analytics-table">
+                        <thead>
+                            <tr><th>Событие</th><th>Категория</th><th>Кол-во</th><th>Посетители</th></tr>
+                        </thead>
+                        <tbody id="events-body">
+                            <tr><td colspan="4" class="empty-cell">Пока нет событий.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>Страницы</h2>
+                        <p class="panel-sub">Просмотры и доля трафика</p>
+                    </div>
+                    <span class="panel-badge" id="pages-badge">0 страниц</span>
+                </div>
+                <div class="table-wrap">
+                    <table class="data-table analytics-table">
+                        <thead>
+                            <tr><th>Страница</th><th>Просмотры</th><th>Посетители</th><th>Доля</th></tr>
+                        </thead>
+                        <tbody id="pages-body">
+                            <tr><td colspan="4" class="empty-cell">Пока нет данных.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div class="analytics-grid analytics-grid--wide">
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>Realtime</h2>
+                        <p class="panel-sub">События за последние 5 минут</p>
+                    </div>
+                    <span class="live-badge"><i></i> Live</span>
+                </div>
+                <div class="realtime-grid">
+                    <div class="realtime-metric">
+                        <strong id="rt-sessions">0</strong>
+                        <span>активных сессий</span>
+                    </div>
+                    <div class="realtime-metric">
+                        <strong id="rt-visitors">0</strong>
+                        <span>посетителей</span>
+                    </div>
+                    <div class="realtime-metric">
+                        <strong id="rt-events">0</strong>
+                        <span>событий</span>
+                    </div>
+                </div>
+                <ul class="event-stream" id="event-stream">
+                    <li class="empty-cell">Пока тихо. Откройте сайт в другой вкладке.</li>
+                </ul>
+            </section>
+
+            <section class="panel" data-reveal>
+                <div class="panel-head">
+                    <div>
+                        <h2>Приватность и данные</h2>
+                        <p class="panel-sub">Всё хранится в этом браузере</p>
+                    </div>
+                    <span class="panel-badge">local-first</span>
+                </div>
+                <p class="panel-note">
+                    TinyAnalytics не использует cookie, не собирает имена, email или точную геолокацию.
+                    События лежат в <code>localStorage</code> этого браузера. Для сбора данных со всех
+                    посетителей подключите свой endpoint в <code>window.SITE_ANALYTICS_CONFIG</code>.
+                </p>
+                <div class="settings-row">
+                    <button type="button" class="btn btn-outline" id="optout-btn">Отключить аналитику</button>
+                    <button type="button" class="btn btn-outline" id="clear-all-btn">Удалить мои данные</button>
+                </div>
+                <p class="panel-note panel-note--muted" id="privacy-status">
+                    Аналитика включена. DNT / Global Privacy Control учитываются автоматически.
+                </p>
+            </section>
+        </div>
+
+        <section class="panel taxonomy-panel" data-reveal>
+            <div class="panel-head">
+                <div>
+                    <h2>Таксономия событий</h2>
+                    <p class="panel-sub">Как в GameAnalytics: категория → событие → свойства</p>
+                </div>
+            </div>
+            <div class="taxonomy-grid">
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-session">session</span>
+                    <p><code>session_start</code>, <code>page_view</code>, <code>page_hide</code>, <code>page_exit</code></p>
+                </div>
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-design">design</span>
+                    <p><code>scroll_depth</code>, <code>search</code>, <code>filter</code>, <code>theme</code></p>
+                </div>
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-progression">progression</span>
+                    <p><code>article_open</code>, <code>article_depth</code>, <code>article_complete</code>, <code>article_close</code></p>
+                </div>
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-business">business</span>
+                    <p><code>outbound_click</code>, <code>store_click</code>, <code>social_click</code>, <code>email_click</code></p>
+                </div>
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-error">error</span>
+                    <p><code>js_error</code>, <code>promise_rejection</code> с severity <code>error</code></p>
+                </div>
+                <div class="taxonomy-item">
+                    <span class="taxonomy-cat cat-performance">performance</span>
+                    <p><code>page_load</code>, <code>web_vital</code> (LCP, rating)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-nav">
+            <a href="../">Главная</a>
+            <a href="../blog/">Блог</a>
+            <a href="../trends/">Аналитика рынка</a>
+            <a href="https://t.me/tiny_game" target="_blank" rel="noopener" class="footer-tg-link">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>
+                Telegram @tiny_game
+            </a>
+            <a href="mailto:oblistud@gmail.com">Контакты</a>
+        </div>
+        <div class="footer-bottom">© 2026 Alexander Gellert. Tiny Heart Studios. <a href="../privacy/">Privacy</a></div>
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/analytics-config.js"></script>
+<script src="../js/analytics.js"></script>
+<script src="app.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

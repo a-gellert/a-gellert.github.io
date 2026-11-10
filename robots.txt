@@ -3,6 +3,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /analytics/
+Disallow: /404.html
 
 # AI crawlers and search engines
 User-agent: Googlebot
