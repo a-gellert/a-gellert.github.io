@@ -193,50 +193,6 @@
     }
 
     /* ------------------------------------------------------------------
-       Animated counters
-       ------------------------------------------------------------------ */
-    function initCounters() {
-        const counters = Array.from(document.querySelectorAll('[data-count]'));
-        if (!counters.length) return;
-
-        const animate = (el) => {
-            const target = Number(el.dataset.count);
-            if (!Number.isFinite(target)) return;
-            if (prefersReducedMotion) {
-                el.textContent = String(target);
-                return;
-            }
-            const duration = 1100;
-            const start = performance.now();
-            const suffix = el.dataset.suffix || '';
-            const prefix = el.dataset.prefix || '';
-
-            const tick = (now) => {
-                const progress = Math.min(1, (now - start) / duration);
-                const eased = 1 - Math.pow(1 - progress, 3);
-                el.textContent = `${prefix}${Math.round(target * eased)}${suffix}`;
-                if (progress < 1) requestAnimationFrame(tick);
-            };
-            requestAnimationFrame(tick);
-        };
-
-        if (!('IntersectionObserver' in window)) {
-            counters.forEach(animate);
-            return;
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
-                animate(entry.target);
-                observer.unobserve(entry.target);
-            });
-        }, { threshold: 0.4 });
-
-        counters.forEach((el) => observer.observe(el));
-    }
-
-    /* ------------------------------------------------------------------
        Article modal reading progress
        ------------------------------------------------------------------ */
     function initReadingProgress() {
@@ -280,7 +236,6 @@
         initSectionNav();
         initReveals();
         initCardSpotlight();
-        initCounters();
         initReadingProgress();
     }
 

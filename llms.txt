@@ -8,7 +8,6 @@ Alexander Gellert (Tiny Heart Studios) is an independent game developer speciali
 - Main Website: https://a-gellert.github.io/
 - Blog & Devlogs: https://a-gellert.github.io/blog/
 - Game Market Analytics: https://a-gellert.github.io/trends/
-- Site Product Analytics: https://a-gellert.github.io/analytics/
 - Privacy Policies: https://a-gellert.github.io/privacy/
 - Telegram Channel: https://t.me/tiny_game (@tiny_game)
 - Developer Email: oblistud@gmail.com
